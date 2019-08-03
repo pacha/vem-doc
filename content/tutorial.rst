@@ -137,6 +137,11 @@ interface, prefixed with the operator that you just used (`/` or `?`). Just type
 there the text to search and press enter to trigger the search itself. You can
 use regular expressions for more complex searches.
 
+Search is always case sensitive, to make it case insensitive prefix your search
+term with ``\c``. For example, the following term will match ``Foo`` or ``FOO``::
+
+    /\cfoo
+
 **Moving the cursor**
 
     :`h`: left
@@ -691,7 +696,7 @@ is necessary to switch between insert and normal mode.
     .. container:: tab qwertz
 
         :`z`: add a blank line over the cursor
-        :`h`: add a blank line below the cursor
+        :`n`: add a blank line below the cursor
         :`(`: add a space to the left of the cursor
         :`)`: add a space to the right of the cursor
 

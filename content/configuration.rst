@@ -40,13 +40,13 @@ about setting up a ``vimrc`` file for Vim apply to ``vemrc`` as well.
 
 Vim provides an extraordinarily amount of configuration options. You can
 configure almost every aspect of the editor, including both its visual
-appearance and behavior. For example, this line to your ``vemrc``
+appearance and behavior. For example, if you add this line to your ``vemrc``
 file::
 
     set cursorline
 
-will make the line under the cursor to be always highlighted (which can make
-easier to spot it).
+the line under the cursor to be always highlighted —which will make the cursor
+easier to spot.
 
 Any option that you can include in the configuration file can also be set in the
 editor's command line, which allows you to see the effect immediately. However,

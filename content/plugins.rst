@@ -25,10 +25,10 @@ work in Vem as it does in Vim. However, some plugins don't follow this best
 practice. In those cases, they may override a key mapping set up by Vem and then,
 some Vem actions can make some actions to get altered or, directly, unreachable.
 
-This section lists most popular Vim plugins and documents if they show any
-incompatibility with Vem, and shows how to fix it in case there's any. For each
-plugin it also may suggest configuration options that can improve the way they
-interact with Vem.
+.. This section lists most popular Vim plugins and documents if they show any
+.. incompatibility with Vem, and shows how to fix it in case there's any. For each
+.. plugin it also may suggest configuration options that can improve the way they
+.. interact with Vem.
 
 .. admonition:: A word of caution
 
