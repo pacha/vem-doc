@@ -190,7 +190,7 @@ shape that you want to use in each mode:
 
 However, you can take a look here for your terminal if this doesn't work for you:
 
-    https://vim.fandom.com/wiki/Change_cursor_shape_in_different_modes
+    `Vim Wiki: Change cursor shape <https://vim.fandom.com/wiki/Change_cursor_shape_in_different_modes>`_
 
 .. admonition:: Alternative
 

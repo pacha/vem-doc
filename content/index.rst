@@ -225,9 +225,8 @@ Some basic actions in command mode are:
                     :`a`: undo
                     :`A`: redo
 
-There are many more commands in addition of these ones. Check the `Essentials
-</tutorial/essentials.html>`_ section of the Vem tutorial for a deeper
-introduction.
+There are many more commands in addition of these ones. Check the
+`Tutorial </tutorial.html>`_ for a more complete introduction.
 
 Cheat sheet
 -----------
@@ -292,7 +291,7 @@ key, the three possible actions are shown in order:
 
 
 While the cheat sheet can be very useful as a quick reference tool, it may be a
-good idea to check out the `tutorial section </tutorial/essentials.html>`_ if
+good idea to check out `Vem's tutorial </tutorial.html>`_ if
 you're interested in learning more about Vem.
 
 More Features
