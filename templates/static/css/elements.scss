@@ -1,0 +1,116 @@
+
+@import 'variables';
+
+@mixin box()
+{
+    margin: 1.5em 0;
+    padding: 0.5em 1.5em;
+    background-color: #F2F2F2;
+    border-radius: 5px;
+}
+
+a
+{
+    color: $red;
+
+    &:hover
+    {
+        text-decoration: underline;
+    }
+}
+
+h2
+{
+    margin: 2em 0 1em 0;
+}
+
+img.screenshot
+{
+    display: block;
+    margin: 0 auto;
+    border-radius: 2px;
+    width: 100%;
+}
+
+img.center
+{
+    display: block;
+    margin: 0 auto;
+}
+
+p
+{
+    margin: 1.2em 0;
+}
+
+.icon
+{
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.note
+{
+    @include box;
+    font-size: 0.95em;
+}
+
+.admonition
+{
+    @include box;
+    font-size: 0.95em;
+
+    .admonition-title
+    {
+        font-weight: bold;
+    }
+}
+
+span.literal
+{
+    padding: 1px 5px;
+    margin: 0 2px;
+    border-radius: 3px;
+    font: 0.75rem monospace;
+    border: 1px solid $gray;
+    background-color: $light-gray;
+    color: $light-black;
+
+}
+
+.note span.literal
+{
+    background-color: $almost-white;
+}
+
+pre.literal-block
+{
+    font: 0.85em monospace;
+    margin: 2vw 0 2vw 3vw;
+    color: #666666;
+    overflow: auto;
+}
+
+ul
+{
+    padding-inline-start: 20px;
+    margin-left: 2vw;
+
+    li
+    {
+        margin-bottom: 0.5vw;
+
+        p
+        {
+            margin: 1vw 0;
+        }
+    }
+}
+
+blockquote
+{
+    margin: 0;
+}
+

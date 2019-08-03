@@ -1,0 +1,212 @@
+
+$black: #333333;
+
+.cheat-sheet
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .sheet
+    {
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 5px;
+        background-color: #F2F2F2;
+        padding: 1vw 2vw;
+        font-size: 15px;
+
+        .header
+        {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1vw;
+
+            .name
+            {
+                font-weight: bold;
+            }
+        }
+
+        .keyboard
+        {
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+
+            .row
+            {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                margin-bottom: 0.5rem;
+                align-items: stretch;
+                min-height: 4em;
+            }
+        }
+
+        .data
+        {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: "col1 col2 col3";
+            grid-gap: 2vw 2vw;
+
+            max-width: 942px;
+            margin-top: 2vw;
+            font-size: 13px;
+
+            .col
+            {
+                .title
+                {
+                    font-weight: bold;
+                    margin-bottom: 0.5vw;
+                    padding-bottom: 0.2vw;
+                    border-bottom: 1px solid #ADADAD;
+                }
+
+                .key-summary
+                {
+                    margin-left: 0;
+
+                    dt
+                    {
+                        font-size: 1.1em;
+                        margin-top: 0.2em;
+                    }
+
+                    dd
+                    {
+                        p
+                        {
+                            margin-bottom: 0.2em;
+                        }
+                    }
+                }
+            }
+
+            .col1
+            {
+                .leyend
+                {
+                    flex-direction: column;
+
+                    .example-key
+                    {
+                        display: flex;
+                        justify-content: center;
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+div.key
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    border: 1px solid #AAAAAA;
+    border-radius: 5px;
+    padding: 0.3em 0.5em;
+    margin-right: 0.5em;
+    &:last-child
+    {
+        margin-right: 0;
+    }
+    min-width: 3.5em;
+
+    .label
+    {
+        padding-right: 0.5em;
+    }
+
+    .actions
+    {
+        font-size: 0.7em;
+
+        div
+        {
+            .kb-icon
+            {
+                width: 8px;
+                height: 8px;
+                stroke: currentColor;
+                stroke-width: 2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                fill: none;
+            }
+
+            text-align: center;
+            border-bottom: 1px solid $black;
+            padding: 0.15em;
+
+            &:last-child
+            {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.key-red
+{
+    background-color: #EEDDDD;
+}
+
+.key-green
+{
+    background-color: #DDEEDD;
+}
+
+.key-violet
+{
+    background-color: #DDDDEE;
+}
+
+.key-yellow
+{
+    background-color: #EEEEDD;
+}
+
+.key-cyan
+{
+    background-color: #DDEEEE;
+}
+
+.key-pink
+{
+    background-color: #EEDDEE;
+}
+
+.key-orange
+{
+    background-color: #EEDDCC;
+}
+
+.key-blue
+{
+    background-color: #CCDDEE;
+}
+
+.key-white
+{
+    background-color: #FBFBFB;
+}
+
+.key-none
+{
+    background-color: transparent;
+    border: none !important;
+}
+

@@ -1,0 +1,91 @@
+
+$almost-white: #fefefe;
+$black: #333333;
+$light-black: #555555;
+$gray: #aaaaaa;
+$light-gray: #f2f2f2;
+$dark-gray: #666666;
+$red: #ce2d2d;
+$light-red: change-color($red, $lightness: 70%);
+$extra-light-red: change-color($red, $lightness: 98%);
+
+span.key {
+    padding: 1px 5px;
+    margin: 0 2px;
+    border-radius: 3px;
+    font: 0.75rem monospace;
+    border: 1px solid $gray;
+    background-color: $light-gray;
+    color: $black;
+    white-space: nowrap;
+}
+
+blockquote > dl, dl.key-summary, .key-summary dl
+{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: max-content auto;
+    grid-column-gap: 8px;
+    align-items: start;
+    margin-left: 2vw;
+
+    dt
+    {
+        justify-self: end;
+        margin-top: 0.4em;
+
+        span.key
+        {
+            background-color: $almost-white;
+            border: 1px solid $gray;
+            border-bottom-color: $dark-gray;
+            border-radius: 3px;
+            box-shadow: inset 0 -1px 0 #9999AA;
+            color: #555555;
+            display: inline-block;
+            font: 0.75em monospace;
+            padding: 2px 6px;
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+
+    dd
+    {
+        margin: 0;
+        p
+        {
+            margin: 0.5em 0;
+            font-size: 0.95em;
+        }
+    }
+}
+
+.tabs
+{
+    margin: 2vw 0;
+    border-bottom: 1px solid #D2D2D2;
+
+    .tab-links
+    {
+        border-bottom: 1px solid #D2D2D2;
+        padding: 0.4vw 0;
+        display: flex;
+        flex-direction: row-reverse;
+
+        a
+        {
+            margin-left: 12px;
+            text-decoration: none;
+            font-size: 0.7em;
+            color: #666666;
+            text-transform: uppercase;
+        }
+
+        a.active
+        {
+            color: #ce2d2d;
+        }
+    }
+}
+

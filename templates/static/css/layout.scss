@@ -1,0 +1,263 @@
+
+@import 'variables';
+
+html
+{
+    background: white;
+    color: #333333;
+    font: 17px/1.4 'Lato', Helvetica, Arial, sans-serif;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2vw 4vw;
+
+    a
+    {
+        text-decoration: none;
+    }
+
+    nav#project-id
+    {
+        a
+        {
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            &:hover
+            {
+                text-decoration: none;
+            }
+
+            img
+            {
+                height: 2rem;
+                margin-right: 0.3rem;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    nav#main-menu-desktop
+    {
+        @media (max-width: 650px)
+        {
+            display: none;
+        }
+
+        a
+        {
+
+            margin-left: 1.5vw;
+            color: #666666;
+
+            &:hover
+            {
+                color: $red;
+                text-decoration: none;
+            }
+
+            &.active
+            {
+                color: $red;
+                font-weight: bold;
+            }
+        }
+    }
+
+    nav.main-menu-mobile
+    {
+        @media (min-width: 651px)
+        {
+            display: none;
+        }
+
+        svg.menu-icon
+        {
+            color: $red;
+            width: 30px;
+            height: 30px;
+            stroke: currentColor;
+            stroke-width: 3;
+            fill: none;
+            margin: 3px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.show-in-mobile
+{
+    @media (max-width: 650px)
+    {
+        display: block !important;
+    }
+}
+
+.initially-hidden
+{
+    display: none;
+}
+
+nav#primary-navigation-mobile
+{
+    color: $red;
+    background-color: $light-gray;
+    padding: 2vw 0;
+    margin-bottom: 2vw;
+
+    a
+    {
+        text-decoration: none;
+        &.selected
+        {
+            font-weight: bold;
+        }
+    }
+
+
+    ul
+    {
+        margin: 0;
+        padding: 0 0 0 4vw;
+        list-style-type: none;
+
+        li
+        {
+            margin: 0.5vw 2vw;
+        }
+
+        &.sections
+        {
+            a
+            {
+                color: $dark-gray;
+            }
+        }
+    }
+}
+
+main
+{
+    flex-grow: 1;
+    padding: 0 4vw 3vw 4vw;
+}
+
+main.one-col
+{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". article .";
+
+    @media (max-width: 1900px)
+    {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    @media (max-width: 850px)
+    {
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    @media (max-width: 600px)
+    {
+        grid-template-columns: 1fr;
+        grid-template-areas: "article";
+    }
+
+    article
+    {
+        grid-area: article;
+    }
+}
+
+main.two-cols
+{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 3fr 8fr 2fr 3fr;
+    grid-template-areas: ". article aside .";
+
+    @media (max-width: 1900px)
+    {
+        grid-template-columns: 2fr 8fr 2fr 2fr;
+    }
+
+    @media (max-width: 850px)
+    {
+        grid-template-columns: 8fr 2fr;
+        grid-template-areas: "article aside";
+    }
+
+    @media (max-width: 600px)
+    {
+        grid-template-columns: 1fr;
+        grid-template-areas: "article";
+    }
+
+    article
+    {
+        grid-area: article;
+
+        // prevent pre boxes from not displaying horizontal scrollbar
+        min-width: 0;
+    }
+
+    aside
+    {
+        padding-top: 1vw;
+        grid-area: aside;
+
+        @media (max-width: 600px)
+        {
+            display: none;
+        }
+        background-color: white;
+
+        nav
+        {
+            position: sticky;
+            top: 0;
+            padding: 2vw 0 0 3.5vw;
+
+            ul
+            {
+                padding: 0;
+                margin: 1vw 1vw 1vw 0;
+                list-style-type: none;
+                font-size: 0.8rem;
+
+                li
+                {
+                    margin-bottom: 1vw;
+
+                    a
+                    {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer
+{
+    margin-top: auto;
+    padding: 3vw 4vw;
+    font-size: 0.8rem;
+    background-color: $light-gray;
+    text-align: center;
+}
+

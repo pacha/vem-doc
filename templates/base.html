@@ -1,0 +1,69 @@
+{% from 'helpers.html' import icon %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/normalize.css">
+        <link rel="stylesheet" href="/static/css/elements.css">
+        <link rel="stylesheet" href="/static/css/layout.css">
+        {% for css_file in data.css_files %}
+            <link rel="stylesheet" href="{{ css_file }}">
+        {% endfor %}
+        {% for js_file in data.js_files %}
+            <script src="{{ js_file }}"></script>
+        {% endfor %}
+
+        {% if data.favicon %}
+            {{ data.favicon }}
+        {% endif %}
+
+        <title>{{ data.project }}</title>
+    </head>
+    <body>
+        <header>
+            <nav id="project-id">
+                <a href="/">{% if data.logo %}<img src="{{ data.logo }}" alt="Vem logo">{% endif %} {{ data.project }}</a>
+            </nav>
+            <nav id="main-menu-desktop">
+                {% for item in data.main_menu %}
+                <a {{ 'class=active' if node.url == item.url}} href="{{ item.url }}">{{ item.text }}</a>
+                {% endfor %}
+            </nav>
+            <nav class="main-menu-mobile">
+                <a href="javascript:;" onclick="toggleVisibility('primary-navigation-mobile')">
+                    <svg class="menu-icon"><use xlink:href="/static/icons/feather-sprite.svg#menu"/></svg>
+                </a>
+            </nav>
+        </header>
+        <nav id="primary-navigation-mobile" aria-labelledby="primary-navigation" class="initially-hidden">
+            <ul>
+                {% for item in data.main_menu %}
+                <li>
+                    <a {{ 'class=active' if node.url == item.url}} href="{{ item.url }}">{{ item.text }}</a>
+                    {% if node.url == item.url and data.index_node %}
+                        {% with index = get_node(data.index_node) %}
+                        <ul class="sections">
+                            {% for section in index.sections %}
+                                <li><a href="#{{ section.id }}">{{ section.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                        {% endwith %}
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+        {% block main %}
+            {{ node.content }}
+        {% endblock main %}
+
+        <footer>
+            {{ data.copyright }}
+        </footer>
+
+    </body>
+</html>
+
