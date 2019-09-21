@@ -1,0 +1,142 @@
+
+$red: #ce2d2d;
+
+blockquote > dl.field-list, dl.key-summary, .key-summary dl
+{
+    margin-left: 0;
+    grid-column-gap: 12px;
+
+    dt
+    {
+        font: 0.75rem monospace;
+        justify-self: start;
+
+        span.literal
+        {
+            background-color: #f5f5f5;
+        }
+    }
+
+    dd
+    {
+        p
+        {
+            font-size: 0.95rem;
+            margin: 0.3em 0;
+        }
+    }
+}
+
+div.ex-commands dl
+{
+    dt
+    {
+        font: 0.8rem monospace;
+        background-color: #f5f5f5;
+        border-radius: 3px;
+        padding: 0.3rem;
+    }
+
+    dd
+    {
+        margin: 0;
+
+        p
+        {
+            font-size: 0.9rem;
+            padding: 0 0.3rem;
+            margin: 0.25rem 0 1rem 0;
+        }
+    }
+}
+
+em
+{
+    color: #666666;
+}
+
+.directional-mappings
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vw;
+    background-color: #f2f2f2;
+    padding: 1vw;
+
+    p
+    {
+        text-align: center;
+        font-size: 0.9rem;
+        margin: 0;
+
+        &.symbol
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    div.key
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .central-row
+    {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+
+.cols
+{
+    display: grid;
+    grid-column-gap: 1vw;
+    margin: 1vw 0;
+
+    dl
+    {
+        margin: 0;
+        padding: 0.5vw 1vw;
+        background-color: #F2F2F2;
+        border-radius: 3px;
+    }
+}
+
+.one-col
+{
+    grid-template-columns: 1fr;
+}
+
+.two-cols
+{
+    grid-template-columns: 1fr 1fr;
+}
+
+.three-cols
+{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.filled-cols
+{
+    dl
+    {
+        background-color: #F2F2F2;
+        border-radius: 3px;
+    }
+}
+
+.filled-row
+{
+    background-color: #F2F2F2;
+    border-radius: 3px;
+}
+

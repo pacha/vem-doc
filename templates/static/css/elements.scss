@@ -75,14 +75,9 @@ span.literal
     border-radius: 3px;
     font: 0.75rem monospace;
     border: 1px solid $gray;
-    background-color: $light-gray;
+    background-color: $white;
     color: $light-black;
 
-}
-
-.note span.literal
-{
-    background-color: $almost-white;
 }
 
 pre.literal-block
