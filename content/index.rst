@@ -1,7 +1,7 @@
 ---
 
 page: home
-title: Overview
+title: "Vem Text Editor"
 css_files:
   - /static/css/home.css
   - /static/css/vem.css
@@ -71,8 +71,8 @@ editors and text will be inserted as you type on the keyboard. To start insert
 mode, press `i`. To go back to command mode to execute additional actions, press
 `Ctrl-o`.
 
-By default, Vem is configured to map commands to the `QWERTY` keyboard layout.
-If you use `QWERTZ` or `AZERTY`, you need to configure your layout in `Vem's
+By default, Vem is configured to map commands to the ``QWERTY`` keyboard layout.
+If you use ``QWERTZ`` or ``AZERTY``, you need to configure your layout in `Vem's
 settings file </configuration.html#keyboard-layout>`_.
 
 Some basic actions in command mode are:

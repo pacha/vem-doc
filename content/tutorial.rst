@@ -1,5 +1,6 @@
 ---
 
+title: "Vem :: Tutorial"
 layout: two-cols
 index_node: tutorial.rst
 

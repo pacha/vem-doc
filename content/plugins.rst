@@ -1,5 +1,6 @@
 ---
 
+title: "Vem :: Plugins"
 layout: two-cols
 index_node: plugins.rst
 

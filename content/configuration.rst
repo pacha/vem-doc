@@ -1,5 +1,6 @@
 ---
 
+title: "Vem :: Configuration"
 layout: two-cols
 index_node: configuration.rst
 
