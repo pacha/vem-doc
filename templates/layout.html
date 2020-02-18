@@ -9,6 +9,7 @@
     {% if data.layout == 'two-cols' %}
     <aside>
         <nav id="secondary-navigation" aria-labelledby="secondary-navigation">
+            {# in-doc sections #}
             {% if data.index_node %}
                 {% with index = get_node(data.index_node) %}
                     <ul>
@@ -18,18 +19,17 @@
                     </ul>
                 {% endwith %}
             {% endif %}
-            {# {% if data.menu %} #}
-            {#     {% if data.menu.title %} #}
-            {#         <strong>{{ data.menu.title }}</strong> #}
-            {#     {% endif %} #}
-            {#     <ul> #}
-            {#         {% for entry in data.menu.entries %} #}
-            {#         <li> #}
-            {#             <a href="{{ entry.url }}">{{ entry.text }}</a> #}
-            {#         </li> #}
-            {#         {% endfor %} #}
-            {#     </ul> #}
-            {# {% endif %} #}
+
+            {# menu items #}
+            {% if data.menu %}
+                <ul>
+                    {% for entry in data.menu %}
+                    <li>
+                        <a href="{{ entry.url }}">{{ entry.text }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </nav>
     </aside>
     {% endif %}

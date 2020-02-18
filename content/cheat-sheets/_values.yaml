@@ -1,0 +1,11 @@
+
+title: "Vem :: Cheat Sheets"
+layout: two-cols
+menu:
+  - text: qwerty
+    url: /cheat-sheets/qwerty.html
+  - text: qwertz
+    url: /cheat-sheets/qwertz.html
+  - text: azerty
+    url: /cheat-sheets/azerty.html
+

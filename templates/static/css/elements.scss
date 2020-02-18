@@ -21,6 +21,7 @@ a
 
 h2
 {
+    font-size: 1.2em;
     margin: 2em 0 1em 0;
 }
 
@@ -70,13 +71,9 @@ p
 
 span.literal
 {
-    padding: 1px 5px;
-    margin: 0 2px;
-    border-radius: 3px;
-    font: 0.75rem monospace;
-    border: 1px solid $gray;
-    background-color: $white;
-    color: $light-black;
+    font: 0.9rem monospace;
+    color: #666666;
+    white-space: nowrap;
 
 }
 
@@ -86,6 +83,13 @@ pre.literal-block
     margin: 2vw 0 2vw 3vw;
     color: #666666;
     overflow: auto;
+}
+
+pre.centered
+{
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 ul
@@ -107,5 +111,27 @@ ul
 blockquote
 {
     margin: 0;
+}
+
+.browsing-links
+{
+    font-size: 0.8rem;
+    color: #888888;
+    margin-top: 4vw;
+    padding: 0.2em 1.5em;
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    a
+    {
+        text-decoration: none;
+
+        &:hover
+        {
+            text-decoration: underline;
+        }
+    }
 }
 

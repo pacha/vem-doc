@@ -1,0 +1,57 @@
+
+title: "Vem :: Documentation"
+layout: two-cols
+css_files:
+  - /static/css/vem.css
+menu:
+  - text: Basics
+    url: /docs/basics.html
+  - text: Files and buffers
+    url: /docs/buffers.html
+  - text: Movements
+    url: /docs/movements.html
+  - text: Selecting
+    url: /docs/selecting.html
+  - text: Clipboard
+    url: /docs/clipboard.html
+  - text: Deleting
+    url: /docs/deleting.html
+  - text: Undoing
+    url: /docs/undoing.html
+  - text: Comments
+    url: /docs/comments.html
+  - text: Formatting
+    url: /docs/formatting.html
+  - text: Searching and replacing
+    url: /docs/search.html
+  - text: Insert mode
+    url: /docs/insert-mode.html
+  - text: Command-line mode
+    url: /docs/command-line-mode.html
+  - text: Windows
+    url: /docs/windows.html
+  - text: Tabpages
+    url: /docs/tabpages.html
+  - text: Scroll
+    url: /docs/scroll.html
+  - text: Marks
+    url: /docs/marks.html
+  - text: Macros
+    url: /docs/macros.html
+  - text: Folds
+    url: /docs/folds.html
+  - text: Tags
+    url: /docs/tags.html
+  - text: Diff mode
+    url: /docs/diff-mode.html
+  - text: Spell checking
+    url: /docs/spell-checking.html
+  - text: Quickfix and location lists
+    url: /docs/quickfix.html
+  - text: Finding files
+    url: /docs/finding-files.html
+  - text: Linting
+    url: /docs/linting.html
+  - text: Compiling
+    url: /docs/compiling.html
+

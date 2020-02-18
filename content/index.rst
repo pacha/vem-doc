@@ -304,7 +304,7 @@ More Features
 Vem is basically Vim, which means that it unashamedly enjoys all its features.
 These are just a few of them:
 
-.. container:: features
+.. container:: features features-2col
 
     .. container:: feature
 

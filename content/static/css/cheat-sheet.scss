@@ -1,14 +1,78 @@
 
 $red: #ce2d2d;
 
+h1
+{
+    margin-bottom: 0;
+}
+
+h2
+{
+    display: none;
+}
+
+#keymap
+{
+    padding: 0 0 1rem 0;
+}
+
+#actions
+{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 10px;
+    font-size: 0.8rem;
+
+    .section
+    {
+        background-color: #F2F2F2;
+        border-radius: 3px;
+        padding: 1rem;
+
+        h3
+        {
+            font-size: 0.9rem;
+            margin: 0 0 0.5rem 0;
+        }
+
+        p
+        {
+            margin-bottom: 0;
+        }
+
+        span.literal
+        {
+            font-size: 0.75rem;
+            margin-right: 5px;
+            background-color: white;
+            border-radius: 3px;
+            padding: 1px 3px;
+            border: 1px solid #D2D2D2;
+        }
+    }
+
+    #legend
+    {
+        background-color: transparent;
+
+        .line-block
+        {
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+
+}
+
 blockquote > dl.field-list, dl.key-summary, .key-summary dl
 {
-    margin-left: 0;
+    margin: 0;
     grid-column-gap: 12px;
 
     dt
     {
-        font: 0.75rem monospace;
+        font: 0.5rem monospace;
         justify-self: start;
 
         span.literal
@@ -21,31 +85,8 @@ blockquote > dl.field-list, dl.key-summary, .key-summary dl
     {
         p
         {
-            font-size: 0.95rem;
+            font-size: 0.8rem;
             margin: 0.3em 0;
-        }
-    }
-}
-
-div.ex-commands dl
-{
-    dt
-    {
-        font: 0.8rem monospace;
-        background-color: #f5f5f5;
-        border-radius: 3px;
-        padding: 0.3rem;
-    }
-
-    dd
-    {
-        margin: 0;
-
-        p
-        {
-            font-size: 0.9rem;
-            padding: 0 0.3rem;
-            margin: 0.25rem 0 1rem 0;
         }
     }
 }
@@ -53,46 +94,6 @@ div.ex-commands dl
 em
 {
     color: #666666;
-}
-
-.directional-mappings
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2vw;
-    background-color: #f2f2f2;
-    padding: 1vw;
-
-    p
-    {
-        text-align: center;
-        font-size: 0.9rem;
-        margin: 0;
-
-        &.symbol
-        {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
-    div.key
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .central-row
-    {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
-    }
 }
 
 .cols
@@ -140,3 +141,22 @@ em
     border-radius: 3px;
 }
 
+.admonition
+{
+    background-color: transparent;
+    padding: 0;
+
+    .admonition-title
+    {
+        background-color: #F2F2F2;
+        border-radius: 3px;
+        padding: 0.5vw 1vw;
+        margin: 0.6vw 0;
+    }
+
+    .field-list
+    {
+        padding: 0 1vw;
+        margin: 0.6vw 0;
+    }
+}

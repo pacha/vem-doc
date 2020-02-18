@@ -1,6 +1,6 @@
 
 project: vem
-title: Vem Text Editor
+title: "Vem Text Editor"
 logo: "/static/img/vem-logo.svg"
 copyright: "Copyright 2019 Andrés Sopeña.<br>Site generated using <a href='https://github.com/pacha/spekulatio'>Spekulatio</a>."
 favicon: |-
@@ -24,6 +24,8 @@ main_menu:
     url: /
   - text: Tutorial
     url: /tutorial.html
+  - text: Docs
+    url: /docs/index.html
   - text: Configuration
     url: /configuration.html
   - text: Plugins
