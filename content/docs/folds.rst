@@ -20,7 +20,7 @@ Use the following key commands to manage folds:
     :`b` `f`: (in visual mode) create fold. Select the area to fold and
         press `b` `f` to fold it into a single line.
 
-    :`b` `a`: toggle the fold open/close. Once the fold is created, you can open
+    :`b` `a`: toggle the fold open/closed. Once the fold is created, you can open
         or close it to see its contents at any time. When a fold is open you can
         create nested folds inside it (again with `b` `f`).
 

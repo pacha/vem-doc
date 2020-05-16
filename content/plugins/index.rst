@@ -1,13 +1,11 @@
 ---
 
 title: "Vem :: Plugins"
-layout: two-cols
-index_node: plugins.rst
 
 ---
 
-Plugins: Overview
-=================
+Plugins
+=======
 
 Vim compatibility
 -----------------

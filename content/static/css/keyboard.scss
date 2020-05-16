@@ -13,9 +13,8 @@ $black: #333333;
         flex-direction: column;
 
         border-radius: 5px;
-        background-color: #F2F2F2;
         padding: 1vw 2vw;
-        font-size: 15px;
+        font-size: 18px;
 
         .header
         {
@@ -36,6 +35,7 @@ $black: #333333;
             flex-direction: column;
             flex-wrap: nowrap;
             justify-content: flex-start;
+            padding-right: 2px;  // fix Chrome 1-missing pixel capture problem
 
             .row
             {

@@ -16,10 +16,9 @@ Deleting
 .. parsed-literal::
     :class: terminal
 
-    ██\ :wi:`1`\ █\  A fair fi\ :wi:`e`\ ld full of folk
-    ██\ :wi:`2`\ █\          :y:`← →`
-    :g:`~`            :y:`I O`
-    :g:`~`
+    \ A fair fi\ :wi:`e`\ ld full of folk
+    \         :y:`← →`
+    \         :y:`I O`
 
 You can delete characters to the left or the right of the cursor with:
 

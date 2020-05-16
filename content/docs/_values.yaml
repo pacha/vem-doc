@@ -4,8 +4,10 @@ layout: two-cols
 css_files:
   - /static/css/vem.css
 menu:
-  - text: Basics
-    url: /docs/basics.html
+  - text: Overview
+    url: /docs/index.html
+  - text: Quick start
+    url: /docs/quick-start.html
   - text: Files and buffers
     url: /docs/buffers.html
   - text: Movements

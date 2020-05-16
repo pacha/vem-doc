@@ -1,7 +1,12 @@
 
-h1
+h1, h2
 {
     text-align: center;
+}
+
+h2
+{
+    margin: 3em 0 2em 0;
 }
 
 .superscript
@@ -43,3 +48,74 @@ h1
         font-size: 0.75em;
     }
 }
+
+.cols
+{
+    display: grid;
+
+    grid-gap: calc(10px + 0.5vw) calc(10px + 0.5vw);
+    justify-items: stretch;
+    font-size: 0.8em;
+}
+
+.cols2
+{
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 450px)
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cols3
+{
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: 450px)
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feature
+{
+    padding: calc(10px + 1vw);
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    text-align: center;
+
+    .icon
+    {
+      width: calc(20px + 1vw);
+      height: calc(20px + 1vw);
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    p
+    {
+        margin: 0.2vw 0 0 0;
+        vertical-align: middle;
+    }
+}
+
+.call-to-action
+{
+    margin: calc(20px + 1vw);
+
+    p
+    {
+        margin: 0;
+        text-align: center;
+        a
+        {
+            font-size: 1.4em;
+
+            &:hover
+            {
+                text-decoration: none;
+            }
+        }
+    }
+}
+

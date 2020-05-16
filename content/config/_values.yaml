@@ -1,0 +1,45 @@
+
+title: "Vem :: Config"
+layout: two-cols
+css_files:
+  - /static/css/vem.css
+menu:
+  - text: Vem configuration
+    url: /config/index.html
+  - text: Keyboard layout
+    url: /config/keyboard-layout.html
+  - text: Cursor shape
+    url: /config/cursor-shape.html
+  - text: Indentation
+    url: /config/indentation.html
+  - text: Encoding
+    url: /config/encoding.html
+  - text: Line endings
+    url: /config/line-endings.html
+  - text: Color schemes
+    url: /config/color-schemes.html
+  - text: Non-visible characters
+    url: /config/non-visible-characters.html
+  - text: Visual tips
+    url: /config/color-schemes.html
+  - text: Configuration per filetype
+    url: /config/configuration-per-filetype.html
+  - text: Autocompletion
+    url: /config/autocompletion.html
+  - text: Autoformatting
+    url: /config/autoformatting.html
+  - text: Code browsing
+    url: /config/code-browsing.html
+  - text: Compiling
+    url: /config/compiling.html
+  - text: Git integration
+    url: /config/git-integration.html
+  - text: Grepping (finding in files)
+    url: /config/grepping.html
+  - text: Automatic linting
+    url: /config/linting.html
+  - text: Spell checking
+    url: /config/spell-checking.html
+
+
+

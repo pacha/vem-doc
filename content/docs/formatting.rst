@@ -144,7 +144,7 @@ file type configuration file::
 That way, `=` will work correctly for any JSON file we open in the editor.
 
 .. Note:: for more information on how to add per-file-type configuration options
-   take a look at `Filetype configuration </configuration.html#filetype-configuration>`_
+   take a look at `Configuration per filetype </config/configuration-per-filetype.html>`_
 
 So, in summary, to use an external tool to format your code:
 
@@ -196,8 +196,8 @@ width of the screen if it is smaller than that).
 Sometimes, it is useful to set the text width according to file types. For
 example, you may want to set automatic line wrapping for Markdown or
 Restructured text files while leaving in its disabled, default value for code.
-To set an option according to the file type, check `filetype configuration
-</configuration.html#filetype-configuration>`_.
+To set an option according to the file type, check `Configuration per filetype
+</config/configuration-per-filetype.html>`_.
 
 .. Note:: The ``formatexpr`` and ``formatprg`` options can be used to configure
    how text is formatted with `|`. The first one allows you to define your own

@@ -33,6 +33,14 @@ img.screenshot
     width: 100%;
 }
 
+img.small-screenshot
+{
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+    max-width: 60%;
+}
+
 img.center
 {
     display: block;

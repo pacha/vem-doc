@@ -1,17 +1,9 @@
----
-
-title: "Vem :: Tutorial"
-layout: two-cols
-index_node: tutorial.rst
-
----
-
 
 .. role:: key
 .. default-role:: key
 
-Tutorial
-========
+Quick start
+===========
 
 To start Vem, use the ``vem`` command in the command line::
 

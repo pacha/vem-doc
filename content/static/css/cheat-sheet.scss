@@ -1,23 +1,34 @@
-
-$red: #ce2d2d;
+@import 'colors';
 
 h1
 {
     margin-bottom: 0;
 }
 
-h2
+.section h2
 {
-    display: none;
+    margin: 40px 0 10px 0;
+    padding-bottom: 4px;
+    border-bottom: 10px solid $light-grey;
 }
 
-#keymap
+#keymap-box
 {
-    padding: 0 0 1rem 0;
+    margin: 1rem 0 3rem 0;
+
+    h2
+    {
+        display: none;
+    }
 }
 
-#actions
+#actions-box, .card-box
 {
+    h2
+    {
+        display: none;
+    }
+
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -26,7 +37,7 @@ h2
 
     .section
     {
-        background-color: #F2F2F2;
+        background-color: $light-grey;
         border-radius: 3px;
         padding: 1rem;
 
@@ -65,7 +76,16 @@ h2
 
 }
 
-blockquote > dl.field-list, dl.key-summary, .key-summary dl
+.wide-card
+{
+    grid-area: span 1 / span 2;
+    @media (max-width: 450px)
+    {
+        grid-area: span 1 / span 1;
+    }
+}
+
+blockquote > dl.field-list, div.subsection > dl.field-list, dl.key-summary, .key-summary dl
 {
     margin: 0;
     grid-column-gap: 12px;
@@ -106,7 +126,7 @@ em
     {
         margin: 0;
         padding: 0.5vw 1vw;
-        background-color: #F2F2F2;
+        background-color: $light-grey;
         border-radius: 3px;
     }
 }
@@ -130,14 +150,14 @@ em
 {
     dl
     {
-        background-color: #F2F2F2;
+        background-color: $light-grey;
         border-radius: 3px;
     }
 }
 
 .filled-row
 {
-    background-color: #F2F2F2;
+    background-color: $light-grey;
     border-radius: 3px;
 }
 
@@ -148,7 +168,7 @@ em
 
     .admonition-title
     {
-        background-color: #F2F2F2;
+        background-color: $light-grey;
         border-radius: 3px;
         padding: 0.5vw 1vw;
         margin: 0.6vw 0;
@@ -160,3 +180,57 @@ em
         margin: 0.6vw 0;
     }
 }
+
+#movements h2
+{
+    border-color: $green;
+}
+
+#editing h2
+{
+    border-color: $cyan;
+}
+
+#copying-cutting-deleting-and-pasting h2
+{
+    border-color: $yellow;
+}
+
+#files-and-buffers h2
+{
+    border-color: $red;
+}
+
+#file-browser h2, #fuzzy-finder h2
+{
+    border-bottom: none;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 1.1em;
+}
+
+#insert-mode h2
+{
+    border-color: $orange;
+}
+
+#command-line h2
+{
+    border-color: $orange;
+}
+
+#tools h2
+{
+    border-color: $blue;
+}
+
+#searching-and-substituting h2
+{
+    border-color: $blue;
+}
+
+#windows-and-tabpages h2
+{
+    border-color: $pink;
+}
+

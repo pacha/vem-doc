@@ -9,3 +9,8 @@ menu:
   - text: azerty
     url: /cheat-sheets/azerty.html
 
+# To take screenshots of the cheat sheets:
+# * Open the corresponding *-map.html file
+# * Go to the 'div.keyboard' node
+# * Press Ctrl-Shift-p and type 'screenshot'
+# * Select node screenshot

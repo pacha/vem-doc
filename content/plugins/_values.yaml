@@ -1,0 +1,10 @@
+
+title: "Vem :: Plugins"
+layout: two-cols
+css_files:
+  - /static/css/vem.css
+menu:
+  - text: Overview
+    url: /plugins/index.html
+  - text: Fugitive.vim
+    url: /plugins/vim-fugitive.html

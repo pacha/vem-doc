@@ -79,11 +79,10 @@ jumps with the cursor:
 .. parsed-literal::
     :class: terminal
 
-    ██\ :wi:`1`\ █\   :y:`← K`
-    ██\ :wi:`2`\ █\  A fair field full :wi:`o`\ f folk
-    ██\ :wi:`3`\ █\   :y:`← J         ↑       ↑`
-    ██\ :wi:`4`\ █\               :y:`H       L`
-    :g:`~`
+    \  :y:`← K`
+    \ A fair field full :wi:`o`\ f folk
+    \  :y:`← J         ↑       ↑`
+    \              :y:`H       L`
 
 You can also use them together with the ``Ctrl`` modifier key to start insert
 mode in different places relative to the current line:
@@ -146,9 +145,9 @@ To go to the actual first column of the line, use `0`:
         .. parsed-literal::
             :class: terminal
 
-            ██\ :wi:`1`\ █\     content_type = :wi:`h`\ eaders.get('content-type')
-            :g:`~`   :y:`↑   ↑                                        ↑`
-            :g:`~`   :y:`0   ,                                        .`
+            \     content_type = :wi:`h`\ eaders.get('content-type')
+            :y:`↑   ↑                                        ↑`
+            :y:`0   ,                                        .`
 
     .. container:: tab qwertz
 
