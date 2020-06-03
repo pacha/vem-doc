@@ -8,3 +8,5 @@ menu:
     url: /plugins/index.html
   - text: Fugitive.vim
     url: /plugins/vim-fugitive.html
+  - text: Coc.nvim
+    url: /plugins/coc-nvim.html

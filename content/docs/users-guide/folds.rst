@@ -45,7 +45,7 @@ There are some keyboard commands that can be used to modify ``foldlevel``:
     :`b` `M`: close all folds
     :`b` `m`: close one more level of folds
     :`b` `R`: open all folds
-    :`b` `R`: open one more level of folds
+    :`b` `r`: open one more level of folds
 
 Since it can be difficult to spot where you created folds once they are open
 (the closed ones are clearly identifiable by their different color

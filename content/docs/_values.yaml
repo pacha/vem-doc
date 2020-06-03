@@ -1,59 +1,75 @@
 
 title: "Vem :: Documentation"
 layout: two-cols
-css_files:
-  - /static/css/vem.css
 menu:
-  - text: Overview
-    url: /docs/index.html
-  - text: Quick start
+  - title: Quickstart
     url: /docs/quick-start.html
-  - text: Files and buffers
-    url: /docs/buffers.html
-  - text: Movements
-    url: /docs/movements.html
-  - text: Selecting
-    url: /docs/selecting.html
-  - text: Clipboard
-    url: /docs/clipboard.html
-  - text: Deleting
-    url: /docs/deleting.html
-  - text: Undoing
-    url: /docs/undoing.html
-  - text: Comments
-    url: /docs/comments.html
-  - text: Formatting
-    url: /docs/formatting.html
-  - text: Searching and replacing
-    url: /docs/search.html
-  - text: Insert mode
-    url: /docs/insert-mode.html
-  - text: Command-line mode
-    url: /docs/command-line-mode.html
-  - text: Windows
-    url: /docs/windows.html
-  - text: Tabpages
-    url: /docs/tabpages.html
-  - text: Scroll
-    url: /docs/scroll.html
-  - text: Marks
-    url: /docs/marks.html
-  - text: Macros
-    url: /docs/macros.html
-  - text: Folds
-    url: /docs/folds.html
-  - text: Tags
-    url: /docs/tags.html
-  - text: Diff mode
-    url: /docs/diff-mode.html
-  - text: Spell checking
-    url: /docs/spell-checking.html
-  - text: Quickfix and location lists
-    url: /docs/quickfix.html
-  - text: Finding files
-    url: /docs/finding-files.html
-  - text: Linting
-    url: /docs/linting.html
-  - text: Compiling
-    url: /docs/compiling.html
-
+  - title: User's Guide
+    url: /docs/users-guide/index.html
+    entries:
+      - title: Files and buffers
+        url: /docs/users-guide/buffers.html
+      - title: Movements
+        url: /docs/users-guide/movements.html
+      - title: Selecting
+        url: /docs/users-guide/selecting.html
+      - title: Clipboard
+        url: /docs/users-guide/clipboard.html
+      - title: Deleting
+        url: /docs/users-guide/deleting.html
+      - title: Undoing
+        url: /docs/users-guide/undoing.html
+      - title: Comments
+        url: /docs/users-guide/comments.html
+      - title: Formatting
+        url: /docs/users-guide/formatting.html
+      - title: Searching and replacing
+        url: /docs/users-guide/search.html
+      - title: Insert mode
+        url: /docs/users-guide/insert-mode.html
+      - title: Command-line mode
+        url: /docs/users-guide/command-line-mode.html
+      - title: Windows
+        url: /docs/users-guide/windows.html
+      - title: Tabpages
+        url: /docs/users-guide/tabpages.html
+      - title: Scroll
+        url: /docs/users-guide/scroll.html
+      - title: Marks
+        url: /docs/users-guide/marks.html
+      - title: Macros
+        url: /docs/users-guide/macros.html
+      - title: Folds
+        url: /docs/users-guide/folds.html
+      - title: Tags
+        url: /docs/users-guide/tags.html
+      - title: Diff mode
+        url: /docs/users-guide/diff-mode.html
+      - title: Spell checking
+        url: /docs/users-guide/spell-checking.html
+      - title: Quickfix lists
+        url: /docs/users-guide/quickfix.html
+      - title: Finding files
+        url: /docs/users-guide/finding-files.html
+      - title: Linting
+        url: /docs/users-guide/linting.html
+      - title: Compiling
+        url: /docs/users-guide/compiling.html
+  - title: Basic cheat sheet
+    url: /docs/cheat-sheets/index.html
+    entries:
+      - title: QWERTY
+        url: /docs/cheat-sheets/qwerty-basic.html
+      - title: QWERTZ
+        url: /docs/cheat-sheets/qwertz-basic.html
+      - title: AZERTY
+        url: /docs/cheat-sheets/azerty-basic.html
+  - title: Full cheat sheet
+    url: /docs/cheat-sheets/index.html
+    entries:
+      - title: QWERTY
+        url: /docs/cheat-sheets/qwerty-full.html
+      - title: QWERTZ
+        url: /docs/cheat-sheets/qwertz-full.html
+      - title: AZERTY
+        url: /docs/cheat-sheets/azerty-full.html

@@ -87,16 +87,21 @@ p
 span.literal
 {
     font: 0.9rem monospace;
-    color: #666666;
+    color: #555555;
     white-space: nowrap;
-
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 2px 4px;
 }
 
 pre.literal-block
 {
     font: 0.85em monospace;
-    margin: 2vw 0 2vw 3vw;
-    color: #666666;
+    margin: 2vw 0;
+    padding: 0.5vw 1vw;
+    border-radius: 2px;
+    color: #333333;
+    background-color: #f2f2f2;
     overflow: auto;
 }
 
@@ -110,7 +115,6 @@ pre.centered
 ul
 {
     padding-inline-start: 20px;
-    margin-left: 1vw;
 
     li
     {
@@ -150,3 +154,61 @@ blockquote
     }
 }
 
+#secondary-navigation
+{
+    ul
+    {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        color: #777777;
+    }
+
+    .menu-first-level
+    {
+        font-size: 1rem;
+
+        li
+        {
+            margin-bottom: 1vw;
+        }
+
+        .menu-second-level
+        {
+            font-size: 0.9rem;
+            padding-top: 0.5vw;
+            padding-left: 10px;
+            list-style-type: square;
+            list-style-position: outside;
+
+            li
+            {
+                margin-bottom: 0.4vw;
+            }
+        }
+    }
+}
+
+
+// ul
+// {
+//     padding: 0;
+//     margin: 1vw 1vw 1vw 0;
+//     list-style-type: none;
+//     font-size: 0.8rem;
+
+//     li
+//     {
+//         margin-bottom: 1vw;
+
+//         a
+//         {
+//             text-decoration: none;
+//         }
+
+//         &:hover
+//         {
+//             text-decoration: underline;
+//         }
+//     }
+// }

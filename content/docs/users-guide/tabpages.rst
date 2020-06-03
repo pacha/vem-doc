@@ -1,4 +1,7 @@
 
+.. role:: key
+.. default-role:: key
+
 Tabpages
 ========
 
@@ -28,10 +31,10 @@ as it refers to a layout of windows. In Vim (and therefore, Vem):
 
 You have the following commands available to work with tabpages:
 
-    :`+`: create new tabpage
+    :`Ctrl-w` `Ctrl-^`: create new tabpage
     :`1` .. `9`: switch to tabpage with that number
 
 To close a tabpage, close all the windows inside it or use::
 
-    :tabc
+    :tabclose
 

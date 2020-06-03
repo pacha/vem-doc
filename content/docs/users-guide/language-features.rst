@@ -2,6 +2,7 @@
 Language Features
 =================
 
+Most of the act
 A great deal of actions that you can perform with the editor are independent of
 the language of the file which you're editing. You can perform most movements
 and text transformations no matter if you're working on a C, JavaScript or Rust
@@ -115,9 +116,19 @@ mappings starting with `C` for them. The following is a list of recommended
 mappings (you don't have to necessarily define them like this, but you can use
 this list as a starting point):
 
+    :`C` `i`: Show identifier information
+    :`C` `s`: Show signature information
     :`C` `d`: Go to definition
-    :`C` `r`: Display references
-    :`C` `R`: Rename symbol
+    :`C` `t`: Go to type definition
+    :`C` `p`: Go to implementation
+    :`C` `r`: Find references of identifier
+    :`C` `u`: Highlight usages of identifier
+    :`C` `a`: Show possible code actions
+    :`C` `w`: List symbols in workspace
+    :`C` `b`: List symbols in buffer
+    :`C` `F`: Format document
+    :`C` `R`: Rename identifier
+
 
 List of language features
 -------------------------

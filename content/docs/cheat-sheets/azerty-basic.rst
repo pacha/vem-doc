@@ -8,6 +8,8 @@ css_files:
 
 ---
 
+.. role:: key
+.. default-role:: key
 
 ================================
 Vem Cheat Sheet - Basic (AZERTY)

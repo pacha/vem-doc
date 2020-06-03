@@ -5,7 +5,16 @@
 Documentation
 =============
 
-Foo bar
+Vem requires some initial learning effort investment. When you open the editor
+there are no menus, toolbars or buttons, everything is controlled using the
+keyboard. Fortunately, learning the basics is pretty easy.
+
+If you have never used Vem before, you can start with the **Quick start**
+and the **Basic cheat sheet**. They give an introduction to how to use Vem and
+
+If you already know the essentials of Vem and want to learn more or are looking
+for some topic in particular, check t
+start
 
 .. container:: features features-3col
 

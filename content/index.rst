@@ -214,8 +214,6 @@ Vem makes use of code provided by Vim's community for some of its features:
       by Jeet Sukumaran
     * `vim-smartword <https://github.com/kana/vim-smartword>`_
       by Kana Natsuno
-    * `supertab <https://github.com/ervandew/supertab>`_
-      by Eric Van Dewoestine
     * `vim-enhancedjumps <https://github.com/inkarkat/vim-EnhancedJumps>`_
       by Ingo Karkat
     * `wildfire.vim <https://github.com/gcmt/wildfire.vim>`_

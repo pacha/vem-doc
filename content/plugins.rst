@@ -113,7 +113,6 @@ install them:
 
     * **ctrlp.vim**: https://github.com/ctrlpvim/ctrlp.vim
     * **NERD Commenter**: https://github.com/scrooloose/nerdcommenter
-    * **Supertab**: https://github.com/ervandew/supertab
     * **vem-dark**: https://github.com/pacha/vem-dark
     * **vem-statusline**: https://github.com/pacha/vem-statusline
     * **vem-tabline**: https://github.com/pacha/vem-tabline
