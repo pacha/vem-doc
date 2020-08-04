@@ -9,6 +9,13 @@ $red: #ce2d2d;
 $light-red: change-color($red, $lightness: 70%);
 $extra-light-red: change-color($red, $lightness: 98%);
 
+hr
+{
+    border: none;
+    height: 1px;
+    background-color: #dddddd;
+}
+
 span.key
 {
     background-color: $almost-white;
@@ -76,7 +83,7 @@ blockquote > dl.field-list, div.subsection > dl.field-list, dl.key-summary, .key
 
 .tabs
 {
-    margin: 2vw 0;
+    margin: 1.5vw 0;
     border-bottom: 1px solid #D2D2D2;
 
     .tab-links
@@ -352,5 +359,67 @@ div.featured-keys
     {
         padding-left: 40px;
     }
+}
+
+.cols
+{
+    display: grid;
+
+    grid-gap: calc(10px + 0.5vw) calc(10px + 0.5vw);
+    justify-items: stretch;
+}
+
+.cols2
+{
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 450px)
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cols3
+{
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: 450px)
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feature-list
+{
+    font-size: 0.8em;
+
+    .feature, p
+    {
+        padding: calc(10px + 1vw);
+        background-color: #F2F2F2;
+        border-radius: 5px;
+        text-align: center;
+
+        .icon
+        {
+          width: calc(20px + 1vw);
+          height: calc(20px + 1vw);
+          stroke: currentColor;
+          stroke-width: 2;
+          fill: none;
+        }
+
+        p
+        {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+.github-icon {
+    width: 1.2em;
+    height: 1.2em;
+    stroke: none;
+    fill: currentColor;
+    margin-bottom: -5px;
 }
 

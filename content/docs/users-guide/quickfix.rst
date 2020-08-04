@@ -2,21 +2,20 @@
 .. role:: key
 .. default-role:: key
 
-Quickfix and location lists
+Quickfix and Location Lists
 ===========================
 
 .. image:: /static/img/screenshots/quickfix-full.png
     :class: screenshot
     :target: /static/img/screenshots/quickfix-full.png
 
-Vim offers two lists to hold positions within files:
+Vim offers two types of lists that store locations within files:
 
     * **Quickfix list**
 
     * **Location list**
 
-These lists are used by many Vim commands. For example, you can perform the
-search of a term across several files and store the resulting positions in the
+These lists are used by multiple Vim commands. For example, you can search across several files and store the resulting positions in them. You can, then, see the results and jump to one of the positions in particular or you can iterate through the list and Q
 quickfix list or have a list of linting errors for the current file in a
 location list. Once you have one of these lists populated you can easily jump
 forwards and backwards between all the results that they contain.

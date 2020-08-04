@@ -21,135 +21,316 @@ Vem Text Editor
 
 .. container:: short-description
 
-    Vem is a set of configuration files that transforms Vim into a different
-    text editor to make it more regular and intuitive to use.
+    Vem is a text editor of the Vi family that allows you to perform all editing
+    tasks using just the keyboard while having a very simple and straightforward
+    set of commands.
 
-.. image:: /static/img/screenshots/main-screenshot.png
+    Vem's command set is as simple as possible but not simpler!
+
+.. image:: /static/img/home/vem-main-screenshot.png
     :class: screenshot
-    :target: /static/img/screenshots/main-screenshot.png
+    :target: /static/img/home/vem-main-screenshot.png
 
 Description
 -----------
 
-Vem is a set of configuration files that takes the best of the Vim text editor:
-battle tested codebase, great extensibility, support for hundreds of file
-formats and total control of the editor by using just the keyboard, while it
-tries to make the user interaction much more regular and intuitive:
-
-* While Vim offers more than 500 keyboard commands, Vem focuses in a far smaller
-  set. It stills allows you to completely control the editor with the keyboard,
-  but it trades expressiveness for simplicity so you can actually remember all
-  keyboard commands.
-
-* Commands are really simple. In Vim, you compose many commands with several
-  keystrokes. In Vem, a key press equals to an immediate action in most cases.
-
-* Commands are also spatially distributed across the keyboard, like a map, so
-  they are easier to type —by maximizing the use of both hands— and remember.
-
-The end result is an input interface for Vim that is more regular, easier to
-remember and a joy to use. Additionally, Vem provides a more intuitive set of
-default settings out of the box than Vim.
-
-This is how it looks like:
-
-.. image:: /static/img/cheat-sheets/leyend.png
-    :class: center
-    :width: 100px
+Vem is a set of configuration files for the Vim text editor that changes how you
+interact with it. Commands are arranged spatially across the keyboard, like in a
+map, and they are much simpler and immediate to use:
 
 .. container:: tabs layout
 
     .. container:: tab qwerty
 
-        .. figure:: /static/img/cheat-sheets/qwerty-white-bk.png
+        .. figure:: /static/img/cheat-sheets/qwerty-full.png
             :class: screenshot
-            :target: /static/img/cheat-sheets/qwerty-white-bk.png
-
-            Click on the image to enlarge
-
-        .. container:: call-to-action cols cols3
-
-            `Download </download.html>`__ |br| Try it
-
-            `Quick start </docs/quick-start.html>`__ |br| Know more
-
-            `Cheat sheet </docs/cheat-sheets/qwerty.html>`__ |br| Take a look
+            :target: /static/img/cheat-sheets/qwerty-full.png
 
     .. container:: tab qwertz
 
-        .. figure:: /static/img/cheat-sheets/qwertz-white-bk.png
+        .. figure:: /static/img/cheat-sheets/qwertz-full.png
             :class: screenshot
-            :target: /static/img/cheat-sheets/qwertz-white-bk.png
-
-            Click on the image to enlarge
-
-        .. container:: call-to-action cols cols3
-
-            `Download </download.html>`__ |br| Try it
-
-            `Quick start </docs/quick-start.html>`__ |br| Know more
-
-            `Cheat sheet </docs/cheat-sheets/qwertz.html>`__ |br| Take a look
+            :target: /static/img/cheat-sheets/qwertz-full.png
 
     .. container:: tab azerty
 
-        .. figure:: /static/img/cheat-sheets/azerty-white-bk.png
+        .. figure:: /static/img/cheat-sheets/azerty-full.png
             :class: screenshot
-            :target: /static/img/cheat-sheets/azerty-white-bk.png
+            :target: /static/img/cheat-sheets/azerty-full.png
 
-            Click on the image to enlarge
+The result is a different editor that strives to be as simple as possible while
+still giving you total control using just the keyboard. If you want to know more
+about what makes Vem different take a look to the next section `Why Vem
+</#why-vem>`_.
 
-        .. container:: call-to-action cols cols3
+Vem requires either Vim or Neovim to be installed in the system and supports the
+``QWERTY``, ``QWERTZ`` and ``AZERTY`` keyboard layouts.
 
-            `Download </download.html>`__ |br| Try it
+--------------------------------------------------------------------------------
 
-            `Quick start </docs/quick-start.html>`__ |br| Know more
+.. container:: call-to-action cols cols3
 
-            `Cheat sheet </docs/cheat-sheets/azerty.html>`__ |br| Take a look
+     Try it |br| `Download </download.html>`__
+
+     Know more |br| `Quick start </docs/quick-start.html>`__
+
+     Take a look |br| `Cheat sheets </docs/cheat-sheets/index.html>`__
+
+--------------------------------------------------------------------------------
+
+Why Vem
+-------
+
+The Vi text editor —mostly in the form of its successor, Vim— remains as one of
+the most popular text editors among software developers and DevOps engineers to
+this day. Even though it was created in the 70s, is still as well-loved, if not
+more, than what it was back in the day when it was first released.
+
+One of the reasons for that is that it provides a large amount of editing
+possibilities which you can control using just the keyboard. It is not
+necessarily the easiest text editor to learn, but once you develop some muscle
+memory it can change the way in which you write code given the speed and
+precision that it allows.
+
+However, some of its core design decisions are still rooted in its origins. The
+reason why you can compose elaborated commands using several keystrokes (for
+example ``c3w``, *change 3 words* or ``9yy``, *copy next 9 lines*) is that Vi
+was created in a Lear Siegler ADM-3A video terminal that communicated using a
+300 baud modem. The screen would refresh slower than you could think, so the
+editor was optimized to send complex actions with a terse syntax. Also, the
+reason why Vi is completely controlled using the keyboard is that, well, the
+mouse was not invented until several years later.
+
+Independently of which was the original reasoning behind those decisions, some
+of them still work very well in today's world. The fact that you can use Vi
+using only the keyboard is what actually gives it its main edge. Some others,
+maybe not so much. Being able to compose complex commands was introduced to
+improve the user experience in a context where the computer would take some time
+to answer. In that scenario, you wanted to pre-package your ideas in bigger
+chunks, so the computer could do more in each interaction. Nowadays, it is the
+computer the one that is waiting for you and that optimization may not be as
+useful as it used to be.
+
+Vem is a text editor that tries to optimize the user experience in a computer
+that answers faster that you can think. It removes any command grammar, makes
+commands to answer instantaneously and distributes them spatially to optimize
+the use of both hands. Vem tries to be as simple as possible but not simpler.
+Vem's goal is to allow you to focus on your code rather than on your editor
+while still giving you a rich, keyboard driven editing experience.
 
 
-Quick Q&A
----------
+Quickstart
+----------
 
-**It sounds interesting, but still, why?**
+To run Vem use::
 
-It may be very difficult to see the benefits of Vem until you try it. It is all
-about the user experience. The best possible editing experience, from the point
-of view of Vem, is one in which: your text editor gives you total control over
-your code while at the same time it feels like it is not there and you don't
-have to think about it. Vim gives you the first. Vem gives you the second on
-top.
+    vem [filename]
 
-**How similar are Vim and Vem?**
+Vem, like Vim, is a modal editor with two main modes: *command* (or *normal*)
+and *insert*. When the editor is in command mode, each key press performs an
+action. When it is in insert mode, it behaves like most text editors and
+text gets inserted as you type on the keyboard. To start insert mode, press
+`i`. To go back to command mode to execute additional actions, press `Ctrl-o`.
 
-Under the hood Vem *is* Vim. It is just a set of configuration files that sits
-on top of it. So most of the functionality is exactly the same. What really
-changes how you interact with the editor using the keyboard commands.
+Some basic actions in command mode are:
 
-ps. That said, if you are a Vim old-timer with Vim's keyboard hardwired in your
-brain, Vem can potentially drive you crazy (well, at least at the beginning...)
+.. container:: tabs layout
 
-**I'm a Vim user, can I still use my .vimrc file and plugins?**
+    .. container:: tab qwerty
 
-In Vem, it is called ``vemrc`` so you can run Vem and Vim without interfering
-each other. But, yes, definitely. Vem doesn't change any internals of Vim, so
-setting configuration options still works the same.
+        .. container:: quickstart
 
-Also, all Vim plugins are compatible with Vem as long as they don't remap
-global keys.
+            .. container:: quickstart-item
 
-**How difficult is Vem to use and learn?**
+                **Modes**
 
-Vem is probably easier than Vim and more difficult than most conventional
-editors. Vem, like Vim, is about making an initial learning effort to get more
-of it in the long run.
+                    :`i`: insert mode
+                    :`Ctrl-o`: command mode
 
-Vim's Features
---------------
+                **File handling**
 
-When you use Vem, you can enjoy many of Vim's great features:
+                    :`W`: open file
+                    :`s`: save file
+                    :`x`: close file/exit Vem
 
-.. container:: cols cols2
+                    :`t`: select next file
+                    :`T`: select previous file
+
+                **Searching**
+
+                    :`/`: search
+                    :`u`: find previous
+                    :`m`: find next
+
+            .. container:: quickstart-item
+
+                **Movement**
+
+                    :`h`: cursor left
+                    :`j`: cursor down
+                    :`k`: cursor up
+                    :`l`: cursor right
+
+                ..
+
+                    :`,`: beginning of line
+                    :`.`: end of line
+
+                ..
+
+                    :`a`: beginning of document
+                    :`z`: end of document
+
+                **Undo/Redo**
+
+                    :`q`: undo
+                    :`Q`: redo
+
+    .. container:: tab qwertz
+
+        .. container:: quickstart
+
+            .. container:: quickstart-item
+
+                **Modes**
+
+                    :`i`: insert mode
+                    :`Ctrl-o`: command mode
+
+                **File handling**
+
+                    :`W`: open file
+                    :`s`: save file
+                    :`x`: close file/exit Vem
+
+                    :`t`: select next file
+                    :`T`: select previous file
+
+                **Searching**
+
+                    :`/`: search
+                    :`u`: find previous
+                    :`m`: find next
+
+            .. container:: quickstart-item
+
+                **Movement**
+
+                    :`h`: cursor left
+                    :`j`: cursor down
+                    :`k`: cursor up
+                    :`l`: cursor right
+
+                ..
+
+                    :`,`: beginning of line
+                    :`.`: end of line
+
+                ..
+
+                    :`a`: beginning of document
+                    :`y`: end of document
+
+                **Undo/Redo**
+
+                    :`q`: undo
+                    :`Q`: redo
+
+    .. container:: tab azerty
+
+        .. container:: quickstart
+
+            .. container:: quickstart-item
+
+                **Modes**
+
+                    :`i`: insert mode
+                    :`Ctrl-o`: command mode
+
+                **File handling**
+
+                    :`Z`: open file
+                    :`s`: save file
+                    :`x`: close file/exit Vem
+
+                    :`t`: select next file
+                    :`T`: select previous file
+
+                **Searching**
+
+                    :`/`: search
+                    :`u`: find previous
+                    :`m`: find next
+
+            .. container:: quickstart-item
+
+                **Movement**
+
+                    :`h`: cursor left
+                    :`j`: cursor down
+                    :`k`: cursor up
+                    :`l`: cursor right
+
+                ..
+
+                    :`,`: beginning of line
+                    :`;`: end of line
+
+                ..
+
+                    :`q`: beginning of document
+                    :`w`: end of document
+
+                **Undo/Redo**
+
+                    :`a`: undo
+                    :`A`: redo
+
+These are just the essential commands you need to know to be able to do a
+minimal edit to a file. For a more complete overview of what you can do with
+Vem, check the `Quick start </docs/quick-start.html>`__ page.
+
+**Note:** By default, Vem is configured to map commands to the ``QWERTY``
+keyboard layout. If you use ``QWERTZ`` or ``AZERTY``, you need to configure your
+layout in `Vem's settings file </config/essentials/keyboard-layout.html>`_.
+
+Screenshots
+-----------
+
+.. container:: overview-screenshots cols cols2
+
+    .. figure:: /static/img/home/thumbs/vem-multiple-windows.png
+        :class: screenshot
+        :target: /static/img/home/vem-multiple-windows.png
+
+        Quake source code edited in multiple windows
+
+    .. figure:: /static/img/home/thumbs/vem-diff.png
+        :class: screenshot
+        :target: /static/img/home/vem-diff.png
+
+        Diff between two files
+
+    .. figure:: /static/img/home/thumbs/vem-live-regex.png
+        :class: screenshot
+        :target: /static/img/home/vem-live-regex.png
+
+        Hilighting of regex matches as-you-type
+
+    .. figure:: /static/img/home/thumbs/vem-fuzzy-finder.png
+        :class: screenshot
+        :target: /static/img/home/vem-fuzzy-finder.png
+
+        Fuzzy file search in Git source code
+
+
+Features
+--------
+
+Since Vem is just a configuration on top of Vim, you can enjoy many of the
+features that Vim offers:
+
+.. container:: feature-list cols cols2
 
     .. container:: feature
 
@@ -165,7 +346,7 @@ When you use Vem, you can enjoy many of Vim's great features:
 
             <svg class="icon"><use xlink:href="/static/icons/feather-sprite.svg#feather"/></svg>
 
-        Very **fast** and **lightweight**. A full-blown Vem session takes tens
+        Very **fast** and **lightweight**. A full-blown session takes tens
         of MB instead of hundreds
 
     .. container:: feature
@@ -206,7 +387,8 @@ When you use Vem, you can enjoy many of Vim's great features:
 Credits
 -------
 
-Vem makes use of code provided by Vim's community for some of its features:
+Vem makes use of some Vim plugins to power some of its features. Many
+thanks to the authors of the following great projects:
 
     * `vim-pathogen <https://github.com/tpope/vim-pathogen>`_
       by Tim Pope
@@ -227,10 +409,10 @@ Vem makes use of code provided by Vim's community for some of its features:
     * `vim-sayonara <https://github.com/mhinz/vim-sayonara>`_
       by Marco Hinz
 
-Many thanks to their authors for such great projects!
 
 License
 -------
 
-Vem is `open source <https://github.com/pacha/vem/>`_ and released under the `MIT license <https://github.com/pacha/vem/blob/master/LICENSE>`_.
+Vem is `open source <https://github.com/pacha/vem/>`_ and free. Vem is released
+under the `MIT license <https://github.com/pacha/vem/blob/master/LICENSE>`_.
 

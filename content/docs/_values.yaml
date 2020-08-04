@@ -2,33 +2,41 @@
 title: "Vem :: Documentation"
 layout: two-cols
 menu:
-  - title: Quickstart
+  - title: Tutorial
     url: /docs/quick-start.html
-  - title: User's Guide
+  - title: "User's Guide"
     url: /docs/users-guide/index.html
     entries:
-      - title: Files and buffers
+      - title: Starting Vem
+        url: /docs/users-guide/starting-vem.html
+      - title: Modes
+        url: /docs/users-guide/modes.html
+      - title: Buffers (Files)
         url: /docs/users-guide/buffers.html
-      - title: Movements
-        url: /docs/users-guide/movements.html
+      - title: Moving
+        url: /docs/users-guide/moving.html
+      - title: Undoing
+        url: /docs/users-guide/undoing.html
       - title: Selecting
         url: /docs/users-guide/selecting.html
       - title: Clipboard
         url: /docs/users-guide/clipboard.html
       - title: Deleting
         url: /docs/users-guide/deleting.html
-      - title: Undoing
-        url: /docs/users-guide/undoing.html
-      - title: Comments
-        url: /docs/users-guide/comments.html
+      - title: Commenting
+        url: /docs/users-guide/commenting.html
       - title: Formatting
         url: /docs/users-guide/formatting.html
-      - title: Searching and replacing
-        url: /docs/users-guide/search.html
-      - title: Insert mode
+      - title: Surrounding Pairs
+        url: /docs/users-guide/surrounding-pairs.html
+      - title: Insert Mode
         url: /docs/users-guide/insert-mode.html
-      - title: Command-line mode
+      - title: Command-line Mode
         url: /docs/users-guide/command-line-mode.html
+      - title: Searching
+        url: /docs/users-guide/searching.html
+      - title: Substituting
+        url: /docs/users-guide/substituting.html
       - title: Windows
         url: /docs/users-guide/windows.html
       - title: Tabpages
@@ -43,18 +51,16 @@ menu:
         url: /docs/users-guide/folds.html
       - title: Tags
         url: /docs/users-guide/tags.html
-      - title: Diff mode
-        url: /docs/users-guide/diff-mode.html
-      - title: Spell checking
+      - title: Diffs
+        url: /docs/users-guide/diffs.html
+      - title: Spell Checking
         url: /docs/users-guide/spell-checking.html
-      - title: Quickfix lists
+      - title: Quickfix Lists
         url: /docs/users-guide/quickfix.html
-      - title: Finding files
-        url: /docs/users-guide/finding-files.html
-      - title: Linting
-        url: /docs/users-guide/linting.html
-      - title: Compiling
-        url: /docs/users-guide/compiling.html
+      - title: Vim compatibility
+        url: /docs/users-guide/vim-compatibility.html
+      - title: Getting Help
+        url: /docs/users-guide/getting-help.html
   - title: Basic cheat sheet
     url: /docs/cheat-sheets/index.html
     entries:

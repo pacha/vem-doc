@@ -1,13 +1,15 @@
 
-Language Features
-=================
+.. role:: key
+.. default-role:: key
 
-Most of the act
+Language Servers
+================
+
 A great deal of actions that you can perform with the editor are independent of
 the language of the file which you're editing. You can perform most movements
 and text transformations no matter if you're working on a C, JavaScript or Rust
-file. There are, however, some features such as ``Go to definition``, ``Show
-function/method signature`` or ``Display syntax errors`` that require specific
+file. There are, however, some features such as *Go to definition*, *Show
+function/method signature* or *Display syntax errors* that require specific
 knowledge about the syntax of the language that you're using.
 
 By default, only language agnostic features are supported by Vem. To support
@@ -45,8 +47,8 @@ How to use a Language Server
 
 To make use of a Language Server you need to go through the following steps:
 
-》 Install a LSP plugin for Vim
-"""""""""""""""""""""""""""""""
+Install a LSP plugin for Vim
+""""""""""""""""""""""""""""
 
 To give Vim the ability to talk to a language server, a plugin is necessary.
 There are many available:
@@ -69,20 +71,28 @@ installed on the system, while `LanguageClient-neovim
 Depending on which plugin you decide to use, you may need to install the
 required ones.
 
-.. Note:: Neovim offers native LSP support from version 0.5.0, so this first
+.. admonition:: Installing coc.nvim
+
+   Check the `page on coc.nvim </plugins/popular-plugins/coc-nvim.html>`__ in
+   the plugin documentation section for more info on how to install this LSP
+   plugin in Vem.
+
+.. admonition:: Native LSP support in Neovim
+
+    Neovim offers native LSP support from version 0.5.0, so this first
     step may not be necessary if you're using that version.
     (https://neovim.io/doc/user/lsp.html)
 
-》 Install a Language Server
-""""""""""""""""""""""""""""
+Install a Language Server
+"""""""""""""""""""""""""
 
 There are Language servers available for most programming languages. Check
 https://langserver.org/ or
 https://microsoft.github.io/language-server-protocol/implementors/servers/
 for a complete list.
 
-》 Configure the LSP plugin to use your Language Server
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Configure the LSP plugin to use your Language Server
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Once you have your Language Sever installed, you have to configure the LSP
 plugin so it can access it. Usually the information that you have to provide is:
@@ -99,8 +109,8 @@ Language Servers and others allow you to install an additional plugin with the
 configuration you need for popular ones too. Follow the instructions of your LSP
 plugin to know how to do this in your case.
 
-》 Set the key mappings to use the LSP features
-"""""""""""""""""""""""""""""""""""""""""""""""
+Set the key mappings to use the LSP features
+""""""""""""""""""""""""""""""""""""""""""""
 
 Most LSP plugins don't define specific key mappings for the LSP features so they
 don't clash with mappings that are already defined by the user. Instead, they
@@ -129,13 +139,3 @@ this list as a starting point):
     :`C` `F`: Format document
     :`C` `R`: Rename identifier
 
-
-List of language features
--------------------------
-
-.. TODO
-
-Diagnostics / Linting
----------------------
-
-.. TODO

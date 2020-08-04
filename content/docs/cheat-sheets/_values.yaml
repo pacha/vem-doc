@@ -1,15 +1,5 @@
 
 title: "Vem :: Cheat Sheets"
-layout: two-cols
-css_files:
-  - /static/css/vem.css
-menu:
-  - text: qwerty
-    url: /cheat-sheets/qwerty.html
-  - text: qwertz
-    url: /cheat-sheets/qwertz.html
-  - text: azerty
-    url: /cheat-sheets/azerty.html
 
 # To take screenshots of the cheat sheets:
 # * Open the corresponding *-map.html file

@@ -10,33 +10,41 @@
 .. role:: y
 .. role:: yi
 
-Working with multiple files
-===========================
+Buffers (Files)
+===============
 
-Similarly to almost any other editor, Vem allows you to edit several files at
-the same time and jump between them quickly.
+You can open several files in Vem by passing them in the command line::
 
-When several files are open, they show up at the top line of the screen:
+    vem file1.txt file2.txt file3.txt
+
+Or by opening them inside the editor:
+
+    * Using a file browser (`W`)
+
+    * Using a fuzzy finder (`Space` `w`)
+
+    * Using the ``:e(dit)`` command in the command-line (``:e <path-to-file>``)
+
+Once more than one file is open, their names are displayed at the top of the
+screen in the *tabline*:
 
 .. image:: /static/img/screenshots/buffers-in-tabline.png
     :class: screenshot
     :target: /static/img/screenshots/buffers-in-tabline.png
 
-One thing that can be a bit confusing to newcomers is that *files* are
-referred as *buffers* in Vim when they are loaded into memory. Many editors use
-the term *files* to refer to both the actual file in disk and the copy that is
-loaded in memory when you're editing it. Vim, however, uses *files* to refer to
-the files on disk and *buffers* to refer to the copy in memory. When you save
-your document, you usually say that you're saving your buffer contents into its
-associated file. Vem uses the same terminology as Vim by extension.
+.. admonition:: Files and Buffers
 
-There are three main ways to open a file:
+    One thing that can be a bit confusing to newcomers is that Vim refers to
+    *files* —at least to how the concept is commonly understood in many other
+    editors— as *buffers*. While most editors don't, Vim differentiates, in its
+    terminology, between content in disk (a file) and content that is loaded in
+    memory when you are editing it (a buffer). So, when you save, you technially
+    are saving the contents of the buffer back to its associated file.
 
-    * Using a file browser (`W`)
-
-    * Using a fuzzy finder (`w`)
-
-    * Typing its path in the command-line (``:e <path-to-file>``)
+    Actually, internally, a buffer is a bit more than just the content of the
+    file in memory, but for the day to day that distinction is not necessarily
+    important. Just keep in mind its meaning as it is a very frequent term in
+    the context of Vim.
 
 
 Using the file browser
@@ -80,11 +88,12 @@ And finally, you can close the file browser with:
 
 In addition to opening a file with `l`, you can use:
 
-    :`Ctrl-v`: open file under cursor in a new vertical window
+    :`Ctrl-]`: open file under cursor in a new vertical window
 
     :`Ctrl-_`: open file under cursor in a new horizontal window
 
-    :`Ctrl-t`: open file under cursor in a new tab
+    :`Ctrl-^`: open file under cursor in a new tabpage (you can use `Ctrl-6` if
+        you can't press `Ctrl-^` in your keyboard).
 
 How to use windows and tabs is explained in `Windows </docs/windows.html>`_ and
 `Tabpages </docs/tabpages.html>`_.
@@ -96,16 +105,16 @@ Using the fuzzy finder
 A very fast way to open files when you already now their paths and/or names is
 to use the fuzzy finder.
 
-To open it, use `w`:
+To open it, use `Space` `w` (ie. first `Space` then `w`):
 
 .. image:: /static/img/screenshots/fuzzy-finder.png
     :class: screenshot
     :target: /static/img/screenshots/fuzzy-finder.png
 
 Once open, it will display a list of files and a prompt at the bottom of the
-screen. The list of files will change as you type. It will display all the files
-in your project or subdirectories that match the text that you're entering. The
-most probable match is shown highlighted at the bottom of the list.
+screen. The list of files will change as you type showing those that match the
+text that you're entering. The most probable match is shown highlighted at the
+bottom of the list.
 
 After entering the text, when you get the file that you're looking for
 highlighted, you can just open it pressing `<Enter>`.
@@ -144,11 +153,14 @@ Other available keyboard commands are:
 
     :`Ctrl-r`: refresh fuzzy finder (reload list of files)
 
-    :`Ctrl-v`: open selected file in a new vertical window
+    :`Ctrl-]`: open selected file in a new vertical window
 
     :`Ctrl-_`: open selected file in a new horizontal window
 
-Again, how to use windows and tabs is explained in `Windows
+    :`Ctrl-^`: open selected file in a new tabpage (you can use `Ctrl-6` if
+        you can't press `Ctrl-^` in your keyboard).
+
+How to use windows and tabs is explained in `Windows
 </docs/windows.html>`_ and `Tabpages </docs/tabpages.html>`_.
 
 Finally, to close the fuzzy finder you can use `Ctrl-o`, `Ctrl-c` or `Esc`:
@@ -162,7 +174,7 @@ Most recently used files
 In case you want to reopen a file you have recently worked with, you can also
 open the fuzzy finder with:
 
-    :`Space` `w`: most recently used files (fuzzy finder)
+    :`Space` `W`: most recently used files (fuzzy finder)
 
 In this case, the fuzzy finder works as described before but will only display
 the last ten most recently used files. To open one of them, just type part of
@@ -222,10 +234,20 @@ Alternatively, you can also use the fuzzy finder to jump between your buffers:
 
 To open it use:
 
-    :`Ctrl-t`: switch to buffer (fuzzy finder)
+    :`w`: switch to buffer (fuzzy finder)
 
-This is particularly useful when you have a larger amount of files open.
+This is particularly useful when you have a larger amount of files open as you
+can switch to another buffer by typing only a few characters of its name.
 
+You can also use the fuzzy finder to create a new window or tabpage displaying
+the selected buffer:
+
+    :`Ctrl-]`: open new vertical window with selected buffer
+
+    :`Ctrl-_`: open new horizontal window with selected buffer
+
+    :`Ctrl-^`: open new tabpage with selected buffer (you can use `Ctrl-6` if
+        you can't press `Ctrl-^` in your keyboard).
 
 Saving and closing
 ------------------

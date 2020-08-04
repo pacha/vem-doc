@@ -1,12 +1,19 @@
 
 title: "Vem :: Plugins"
 layout: two-cols
-css_files:
-  - /static/css/vem.css
 menu:
-  - text: Overview
-    url: /plugins/index.html
-  - text: Fugitive.vim
-    url: /plugins/vim-fugitive.html
-  - text: Coc.nvim
-    url: /plugins/coc-nvim.html
+  - title: Plugin installation
+    url: /plugins/installation.html
+  - title: Popular plugins
+    url: /plugins/popular-plugins/index.html
+    entries:
+      - title: fzf.vim
+        url: /plugins/popular-plugins/vim-fzf.html
+      - title: vim-fugitive
+        url: /plugins/popular-plugins/vim-fugitive.html
+      - title: coc.nvim
+        url: /plugins/popular-plugins/coc-nvim.html
+      - title: vim-devicons
+        url: /plugins/popular-plugins/vim-devicons.html
+  - title: Included plugins
+    url: /plugins/included-plugins.html

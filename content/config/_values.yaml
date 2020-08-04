@@ -1,45 +1,52 @@
 
 title: "Vem :: Config"
 layout: two-cols
-css_files:
-  - /static/css/vem.css
 menu:
-  - text: Vem configuration
-    url: /config/index.html
-  - text: Keyboard layout
-    url: /config/keyboard-layout.html
-  - text: Cursor shape
-    url: /config/cursor-shape.html
-  - text: Indentation
-    url: /config/indentation.html
-  - text: Encoding
-    url: /config/encoding.html
-  - text: Line endings
-    url: /config/line-endings.html
-  - text: Color schemes
-    url: /config/color-schemes.html
-  - text: Non-visible characters
-    url: /config/non-visible-characters.html
-  - text: Visual tips
-    url: /config/color-schemes.html
-  - text: Configuration per filetype
-    url: /config/configuration-per-filetype.html
-  - text: Autocompletion
-    url: /config/autocompletion.html
-  - text: Autoformatting
-    url: /config/autoformatting.html
-  - text: Code browsing
-    url: /config/code-browsing.html
-  - text: Compiling
-    url: /config/compiling.html
-  - text: Git integration
-    url: /config/git-integration.html
-  - text: Grepping (finding in files)
-    url: /config/grepping.html
-  - text: Automatic linting
-    url: /config/linting.html
-  - text: Spell checking
-    url: /config/spell-checking.html
+  - title: vemrc
+    url: /config/vemrc.html
+  - title: Essentials
+    url: /config/essentials/index.html
+    entries:
+      - title: Keyboard layout
+        url: /config/essentials/keyboard-layout.html
+      - title: Indentation
+        url: /config/essentials/indentation.html
+      - title: Line endings
+        url: /config/essentials/line-endings.html
+      - title: Encoding
+        url: /config/essentials/encoding.html
+      - title: Git integration
+        url: /config/essentials/git-integration.html
+      - title: Configuration per filetype
+        url: /config/essentials/configuration-per-filetype.html
+  - title: Visuals
+    url: /config/visuals/index.html
+    entries:
+      - title: Cursor shape
+        url: /config/visuals/cursor-shape.html
+      - title: Color schemes
+        url: /config/visuals/color-schemes.html
+      - title: Non-visible characters
+        url: /config/visuals/non-visible-characters.html
+      - title: Visual tips
+        url: /config/visuals/visual-tips.html
+  - title: Language features
+    url: /config/language-features/index.html
+    entries:
+      - title: Language servers
+        url: /config/language-features/language-servers.html
+      - title: Autocompletion
+        url: /config/language-features/autocompletion.html
+      - title: Autoformatting
+        url: /config/language-features/autoformatting.html
+      - title: Code browsing
+        url: /config/language-features/code-browsing.html
+      - title: Compiling
+        url: /config/language-features/compiling.html
+      - title: Automatic linting
+        url: /config/language-features/linting.html
+      - title: Language syntax files
+        url: /config/language-features/syntax.html
 
 
 

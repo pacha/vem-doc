@@ -8,7 +8,7 @@ Formatting
 This sections of Vem's documentation covers many actions that allow you to
 format and edit your code or text. It is important to get familiar with them as
 they may save you from a lot of manual work and considerably reduce the number
-of times that you have to switch between Normal and Insert mode.
+of times that you have to switch between normal and insert mode.
 
 Adding white-space
 ------------------
@@ -20,16 +20,16 @@ having to leave Normal mode:
 
     .. container:: tab qwerty 
 
-        :`(`: insert space before the cursor
-        :`)`: insert space after the cursor
+        :`Tab`: indent current line or text selection
+        :`Shift-Tab`: unindent current line or text selection
 
         :`y`: insert blank line above the cursor
         :`n`: insert blank line below the cursor
 
-        :`Tab`: indent current line or text selection
-        :`Shift-Tab`: unindent current line or text selection
+        :`(`: insert space before the cursor
+        :`)`: insert space after the cursor
 
-        :`Enter`: insert newline character
+        :`Enter`: insert newline character (also in normal mode)
 
 
     .. container:: tab qwertz

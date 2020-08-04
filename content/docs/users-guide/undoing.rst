@@ -2,7 +2,7 @@
 .. role:: key
 .. default-role:: key
 
-Undoing changes
+Undoing Changes
 ===============
 
 The commands to undo and redo changes are:

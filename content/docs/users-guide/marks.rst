@@ -8,7 +8,24 @@ Marks
 You can define places in your documents where you can quickly jump back to by
 using marks.
 
-To set marks and make the cursor jump to them, use:
+The (Q)uick mark
+----------------
+
+The easiest way of setting and jumping to a mark is using the commands:
+
+    :`Space` `Backespace`: set Quick mark
+
+    :`Backspace`: jump to Quick mark
+
+Once set, you can jump to the Quick mark from anywhere in the same document or
+from a different buffer. You can also reset the Quick mark as many times as you
+want.
+
+Letter marks
+------------
+
+You can set more than one mark at a time. Actually, you can set a mark for each
+letter, both lowercase and uppercase. To do so, use:
 
     :`!` `{letter}`: set a mark using ``{letter}``.
 
@@ -16,21 +33,22 @@ To set marks and make the cursor jump to them, use:
 
 For example, `\`` `a` jumps to a mark that has been set with `!` `a`.
 
-You can use both uppercase and lowercase letters for marks, however, keep in
-mind that they work differently:
+While you can use both lowercase and uppercase letters, keep in mind that they
+behave differently:
 
-* **Lowercase letters** set marks to jump within a buffer. For example, you can
-  have an ``a`` mark in two different buffers.
+* **Uppercase letters** are shared across all buffers. That means that
+  there can be only one ``A`` mark in a given moment. Uppercase marks,
+  therefore, allow you to jump between buffers.
 
-* **Uppercase letters** set marks to that you can use to jump between buffers.
-  Therefore there can only be a single mark ``A`` across all buffers.
+* **Lowercase letters** are unique to each buffer. That is, each buffer has its
+  own set of lowercase marks and the ``a`` mark in a buffer can be different
+  from the ``a`` mark in another one.
 
-There are two shortcut key mappings to use the ``C`` mark:
+.. admonition:: The Quick mark is just the Q mark
 
-    :`C`: set the ``C`` mark (same as `!` `C`)
-
-    :`Backspace`: jump to the ``C`` mark (same as `\`` `C`)
-
-There's nothing special about the ``C`` mark other than it is useful to set
-temporary locations to quickly jump back to since it is very easy to set.
+   There's nothing special about the Quick mark other than it can be set and
+   jump to with convenient key bindings. Every time that you set the Quick mark
+   what you're doing is to set the ``Q`` mark. That means that `Space`
+   `Backspace` is effectively the same as `!` `Q`, and `Backspace` is the
+   same as `\`` `Q`.
 

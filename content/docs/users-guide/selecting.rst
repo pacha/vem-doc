@@ -2,25 +2,25 @@
 .. role:: key
 .. default-role:: key
 
-Selecting text
-==============
+Selecting
+=========
 
-Like for everything else in Vem, to visually select text —to copy/cut it or to perform
-an action on it afterwards— you use the keyboard.
+This section explains how to select text with Vem in order to copy, cut, delete
+or perform any other action over it.
 
 .. image:: /static/img/screenshots/visual-mode.png
     :class: screenshot
     :target: /static/img/screenshots/visual-mode.png
 
-When you have text selected, the editor is said to be in **visual mode**, and
-some of the keys change their behaviour to act upon the current selection.
-
+Once you select text, the editor enters **visual mode**, the selected text is
+highlighted and the new mode name is shown on the statusline. In this mode,
+many keyboard commands are the same as in normal mode —for example, all
+movements— but some other change so they operate over the entire selection.
 
 Selection types
 ---------------
 
-Many editors allow you to create a single type of selection, in Vim you can
-create 3 different ones:
+There are three kinds of selections that you can define:
 
     * Characterwise selection
 
@@ -31,7 +31,7 @@ create 3 different ones:
 Characterwise selection
 """""""""""""""""""""""
 
-This is the most common type of selection among different editors. It consists
+This is the most common type of selection among other editors. It consists
 in a selection that goes between two arbitrary characters in the text:
 
 .. parsed-literal::
@@ -60,28 +60,28 @@ the position of the cursor:
     :class: terminal
 
     **Programs must be written for people to read,**
-    *a*\ **nd only incidentally for machines to execute.**
+    **and only incid**\ *e*\ **ntally for machines to execute.**
 
 To create a selection of this kind, press `G` and then perform any movement up
 or down with the cursor:
 
     :`G` ``<up/down movement>``: create linewise selection
 
-This kind of selection makes extremely fast to move blocks of code, so it is a
-good idea to use it every time you need to perform an action over entire lines.
+This kind of selection is very convenient when working with code since it allows
+you to operate over entire blocks very quickly.
 
 
 Blockwise selection
 """""""""""""""""""
 
-The final type of selection is *blockwise*. With this one, you can define an
+The final type of selection is blockwise. With this one, you can define an
 arbitrary rectangle in the screen that you can copy/cut, delete or modify:
 
 .. parsed-literal::
     :class: terminal
 
-    **Programs** must be written for people to read,
-    **and onl**\ *y* incidentally for machines to execute.
+    Programs **must be written** for people to read,
+    and only **incidentally f**\ *o*\ r machines to execute.
 
 To start a blockwise selection press:
 
@@ -122,21 +122,22 @@ And you press, `Ctrl-h`\ -> `Ctrl-o`, the result is:
 Deselecting and Reselecting
 ---------------------------
 
-Once you have a selection defined, you can discard it with:
+Once you have a selection defined, you can discard it with switching back to
+normal mode with `Ctrl-o` or with:
 
-    :`Space`: remove current text selection
+    :`Space` `Space`: (in visual mode) remove current text selection
 
 And if there's no selection defined, you can bring back the last active
 selection with:
 
-    :`Space` `g`: reselect latest selected text
+    :`Space` `Space`: (in normal mode) reselect latest selected text
 
 
 Quick selections
 ----------------
 
 While you can select any arbitrary area just using movement commands, in
-practice it is much more common to use commands that allow to perform quick
+practice it is much more common to use actions that allow to perform quick
 selections over text objects.
 
 For example, if the cursor is over the ``s`` of ``string_network``:
@@ -163,6 +164,15 @@ Then, you can perform the following actions:
     :class: terminal
 
     mask = **int(string_network.split('/')[1]**\ *)*
+
+..
+
+    :`Space` `g`: select camel-case or underscore delimited word
+
+.. parsed-literal::
+    :class: terminal
+
+    mask = int(**strin**\ *g*\ _network.split('/')[1])
 
 ..
 
@@ -200,10 +210,12 @@ Other quick selections are:
 
     :`Space` `a`: select all
 
+    :`Space` `p`: select current paragraph (text between two blank lines)
+
+    :`Space` `P`: select last pasted or inserted text
+
     :`Space` `G`: select text in current line (not including preceding or
         trailing white-space)
-
-    :`Space` `p`: select last pasted or inserted text
 
 .. admonition:: Other text objects
 

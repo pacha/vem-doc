@@ -1,6 +1,0 @@
-
-Spell checking
-==============
-
-TODO
-

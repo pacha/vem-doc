@@ -79,17 +79,17 @@ and restore them with::
 Automatic folding
 -----------------
 
-By default, folds are created manually and lost when the file is closed (unless
-previously saved with ``:mkview``. However, you can also have your code
-automatically folded if that's how you prefer to work. To do so, there are two
-main options:
+By default, folds are created manually. However, they are lost when the file is
+closed (unless previously saved with ``:mkview``) and creating them may be a bit
+cumbersome in some cases. That's why you can also have your code automatically
+folded. To do so, there are two main options:
 
-    * Having folds defined using indent: this is very practical as it works
+    * **Having folds defined using indent**: this is very practical as it works
       with any programming language or file type as long as the content is
       correctly indented.
 
-    * Having folds defined using the file content's structure (ie. the
-      syntax of the programming language): this method can yield better results
+    * **Having folds defined using the file content's structure (ie. the
+      syntax of the programming language)**: this method can yield better results
       as the folds are created based on the content itself. However, it may
       require that you install an external plugin for your file type.
 
@@ -104,7 +104,7 @@ You can include these lines (or similar ones) in your ``.vemrc`` file if you
 want to enable indent folding for every single file. If you want to enable it
 for a particular file type or you want to have different values for different
 ones, then replace ``set`` by ``setlocal`` and follow the instructions in
-`Configuration per filetype </configuration.html#filetype-configuration>`_ to
+`Filetype configuration </config/essentials/configuration-per-filetype.html>`_ to
 know where to place these options for your particular type of file.
 
 To enable folding based on the structure of the file content, Vim offers both
@@ -128,7 +128,7 @@ This allows you to focus on the parts that show differences.
 
 These folds are normal ones and can be managed with the same keyboard commands
 described in this section. In particular, for diffs, it is very useful to toggle
-the folds open and close with `za` when you need to inspect their contents.
+the folds open and close with `ba` when you need to inspect their contents.
 
 To know more about comparing files check the `Diff Mode </docs/diff.html>`_
 section.

@@ -22,8 +22,8 @@ a
 
 h2
 {
-    font-size: 1.2em;
-    margin: 2em 0 1em 0;
+    font-size: 1.3em;
+    margin: 2.5em 0 1em 0;
 }
 
 h3
@@ -54,6 +54,13 @@ img.center
     margin: 0 auto;
 }
 
+p.caption
+{
+    margin-top: 0.5em;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
 p
 {
     margin: 1.2em 0;
@@ -71,6 +78,13 @@ p
 {
     @include box;
     font-size: 0.95em;
+
+    pre.literal-block
+    {
+        margin: 1vw 2vw;
+        padding: 0;
+        background-color: none;
+    }
 }
 
 .admonition
@@ -82,25 +96,52 @@ p
     {
         font-weight: bold;
     }
+
+    pre.literal-block
+    {
+        margin: 1vw 2vw;
+        padding: 0;
+        background-color: none;
+    }
+}
+
+.admonition-list
+{
+    .admonition
+    {
+        margin: 0;
+    }
+
+    .admonition-title
+    {
+        margin: 1em 0;
+    }
+
+    ul
+    {
+        margin: 0 0 1em 0;
+        padding: 0;
+        list-style-type: none;
+    }
 }
 
 span.literal
 {
-    font: 0.9rem monospace;
-    color: #555555;
+    font: 0.8rem monospace;
+    color: $turquoise;
     white-space: nowrap;
     border-radius: 3px;
-    background-color: #f2f2f2;
+    background-color: $turquoise-light;
     padding: 2px 4px;
 }
 
 pre.literal-block
 {
     font: 0.85em monospace;
-    margin: 2vw 0;
-    padding: 0.5vw 1vw;
+    margin: 1.5vw 0;
+    padding: 1vw;
     border-radius: 2px;
-    color: #333333;
+    color: $turquoise;
     background-color: #f2f2f2;
     overflow: auto;
 }
@@ -130,6 +171,17 @@ ul
 blockquote
 {
     margin: 0;
+}
+
+dl
+{
+    dd
+    {
+        p
+        {
+            margin: 0.5vw 0 1vw 0;
+        }
+    }
 }
 
 .browsing-links
@@ -189,26 +241,3 @@ blockquote
     }
 }
 
-
-// ul
-// {
-//     padding: 0;
-//     margin: 1vw 1vw 1vw 0;
-//     list-style-type: none;
-//     font-size: 0.8rem;
-
-//     li
-//     {
-//         margin-bottom: 1vw;
-
-//         a
-//         {
-//             text-decoration: none;
-//         }
-
-//         &:hover
-//         {
-//             text-decoration: underline;
-//         }
-//     }
-// }

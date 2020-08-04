@@ -8,18 +8,22 @@ Scroll
 Sometimes you need to see the lines that are directly above or below the ones
 that are being displayed in the current window. For example, the cursor can be
 at the bottom line of the screen and, while you're editing it, you may need to
-know the contents of the next lines.
+peek to the following ones to gather more context.
 
-Rather than stopping editing the current line and moving the cursor to make the
-window scroll and then go back to the point where you were editing, you can use
-the following key commands to scroll the window:
+In a situation similar to that one, rather than stop editing and start moving
+the cursor to adjust the scroll, you can place the current line in the middle of
+the window with:
 
-    :`Ctrl-e`: scroll window up
-    :`Ctrl-d`: scroll window down
+    :`Space` `.`: place current line in the middle of the window
 
-    :`~`: place current line in the middle of the window
-    :`Space` `e`: place current line at the top of the window
-    :`Space` `d`: place current line at the bottom of the window
+With that you can see the context of the line both above and below. However, if
+you need more control on the scroll you can also use:
+
+    :`Ctrl-e`: scroll window up (line by line)
+    :`Ctrl-a`: scroll window down (line by line)
+
+    :`Space` `U`: place current line at the top of the window
+    :`Space` `M`: place current line at the bottom of the window
 
 .. Note:: Unlike other editors, in Vim/Vem you can't scroll the viewport to a
    location where the cursor is not shown. So, typically, if you want to see

@@ -1,6 +1,0 @@
-
-Git integration
-===============
-
-TODO
-

@@ -51,12 +51,19 @@ keyboard:
         </div>
     </div>
 
-If you don't have text selected, the action is performed on the current line.
-That is very useful to copy or move independent lines.
-
 Once you have text in the clipboard, you can paste it with:
 
     :`p`: paste
+
+The **copy**, **cut** and **delete** actions operate on the current selection if
+there is one or the current line if there's none. This is very practical to work
+with single lines in code. For example, to move a single line you only have to
+press `d` when the cursor is over it and `p` on the place you want to move it
+to.
+
+
+Secondary clipboard
+-------------------
 
 In Vem you have two clipboards. To access the second one, use the uppercase
 version of the above actions:
@@ -105,21 +112,21 @@ the cursor to that position:
 
     .. container:: tab qwerty 
 
-        :`Ctrl-p` `,`: paste at the beginning of the line (linewise)
+        :`Ctrl-p` `,`: paste at the beginning of the line —first non-blank
+            character (linewise)
         :`Ctrl-p` `.`: paste at the end of the line (linewise)
 
     .. container:: tab qwertz
 
-        :`Ctrl-p` `,`: paste at the beginning of the line (linewise)
+        :`Ctrl-p` `,`: paste at the beginning of the line —first non-blank
+            character (linewise)
         :`Ctrl-p` `.`: paste at the end of the line (linewise)
 
     .. container:: tab azerty
 
-        :`Ctrl-p` `,`: paste at the beginning of the line (linewise)
+        :`Ctrl-p` `,`: paste at the beginning of the line —first non-blank
+            character (linewise)
         :`Ctrl-p` `;`: paste at the end of the line (linewise)
-
-As it happens with the `,` movement, here the beginning of the line means the
-first non-blank character on that line.
 
 
 Pasting different selection types
@@ -149,6 +156,8 @@ current and the next line (without modifying them):
     444                             333
     555                             555
 
+Notice that you don't have to *open* blank lines to paste a linewise selection.
+
 Blockwise selections are pasted by displacing all characters around the block
 that is being pasted, as you could expect.
 
@@ -160,7 +169,7 @@ Sometimes you may want to paste text keeping the same level of indentation as th
 current line. That is useful when you move pieces of code to a inner or outer
 level of indentation. To paste and indent at the same time, use:
 
-    :`Ctrl-p` `Space`: paste with the same level of indentation as the current line
+    :`Ctrl-p` `Tab`: paste with the same level of indentation as the current line
 
 
 .. admonition:: Using the system clipboard
@@ -173,7 +182,8 @@ level of indentation. To paste and indent at the same time, use:
     copy/cut/paste text inside Vem but you won't be able to share it with other
     applications.
 
-    To check if your Vim/Neovim installation supports using the system clipboard
+    In general, the graphical version of Vim always provides system clipboard
+    suppport. To check if Vim or Neovim in terminal mode provide support,
     follow the following instructions:
 
     **Vim**
@@ -261,10 +271,4 @@ When you start paste mode, the status line will display it. And as long as you
 remain in paste mode, you'll be able to correctly paste using the terminal
 clipboard shortcut. Press `Ctrl-^` or `Ctrl-6` again to exit paste mode so the
 editor can format the text correctly when you enter it manually.
-
-.. Note:: Notice that this is important only for terminal Vim (GUI versions are
-   not affected) and only for pasting using the terminal clipboard shortcut. If
-   your Vim installation supports reading the system clipboard (see above), then
-   you can just use Vem's paste command, which will work just fine in all
-   situations.
 

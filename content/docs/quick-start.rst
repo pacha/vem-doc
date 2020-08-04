@@ -1,169 +1,690 @@
 
 .. role:: key
 .. default-role:: key
+.. |br| raw:: html
 
-Quick start
-===========
+    <br/>
 
-To start Vem, use the ``vem`` command in the command line::
+Quickstart
+==========
 
-    vem [filename]
-
-After launching Vem, you'll notice that its user interface is very simple:
+When you launch Vem, you are welcomed with an extremely minimalistic interface:
+no toolbars, no buttons and no menus. The entire space is reserved for just one
+thing, the editor, except for a single line of information at the bottom of the
+screen. And, if you start typing something, chances are that strange
+things start happening.
 
 .. image:: /static/img/screenshots/new-doc.png
     :class: screenshot
     :target: /static/img/screenshots/new-doc.png
 
-At the bottom of the screen you can see two special lines. The fist one is the
-*statusline*, which shows information about the current file and the very last
-one is the *command-line*, which displays messages and that you can use to enter
-commands for searching, replacing, sorting and more.
+Other applications with these interface elements may be easier to discover using
+the mouse, even when using them for the first time. Vem requires some initial
+learning though. The good news is that it is not difficult and this tutorial
+will guide you through all you need to know to use it.
 
-Vem, like Vim, is a modal editor. And if you're not familiar with this kind of
-editors, you may be surprised to see that nothing will get inserted if you type
-some text now. That's because when Vem starts, it is in **normal mode** (also
-known as **command mode**) and the keyboard is prepared to accept commands from
-you. For example, if you press `s` the current file will be saved and if you
-press `f`, you'll delete the word under the cursor.
+Vem is a kind-of-odd relative of the Vi family of editors, and it is build on
+top of Vim. If you haven't ever used a modal editors before, you're in for a
+wild ride. They are very different from most conventional text editors, but they
+can also change the way you write code. They can take a bit to get used to, but
+one advantage of Vem is that it is arguably easier and more intuitive than the
+rest of the family members.
 
-If you press `i`, **insert mode** will be activated and the editor will behave
-like most common text editors and text will be inserted as you type. To go back
-to normal mode to execute more commands, press `Ctrl-o`.
+If you have used Vim before then Vem has the potential to get on your nerves,
+specially at first. Vem commands are placed in very different locations and they
+behave differently than in Vim. If you have developed any muscle memory for Vim,
+then you'll need some time to adapt. But persist. It doesn't actually take that
+long and you may end up preferring Vem's simplicity.
 
-To exit Vem, press `x` in normal mode —this will close the current file or exit
-Vem if it is the last one.
+This tutorial doesn't explain all available Vem commands, but it provides all
+the essential ones. The complete set is explained in the `User's Guide
+</docs/users-guide/index.html>`__.
 
 
-Switching modes
----------------
+Starting Vem
+------------
 
-More in detail, to change from normal to insert mode you can use `i` or `o`:
+Vem is just a set of configuration files on top of Vim or Neovim. That means
+that you need one of those editors being installed in your system before you can
+use Vem. Head to `Download </download.html>`_ for more details on how to install
+them, and Vem, in your system.
 
-    :`i`: start insert mode before current cursor position.
+Once you have Vem and Vim (or Neovim) installed, you can start it by running the
+following command in a terminal::
 
-    :`o`: start insert mode after current cursor position.
+    vem [filename]
 
-And to go back to normal mode:
+This will start Vem using Vim as the underlying editor. You can also use the
+``nvem`` and ``gvem`` commands to start Vem using either Neovim and the graphical
+version of Vim respectively. Which one to use is mostly a question of personal
+preference. From the point of view of Vem's features, there is no
+difference between them.
 
-    :`Ctrl-o` or `Esc`: start normal mode.
+To exit Vem, just press the ``x`` key:
 
-Vim's traditional key to activate normal mode is `Esc`. Vem uses `Ctrl-o`
-because it is generally easier to reach in the keyboard.
+    :`x`: close file (and exit Vem if it is the last open one)
 
-In a normal editing session, one typically switches back and forth between
-normal and insert mode.
 
-One thing to note about modes is that, in normal mode, a key can have assigned
-up to three commands: the lowercase letter (`t`), the uppercase letter (`T`) and
-the key pressed together with ``Control`` —Vem doesn't make use of any other
-modifier key like ``Alt`` or ``Command``. Symbols and numbers also have commands
-assigned.
+.. admonition:: Configuration
 
-In insert mode, only ``Ctrl-<key>`` combinations perform actions.
+    Vem's configuration options can be set by adding a text file at::
 
-.. admonition:: Current mode display
+        ~/.config/vem/vemrc
 
-    The current mode is displayed at the beginning of the status line. That way
-    you always know which mode is active. One common practice is to change the
-    shape of the cursor depending on the active mode, with a square block (█)
-    for normal mode and a thin line (│) for insert mode. That is a very
-    intuitive way of keep track on which mode you're in. To know how to set up
-    this feature check the `configuration section
-    </configuration.html#cursor-shape>`_ of the documentation.
+    Most of the time you don't need to set any special configuration to start
+    working with Vem, but you can also copy the example configuration file at
+    `Configuration </config/index.html>`_, which contains some basic options,
+    and adapt it to your needs. This is particularly important if you use an
+    ``AZERTY`` or ``QWERTZ`` keyboard layout. In that case, you need to specify
+    which one you're using so Vem can place actions in the correct positions
+    across the keyboard.
 
-Basic actions
--------------
+Modes: a short explanation
+--------------------------
 
-Once you're in normal mode, almost every key press in the keyboard performs an
-editing action. That means that are a large number of them available to you.
-Some actions are more frequently used than others though and you don't need to
-learn all them in one go to start using Vem.
+Vem is intended to be used using just the keyboard. To be able to define all the
+actions that can be performed, Vem, like Vim, relies on *modes*. If you haven't
+used a modal editor before, just think of it as an editor in which the keyboard
+can be used in two different ways: you can use it to insert text —like you would
+do in most editors— or you can use it as a sort of *control panel* where each
+key performs an action. Each one of these two options is known as a *mode* and
+you can switch from one to another at any time.
 
-These are some basic actions that you may use all the time:
+The names of these two main modes are —there are others but these are the most
+important:
 
-**Saving and closing**
+* **Insert mode**: characters get inserted into the text as you type (except
+  ``Ctrl-<key>`` combinations, which perform actions).
 
-    :`s`: save (a prompt will appear if your document doesn't have a name yet)
+* **Command mode**: each key press performs a different action. This applies to
+  both lowercase and uppercase letters, symbols and ``Ctrl-<key>`` combinations.
+  (For example, as we saw before, pressing `x` closes the current file and exits
+  Vem if it is the last one). Command mode is most commonly referred to as
+  **Normal mode**.
 
-    :`x`: close/quit (a prompt will appear if you have unsaved changes)
+Being able to insert text and switch back to normal mode at any time allows you
+to have a large number of commands/actions available at your fingertips.
+Although it may take some days to get used to it at first, switching modes
+allows you to be extremely precise and fast when you develop some muscle memory.
+You can, quite literally, perform actions at the same speed that you type.
 
-**Undoing changes**
+.. admonition:: Vem and Vim differences
 
-.. container:: tabs key-summary
+    With some small exceptions, all we have said so far is applicable to both
+    Vem and Vim. The difference between them lies on how they define the
+    commands available in command mode: while Vim defines a larger number of
+    commands and many of them follow a small grammar that requires several
+    keystrokes per action, Vem defines a smaller, simpler set of commands that
+    are executed straight away after a key press in most cases.
 
-    .. container:: tab qwerty 
+    For example, in Vim you can create composite commands like ``5gUw`` (which
+    makes the next 5 words uppercase), while in Vem each action is a keystroke
+    in itself.
+
+    Which approach is better is mostly a question of personal preference. Vem
+    design stance is that it is better for the editor to be smaller and simpler,
+    so it can stay out of the way and allow the user to focus 
+
+The basics
+----------
+
+So far so good, but you may be wondering how to *actually* use Vem. Let's jump
+straight into it:
+
+* Vem starts in normal mode by default.
+* To start **insert mode**, so you can insert text, press `i` (or `o` to start
+  inserting at the *right side* of the current character instead of the left one).
+* To go back to **normal mode** press `Ctrl-o`.
+* Once in normal mode press `s` to save the current document and `x` to close it
+  and exit.
+
+If you press `s` and you didn't specify a filename in the command line, you'll
+be prompted for one at the bottom of the screen.
+
+With just those commands (`i`, `Ctrl-o`, `s`, `x`) you can already edit any
+file, however, they won't be making your editing life much better. For
+that you'll need more commands. This is how the most important ones are
+distributed across the keyboard:
+
+.. container:: tabs layout
+
+    .. container:: tab qwerty
+
+        .. figure:: /static/img/cheat-sheets/qwerty-basic.png
+            :class: screenshot
+            :target: /static/img/cheat-sheets/qwerty-basic.png
+
+    .. container:: tab qwertz
+
+        .. figure:: /static/img/cheat-sheets/qwertz-basic.png
+            :class: screenshot
+            :target: /static/img/cheat-sheets/qwertz-basic.png
+
+    .. container:: tab azerty
+
+        .. figure:: /static/img/cheat-sheets/azerty-basic.png
+            :class: screenshot
+            :target: /static/img/cheat-sheets/azerty-basic.png
+
+If you take a look at that chart, you may notice how there doesn't seem to be a
+connection between the name of the commands and the letter of the key they are
+assigned to in many cases. For example, in the case of **Undo** and
+**Redo** the assigned letter is:
+
+.. container:: tabs layout key-summary
+
+    .. container:: tab qwerty
 
         :`q`: undo
-
         :`Q`: redo
 
     .. container:: tab qwertz
 
         :`q`: undo
-
         :`Q`: redo
 
     .. container:: tab azerty
 
         :`a`: undo
-
         :`A`: redo
 
-**Finding text in the document**
+That is because, in Vem, commands are distributed spatially across the keyboard
+so that related actions are clustered together and to optimize the use of both
+hands for actions that are usually executed sequentially.
+
+Looking at all those commands at once may be a bit overwhelming if you haven't
+used a modal text editor before, but don't worry, remembering them and their
+positions is actually pretty easy. Also, the meaning of some of them may not
+look very clear at first. That chart is more useful when you know a bit more
+about what the commands do, which is what the next sections will quickly cover.
+
+But first let's summarize the commands we know already:
+
+.. container:: tabs layout key-summary
+
+    .. container:: tab qwerty
+
+        :`Ctrl-o`: start normal mode
+
+        ..
+
+        :`i`: start insert mode (left of current character)
+        :`o`: start insert mode (right of current character)
+
+        ..
+
+        :`s`: save
+        :`x`: close (and exit if it is the last document)
+
+        ..
+
+        :`q`: undo
+        :`Q`: redo
+
+    .. container:: tab qwertz
+
+        :`Ctrl-o`: start normal mode
+
+        ..
+
+        :`i`: start insert mode (left of current character)
+        :`o`: start insert mode (right of current character)
+
+        ..
+
+        :`s`: save
+        :`x`: close (and exit if it is the last document)
+
+        ..
+
+        :`q`: undo
+        :`Q`: redo
+
+    .. container:: tab azerty
+
+        :`Ctrl-o`: start normal mode
+
+        ..
+
+        :`i`: start insert mode (left of current character)
+        :`o`: start insert mode (right of current character)
+
+        ..
+
+        :`s`: save
+        :`x`: close (and exit if it is the last document)
+
+        ..
+
+        :`a`: undo
+        :`A`: redo
+
+.. admonition:: The Esc key
+
+    If you're familiar with Vim, you may be wondering why Vem uses `Ctrl-o` to
+    start normal mode instead of the typical `Esc` key. In fact, `Ctrl-o` and
+    `Esc` are aliases in Vem and you can use them interchangeably. The reason
+    why the former is favored over the second is because the `Esc` key was
+    placed in a much easier location to reach in the keyboard of the machine
+    where the original Vi editor —the precursor of Vim— was developed. In almost
+    every modern keyboard, though, `Esc` is located in the far right/top corner,
+    which is an awkward placement for a key that has to be pressed constantly.
+
+    *Note*: Some users remap the location of the `Esc` key in their systems, for
+    example, swapping its functionality with `Caps Lock`. If that's your case,
+    you can still use it in Vem as `Esc` and `Ctrl-o` are functionally
+    equivalent.
+
+Moving around
+-------------
+
+Basic movements
+"""""""""""""""
+
+You can use Vim's traditional movement keys, ``hjkl``, to move the cursor:
+
+.. container:: featured-keys
+
+    .. container:: featured-key
+
+        .. container:: featured-label
+
+            h
+
+        .. container:: featured-action
+
+            ←
+
+    .. container:: featured-key
+
+        .. container:: featured-label
+
+            j
+
+        .. container:: featured-action small-text
+
+            ↓
+
+    .. container:: featured-key
+
+        .. container:: featured-label
+
+            k
+
+        .. container:: featured-action small-text
+
+            ↑
+
+    .. container:: featured-key
+
+        .. container:: featured-label
+
+            l
+
+        .. container:: featured-action
+
+            →
+
+They move the cursor in the same way that arrow keys do. Many newcomers to
+Vim/Vem find difficult to get used to them at first since the don't look very
+intuitive. It requires some initial effort to get familiar with them but it is
+very important to do it, mainly for two reasons: first, to move the cursor, you
+don't have to take your hands away from the home row of the keyboard and,
+second, many other actions in Vem are placed in the keyboard according to these
+movements (remember that Vem distributes commands in a spatial way across the
+keyboard). In sum, using these keys is part of an efficient use of Vem.
+
+For example, the uppercase version of these letters just performs a larger
+movement in the same direction:
+
+    :`H`: previous word
+
+    :`L`: next word
+
+    :`J`: next paragraph (next blank line)
+
+    :`K`: previous paragraph (previous blank line)
+
+And you can also use them modified with `Ctrl` to start **insert mode** at the left,
+right, above and below the current line:
+
+.. container:: directional-mappings
+
+    .. container:: key
+
+        Insert at new line above cursor
+
+        `Ctrl-k`
+
+    .. class:: symbol
+
+        ↑
+
+    .. container:: central-row
+
+        .. container:: key
+
+            `Ctrl-h`
+
+            Insert at start of line
+
+        .. class:: symbol
+
+            ←
+
+        .. class:: symbol
+
+            ∙
+
+        .. class:: symbol
+
+            →
+
+        .. container:: key
+
+            `Ctrl-l`
+
+            Insert at end of line
+
+    .. class:: symbol
+
+        ↓
+
+    .. container:: key
+
+        `Ctrl-j`
+
+        Insert at new line below cursor
+
+Other horizontal movements
+""""""""""""""""""""""""""
+
+These are movements that you can use to move inside the current line:
+
+.. container:: tabs key-summary
+
+    .. container:: tab qwerty 
+
+        :`0`: move to first column
+
+        :`,`: move to start (first non-blank character)
+
+        :`.`: move to end
+
+    .. container:: tab qwertz
+
+        :`0`: move to first column of current line
+
+        :`,`: move to beginning of current line (first non-blank character)
+
+        :`.`: move to end of current line
+
+    .. container:: tab azerty
+
+        :`0`: move to first column of current line
+
+        :`,`: move to beginning of current line (first non-blank character)
+
+        :`;`: move to end of current line
 
 
-    :`/` or `-`: search downwards (from current cursor position to end of document)
+Other vertical movements
+""""""""""""""""""""""""
 
-    :`?`: search upwards (from current cursor position to beginning of document)
+These movements will perform larger jumps up and down the current document:
 
-    :`m`: (after searching) find next occurrence
+.. container:: tabs key-summary
 
-    :`u`: (after searching) find previous occurrence
+    .. container:: tab qwerty 
 
-    :`_`: search occurrences of the word under the cursor
+        :`U`: page up
 
-    :`Ctrl-r`: remove highlighting of occurrences of the last search term
+        :`M`: page down
 
-When you search, the cursor will be placed in the very last line of Vem's
-interface, prefixed with the operator that you just used (`/` or `?`). Just type
-there the text to search and press enter to trigger the search itself. You can
-use regular expressions for more complex searches.
+        :`a`: move to the top of the file
 
-Search is always case sensitive, to make it case insensitive prefix your search
-term with ``\c``. For example, the following term will match ``Foo`` or ``FOO``::
+        :`z`: move to the bottom of the file
 
-    /\cfoo
+    .. container:: tab qwertz
 
-**Moving the cursor**
+        :`U`: page up
 
-    :`h`: left
+        :`M`: page down
 
-    :`j`: down
+        :`a`: move to the top of the file
 
-    :`k`: up
+        :`y`: move to the bottom of the file
 
-    :`l`: right
+    .. container:: tab azerty
 
-Vem is not designed to be used with the arrow keys (although you *can* use them)
-but the traditional Vim cursor movement ones. If you haven't used Vim or Vem
-before, they may not look very intuitive and it might take some time to get
-used to them. However, they bring some advantages:
+        :`U`: page up
 
-* Your hand doesn't have to leave the home row at any moment. There's no need to
-  move it back and forth from the home row to the arrow key cluster.
+        :`M`: page down
 
-* In Vem, the location of many actions in the keyboard is related to these four
-  keys. So, using them helps to remember all surrounding actions and to be
-  really efficient with Vem.
+        :`q`: move to the top of the file
 
-.. container:: note
+        :`w`: move to the bottom of the file
 
-    One additional advantage of using ``hjkl`` as direction keys is that they
-    have been used as such since the times or the original Vi editor, which
-    means that there are many common applications such as document readers, file
-    browsers or email clients that support them.
+Going back
+""""""""""
 
+You can make the cursor go back to the location it was before a jump
+with:
+
+    :`R`: jump back. Pressing it multiple times takes the cursor through the
+          jump history, making it visit all the locations in the current file
+          you have jumped to sequentially.
+
+For example, you could jump to the beginning of a source code file, add some
+import/include/require statement and go back to the initial location by pressing
+`R` to continue editing where you were previously.
+
+.. admonition:: Movements in insert mode
+
+   Generally, you activate normal mode to perform any kind of cursor movement or
+   search. However, sometimes, you're in insert mode and just want to move the
+   cursor a couple of characters left or right, or just place it on the line
+   below. For those cases, you don't have to leave insert mode to activate
+   normal mode to then go to insert mode again. You can just move the cursor
+   (and remain in insert mode) with:
+
+   .. class:: key-summary
+
+        :`Ctrl-h`: (*insert mode*) left
+
+        :`Ctrl-j`: (*insert mode*) down
+
+        :`Ctrl-k`: (*insert mode*) up
+
+        :`Ctrl-l`: (*insert mode*) right
+
+
+Selecting text and using the clipboard
+--------------------------------------
+
+Selecting text is different than in many conventional text editors because there
+are three kinds of selections:
+
+**Characterwise selection** is the most common selection type in many other
+editors, and it is defined between two arbitrary characters in the document:
+
+.. parsed-literal::
+    :class: terminal
+
+    Programs **must be written for people to read,
+    and only incidentally for machine**\ *s* to execute.
+
+To start a characterwise selection, press `G` and perform any horizontal
+movement (eg. `h`, `l`, `H`, `L`, `.`, ...).
+
+**Linewise selection** is used to select full lines independently of the position
+of the cursor. It is very useful when working with code as you can work with
+blocks of lines very quickly:
+
+.. parsed-literal::
+    :class: terminal
+
+    **Programs must be written for people to read,**
+    **and only incid**\ *e*\ **ntally for machines to execute.**
+
+To make a linewise selection, press `G` and perform any vertical movement (eg.
+`j`, `k`, `J`, `K`, `U`, `M`, ...).
+
+**Blockwise selection** is used to define an arbitrary square of text in the
+document and it is commonly used to perform advanced edits over multiple lines:
+
+.. parsed-literal::
+    :class: terminal
+
+    Programs **must be written** for people to read,
+    and only **incidentally f**\ *o*\ r machines to execute.
+
+To start a blockwise selection press `G` `G` (twice).
+
+To know in which selection mode you are at any given moment, you can look at the
+status line at the bottom of the screen. There the mode indicator will state
+``Visual`` for characterwise selections, ``V-Line`` for linewise selections and
+``B-Line`` for blockwise selections.
+
+.. Important::
+
+    You can perform any vertical or horizontal movement in both characterwise and
+    linewise selections, which defines which type they are is just the **first**
+    movement.
+
+    Also, you can cycle through the selection types by repeatedly pressing `G`.
+
+Deselecting and Reselecting
+"""""""""""""""""""""""""""
+
+To stop a selection and go back to normal mode and to reselect the latest
+selected text use:
+
+    :`Space` `Space`: (in visual mode) deselect
+
+    :`Space` `Space`: (in normal mode) reselect
+
+Quick selections
+""""""""""""""""
+
+While you can create any arbitrary selection using `G` and movement actions, in
+practice it is very common to select specific text objects. For those, you can
+use the following shortcuts:
+
+    :`g`: select word
+
+    :`g` `g`: like `g` but for all characters surrounded by white space under the
+        cursor (including parenthesis, brackets and punctuation)
+
+    :`Ctrl-g`: select text between enclosing quotes, parenthesis or brackets.
+        Repeated presses to `Ctrl-g` expands the selection to the next
+        enclosing pair of quotes, parenthesis or brackets.
+
+    :`Space` `a`: select all
+
+    :`Space` `p`: select current paragraph
+
+There are many more selecting actions. Take a look at the `Selecting
+</docs/users-guide/selecting.html>`_ section for a complete list.
+
+Using the clipboard
+"""""""""""""""""""
+
+Now that you know how to define a selection, it is a good moment to learn how
+to use the clipboard. Some basic actions that you can perform over a selection
+are:
+
+    :`e`: copy
+
+    :`d`: cut
+
+    :`c`: delete
+
+    :`p`: paste
+
+As you can see, Vem does not use the common `Ctrl-x`, `Ctrl-c` and `Ctrl-v`
+shortcuts. This is on purpose, and although it may feel strange not to use them
+at first, after a bit of practice you'll notice how fast and comfortable are
+Vem's mappings in comparison.
+
+Another thing to take into account is that `p` behaves differently depending on
+the kind of selection that was copied or cut. For example, if you have a
+linewise selection, lines will be pasted entirely without altering the existing
+ones (you don't have to *open* space for them). Characterwise selections behave
+closer to how they do in other text editors.
+
+.. admonition:: Working with single lines
+
+    The **copy**, **cut** and **delete** actions operate on the current
+    selection if there is one or the current line if there's none. This is very
+    practical to work with single lines in code. For example, to move a single
+    line you only have to press `d` when the cursor is over it and `p` on the
+    place you want to move it to.
+
+Using the secondary clipboard
+"""""""""""""""""""""""""""""
+
+Vem has two clipboards. The main clipboard (accessed with `e`, `d` and `p`) is
+connected to the system one so you can copy and paste information from/to other
+applications. The secondary clipboard allows you to have an additional piece of
+text in memory without overwriting whatever you have in the main one. You can
+access it with:
+
+    :`E`: copy (secondary clipboard)
+
+    :`D`: cut (secondary clipboard)
+
+    :`P`: paste (secondary clipboard)
+
+.. admonition:: Using the system clipboard
+
+    By default, Vem uses the system clipboard to allow you to copy and paste
+    from/to different applications, even when working in the terminal. However,
+    for this to work, the Vim or Neovim instance that Vem uses to run needs to
+    provide support for it.
+
+    If you can't copy or paste from/to other applications, check the `Clipboard
+    <docs/users-guide/clipboard.html>`_ section to setup the system correctly.
+
+Directional paste
+"""""""""""""""""
+
+Unlike other editors, Vem pastes content after the cursor by default (both for
+characterwise and linewise selections). To paste before the cursor you can use:
+
+    :`Ctrl-p` `h`: paste to the left of the cursor
+    :`Ctrl-p` `k`: paste above the cursor
+
+Deleting text
+-------------
+
+You don't need to switch to insert mode to be able to delete text. Most of the
+time this is something you can do quicker from normal mode.
+
+The basic actions to delete text are:
+
+    :`I`: delete character to the left of the cursor (ie. *backspace*)
+
+    :`O`: delete character to the right of the cursor (ie. *delete*)
+
+And, as you saw in the previous section:
+
+    :`c`: delete line or selection (if one active)
+
+Changing text
+"""""""""""""
+
+In other cases, you may want to delete some text and start insert mode
+immediately after (what it is known as *changing* in Vim terms). In the same way
+that the `g` key allows to perform quick selections, `f` allows you to to
+perform quick changes:
+
+    :`f`: delete word under cursor and start insert mode
+
+    :`F`: delete from cursor to the end of line and start insert mode
+
+    :`Ctrl-f`: delete text between next enclosing quotes, parenthesis or
+        brackets and start insert mode
 
 Command line
 ------------
@@ -207,427 +728,335 @@ will jump to that line number.
 
 Once you execute a command in the command line, you'll be back to normal mode.
 
-Opening, saving and closing
+.. Admonition:: Movement in the command line
+
+   In the same way that you can move in insert mode with the combination of
+   `Ctrl` and the basic movement keys: `h`, `j`, `k` and `l`, you can use these
+   mappings to perform actions in the command line:
+
+    :`Ctrl-h`: move cursor to the left
+    :`Ctrl-l`: move cursor to the right
+    :`Ctrl-k`: show previous command (in command line history)
+    :`Ctrl-j`: show next command (in command line history)
+
+   `Ctrl-k` and `Ctrl-j` are particularly useful key combinations since they
+   allow you to repeat previous commmands and searches without having to type
+   them again. Also, if you type the beginning of a command and then press
+   `Ctrl-k`, the closest command in history that matches with that start will be
+   shown, so you can type a couple of characters and directly get the command
+   you are looking for without having to go through the rest of the history.
+
+
+Searching
+---------
+
+To search inside a document use:
+
+    :`/` or `-`: start search
+
+.. Admonition:: Using / or -
+
+    `/` is the key traditionally used in Vim for searching, and it is located at
+    the bottom right of the keyboard (next to the right shift key) in QWERTY US
+    layouts. In some other layouts, its position is taken by `-`. While, in Vem,
+    you can indistinctly use one or the other, it is recommended that you use
+    whichever key is located in that position (lower right) on your keyboard
+    since that is a very convenient placement for such a frequently used key.
+
+When you start a search, the cursor will be placed in the command line and
+you'll be able to type your search term:
+
+.. image:: /static/img/screenshots/search-small.png
+    :class: screenshot
+    :target: /static/img/screenshots/search-small.png
+
+Matches in the text will be highlighted as you type and, when you press `Enter`,
+the cursor will be placed in the first occurrence after its position.
+
+Once you're back to the text you can jump to other matches:
+
+    :`m`: find next occurrence of latest search
+
+    :`u`: find previous occurrence of latest search
+
+Or you can reset the highlighting when you don't need it anymore:
+
+    :`Ctrl-r`: remove highlighting of occurrences of the last search term
+
+Some relevant facts to note are:
+
+    * You can use regular expressions in your search (see the `Searching and
+      replacing </docs/users-guide/search.html>`_ section for more information about
+      the syntax).
+
+    * Searches are case sensitive by default. To make case insensitive search, prefix your
+      term with ``\c``. For example::
+
+        /\cfoo
+
+      will match both ``Foo`` and ``FOO``.
+
+    * To search in the reverse direction (from the current cursor position to
+      the beginning of the document), you can use `?` instead of `/` or `-`.
+
+Searching the word under cursor
+"""""""""""""""""""""""""""""""
+
+Sometimes, you just want to find the next occurrence of a term that is already
+present in the document. In those cases, just place the cursor on top of the
+word to search and use:
+
+    :`_`: search occurrences of the word under the cursor
+
+
+Status line
+-----------
+
+By now, you probably have noticed that the line just on top of the command line
+shows the current active mode and the path of the file you're editing. That is
+the **statusline**:
+
+.. image:: /static/img/screenshots/statusline.png
+    :class: screenshot
+    :target: /static/img/screenshots/statusline.png
+
+In addition, it provides other pieces of information. For instance, the cursor
+position is displayed at the far right with the format::
+
+    <line>:<column>  <percentage>
+
+where ``percentage`` is the percentage of progress within the document.
+
+Also, there are the three pieces of information that are not immediately obvious
+in a text file just by looking at it but that define how it is internally
+formatted:
+
+* Indentation type and size (``tabs`` or ``spaces``)
+* File enconding (eg. ``utf-8``, ``latin-1`` or ``cp1251``)
+* Newline type (Unix: ``LF``, Windows: ``CRLF``, Mac pre-OSX: ``CR``)
+
+.. admonition:: Displaying the Git branch
+
+    You can also display the current Git branch in the statusline. See
+    `Git Integration </config/essentials/git-integration.html>`_ for more
+    information.
+
+
+Working with multiple files
 ---------------------------
 
-There are two keyboard commands to open a file:
+In our examples so far, we have been operating with a single file. Vem offers,
+though, several commands to work very efficiently with multiple of them.
+
+The basic commands to open, save and close files are:
 
 .. container:: tabs key-summary
 
     .. container:: tab qwerty 
 
-        :`w`: open file (fuzzy finder)
+        :`W`: open file
 
-        :`W`: open file (file browser)
+        :`s`: save file
+
+        :`x`: close file (and exit Vem if it is the last one)
 
     .. container:: tab qwertz
 
-        :`w`: open file (fuzzy finder)
+        :`W`: open file
 
-        :`W`: open file (file browser)
+        :`s`: save file
+
+        :`x`: close file (and exit Vem if it is the last one)
 
     .. container:: tab azerty
 
-        :`z`: open file (fuzzy finder)
+        :`Z`: open file
 
-        :`Z`: open file (file browser)
+        :`s`: save file
 
-With the *file browser*, you can choose the file to open by locating it in the
-file system, whereas the *fuzy finder* allows you to find the file you
-want to open by typing part of its path.
+        :`x`: close file (and exit Vem if it is the last one)
 
-You can also use the command line to open files directly::
+Using the file browser
+""""""""""""""""""""""
 
-    :e <path-to-your-file>
+When you indicate that you want to open a file, a file browser is displayed:
 
-The path can be either absolute or relative to the current directory, which
-typically is the directory where you started Vem (you can display it with
-``:pwd`` and change it with ``:cd``).
+.. image:: /static/img/screenshots/file-browser.png
+    :class: screenshot
+    :target: /static/img/screenshots/file-browser.png
 
-Once open, both the *file browser* and the *fuzzy finder* offer some custom
-commands:
+As you can see, the file browser is very minimalistic and uses the same window
+where you edit your files. Don't let this simple appearance mislead you:
+while the functionality is very basic —pretty much just opening files— it is
+extremely fast to use, in particular because you can use any movement key that
+you use when editing files.
 
-**File browser**
+There are two movement keys that change their behavior when used inside the file
+browser though:
 
-When you open the file browser, the contents of the file you're
-editing will be replaced by a listing of the contents of the directory where the
-file that you were editing is stored. Use the ``hjkl``
-movement keys to browse through the file system:
+    :`h`: go to parent directory
 
-    :`h`: go up one directory
+    :`l`: open the file under the cursor (if the cursor is over a directory, the
+        directory contents are displayed instead)
 
-    :`j`: move the cursor down
+Other than that you can go up and down, jump to the top or the bottom of the
+list or search inside it using the same keys that you would use normally. When
+you find the file you want to open just press `l` or `Enter`.
 
-    :`k`: move the cursor up
+A couple of additional commands that are very useful inside the file browser
+are:
 
-    :`l`: open the directory or file depending on what is under the cursor
+    :`Ctrl-h`: toggle the display of hidden files on / off
 
-..
+    :`Ctrl-r`: refresh content
 
-    :`Ctrl-r`: refresh listing
+To leave the file browser without opening a file, use:
 
     :`x`: close file browser
 
-**Fuzzy finder**
+.. Admonition:: Buffers and Files
 
-When you open the fuzzy finder, you'll be shown a list of files and a prompt at
-the bottom of the screen. The list of files will change as you type. It will display
-all the files in your project or subdirectories that match the text that you're
-entering. The most probable match is shown highlighted at the bottom of the
-list.
+    When using Vem, you may notice that open files are frequently referred to as
+    *buffers* (for example, that is how the fuzzy finder names them). *Buffer* is
+    the term traditionally used in Vim to refer to a document in memory —as
+    opposed to a *file*, which is the content persisted on disk. For example,
+    when you create a new document in the editor, it constitutes a buffer that
+    is not associated yet to a file in disk. Most editors —and most applications
+    for that matter— don't make this distinction in their terminology and refer,
+    in general, to both documents in memory and in disk as *files*. In this
+    documentation, that second and more extended meaning is used, but be aware of
+    the meaning of the term *buffer* since it is profusely used in Vim's
+    documentation and in many commands of the command line.
 
-After entering the text, when you get the file that you're looking for
-highlighted, you can just open it pressing `<Enter>`.
+Creating a new file
+"""""""""""""""""""
 
-One very practical feature of the fuzzy finder is that you don't have to type
-all the characters in the file path to find a match. For example, if you want to
-open a file in ``foo/bar/my-file.ext``, you can type:
+You can create a new file with:
 
-    * ``my-file``
+    :`Ctrl-t`: new file
 
-    * ``foobarmy-file``
+When a new file is created it doesn't have a name nor it is saved on disk. When
+you press `s` to save for the first time you will be prompted for its filename.
 
-    * ``barfile``
+.. Admonition:: the :w command
 
-You can use the following key mappings with the fuzzy finder:
+    When you're prompted to enter the filename of a new file what you're
+    executing is just the ``:w <filename>`` command. You can actually execute
+    that command at any moment for any file. If you don't specify any path, the
+    current file is saved (ie. same as pressing `s`). If you specify a path
+    though, a new file with the contents of the current document will be created
+    in disk.
 
-    :`Ctrl-j`: move the highlighted selection down (so you can open a file other
-               than the already highlighted one)
+Switching files
+"""""""""""""""
 
-    :`Ctrl-k`: move the highlighted selection up (so you can open a file other
-               than the already highlighted one)
+When there are multiple open files in the editor, the **tabline** —a line at the
+top showing all their names— is displayed, and the current file is highlighted:
 
-    :`Ctrl-h`: move the cursor in the prompt line to the left
+.. image:: /static/img/screenshots/tabline.png
+    :class: screenshot
+    :target: /static/img/screenshots/tabline.png
 
-    :`Ctrl-l`: move the cursor in the prompt line to the right
+To switch from one file to another you can use:
 
-..
+    :`t`: next file
 
-    :`Ctrl-r`: refresh fuzzy finder (reload list of files)
+    :`T`: previous file
 
-    :`Ctrl-o`: close fuzzy finder
+Or you can directly jump to a particular file by pressing:
 
-The fuzzy finder is very practical to open files in projects that you know well
-very quickly with a few key strokes.
+.. container:: tabs key-summary
 
+    .. container:: tab qwerty 
 
-**Selecting the file to edit**
+        :`w`: switch buffer
 
-Once you have multiple files open, you can select which file to edit with:
+    .. container:: tab qwertz
 
-    :`t`: next buffer in the buffer list
+        :`w`: switch buffer
 
-    :`T`: previous buffer in the buffer list
+    .. container:: tab azerty
 
-    :`Ctrl-t`: jump to buffer by typing part of the name (same as the fuzzy
-               finder for opening files, but just for the current buffers).
+        :`z`: switch buffer
 
-When you have multiple files open, their names will be displayed at the top of
-the screen. Sometimes you may want to change the order in which they appear. You
-can do so with:
+When you do so, a new prompt and a list of results appear at the bottom of the
+editor. That is the fuzzy finder and it allows you to type the name of the file
+that you want to jump to:
 
-    :`{`: move current buffer to the left
+.. image:: /static/img/screenshots/switch-buffer.png
+    :class: screenshot
+    :target: /static/img/screenshots/switch-buffer.png
 
-    :`}`: move current buffer to the right
+The fuzzy finder allows you to type a few characters that can be found anywhere
+in the filename and will show the files that match your input characters in the
+top list. The characters don't have to necessarily be at the beginning of
+the filename nor be consecutive.
 
-**Saving and closing**
+Once the filename you're looking for is highlighted in the top list of results,
+you can press `Enter` to switch to it.
 
-To save and close buffers/files, you can use:
+If the file you're looking for is already being shown in the result list you can
+select it by using the following key mappings before pressing `Enter`:
 
-    :`s`: save file
+    :`Ctrl-k`: move up the result list in fuzzy finder
 
-    :`x`: close file (exit if last one)
+    :`Ctrl-j`: move down the result list in fuzzy finder
 
-    :`Space` `x`: close all files and exit
+This system works specially well when you have many open files because jumping
+from one to another just requires a few keystrokes.
 
-When you close a file with unsaved changes you get prompted if you want to save
-or discard them. If you want to save all changes in all files you can also use
-the command::
+To close the fuzzy finder without switching from the current file, use `Ctrl-o`
+or `Esc`.
 
-    :wall
+.. Admonition:: Order of the files in the tabline
 
-before closing all the files.
+   By default, files are displayed in the tabline in the same order as they are
+   open. Since `t` and `T` switch from one file to another in the order as they
+   are displayed, you may want to sort them in a more convenient way. To do so,
+   you can use:
 
+    :`{`: move file to the left in the tabline
+    :`}`: move file to the right in the tabline
 
-Moving the cursor
+Saving and closing all files
+""""""""""""""""""""""""""""
+
+Finally, you may want to save all unsaved files or just close all files (and
+effectively leaving Vem). You can do so with:
+
+    :`Space` `s`: save all
+    :`Space` `x`: close all (exit Vem)
+
+To execute them, you first have to press `Space` and then `s` or `x` in
+sequence.
+
+Insert mode
+-----------
+
+Most commands are available when in normal mode, however, there 
+Working with code
 -----------------
 
-As we saw before, you use `h`, `j`, `k`, `l` to move the cursor:
+The following actions are extremely common when working with code:
 
-    :`j`: cursor down
+Indenting
+"""""""""
 
-    :`k`: cursor up
-
-    :`h`: cursor left
-
-    :`l`: cursor right
-
-In Vem, many other actions are related to these movements. For example, the
-uppercase version of those keys make the cursor to perform larger jumps:
-
-    :`J`: next paragraph (next blank line)
-
-    :`K`: previous paragraph (previous blank line)
-
-    :`H`: previous word
-
-    :`L`: next word
-
-Also, the combination of these keys and the `Ctrl` modifier allows you to
-move the cursor and change to insert mode at the same time:
-
-    :`Ctrl-j`: open blank line below current one and enter insert mode
-
-    :`Ctrl-k`: open blank line above current one and enter insert mode
-
-    :`Ctrl-h`: move to beginning of current line and enter insert mode
-
-    :`Ctrl-l`: move to end of current line and enter insert mode
-
-All these 4 actions enter insert mode after the jump. If you want to perform the
-jump but remain in normal mode, use:
-
-.. container:: tabs key-summary
-
-    .. container:: tab qwerty 
-
-        :`,`: move to beginning of current line
-
-        :`.`: move to end of current line
-
-        :`y`: open blank line above current one
-
-        :`n`: open blank line below current one
-
-    .. container:: tab qwertz
-
-        :`,`: move to beginning of current line
-
-        :`.`: move to end of current line
-
-        :`z`: open blank line above current one
-
-        :`n`: open blank line below current one
-
-    .. container:: tab azerty
-
-        :`,`: move to beginning of current line
-
-        :`;`: move to end of current line
-
-        :`y`: open blank line above current one
-
-        :`n`: open blank line below current one
-
-Vem considers the beginning of the line as the first non-blank character on it.
-So if you press `Ctrl-h`, you'll start insert mode after the current level of
-indentation in the line. And, if you press `,`, the cursor will be placed over
-the first non-blank character. To go to the very first column of the line, use
-`^` or `0`:
-
-    :`0` or `^`: move to first column of current line
-
-Other four additional and very important movements are:
-
-.. container:: tabs key-summary
-
-    .. container:: tab qwerty 
-
-        :`a`: first line of the document
-
-        :`z`: last line of the document
-
-        :`U`: page up
-
-        :`M`: page down
-
-    .. container:: tab qwertz
-
-        :`a`: first line of the document
-
-        :`y`: last line of the document
-
-        :`U`: page up
-
-        :`M`: page down
-
-    .. container:: tab azerty
-
-        :`q`: first line of the document
-
-        :`w`: last line of the document
-
-        :`U`: page up
-
-        :`M`: page down
-
-Finally, you can make the cursor go back to the location it was before a jump
-with `R`:
-
-    :`R`: jump back. Pressing it multiple times takes the cursor through the
-          jump history, making it visit all the locations in the current file
-          you have jumped to sequentially.
-
-For example, you could jump to the beginning of a source code file, add some
-import/include/require statement and go back to the initial location by pressing
-`R` to continue editing where you were previously.
-
-.. admonition:: Movements in insert mode
-
-   Generally, you activate normal mode to perform any kind of cursor movement
-   or search. However, there are times in which you're in insert mode and just
-   want to move the cursor a couple of characters left or right, or just place
-   it on the line below. For those cases, you don't have to leave insert mode to
-   activate normal mode to then go to insert mode again. You can just move the
-   cursor (and remain in insert mode) with:
-
-   .. class:: key-summary
-
-        :`Ctrl-h`: (*insert mode*) left
-
-        :`Ctrl-j`: (*insert mode*) down
-
-        :`Ctrl-k`: (*insert mode*) up
-
-        :`Ctrl-l`: (*insert mode*) right
-
-
-Selecting text
---------------
-
-Like in most other editors, when you want to perform an action over a section of
-a document, you have to select it visually first.
-
-Vem offers three kinds of visual selections:
-
-    * **Characterwise selection**: This is the usual way of selecting text in
-      most editors. The selection goes from any arbitrary character in a line to
-      another character in the same or different line.
-
-    * **Linewise selection**: This selection comprises only entire lines. This
-      is extremely useful when programming because it allows you to select a
-      range of lines independently of where inside the line you are. Also, when
-      you copy/cut and paste lines, you don't have to worry about *opening*
-      space for them, since a linewise selection is always pasted below the
-      current line (without altering it).
-
-    * **Block selection**: It is not very common to find this kind of selection
-      in other text editors and it is very useful. It allows you to select an
-      arbitrary square of text. It can be used to work with tabular data or
-      with lines of text that follow a common pattern.
-
-To start a characterwise selection, press `G` and perform a movement to the
-left of right (like for example with `h`, `l`, `H` or `L`). To start a
-linewise selection, press `G` and perform a movement up or down (like with
-`j`, `k`, `J` or `K`):
-
-    :`G` *and sideways movement*\:: start a character-wise selection
-
-    :`G` *and up/down movement*\:: start a line-wise selection
-
-    :`GG`: start a block-wise selection
-
-Once you have started a selection of a given type, you can move in any direction
-and the selection type will not change. If you want to change the current
-selection type, you can press `G` again to cycle through them:
-
-    :`G`: (in visual mode) change selection type
-
-To undo a selection and go back to normal mode:
-
-    :`Space`: (in visual mode) undo selection
-
-One important thing about selections is that you can use any of Vem's movements
-to define it. Therefore, once you have start the selection you can use any
-movement key to expand or reduce it. This includes moving to the next/previous
-word, paragraph or page, moving to the beginning or end of the document and,
-also, the search keys `/` and `?`. You can start a selection and use the search
-function to move the cursor where the selection should end.
-
-**Quick selections**
-
-The following commands allow you to define frequent selections easily. Spend bit
-of time trying them because they can save you a lot of time:
-
-    :`g`: select word under cursor (only letters)
-
-    :`gg`: select *extended* word under cursor (non white space characters)
-
-    :`Ctrl-g`: select text between enclosing quotes, parenthesis or brackets.
-               Repeated presses to `Ctrl-g` expands the selection to the next
-               enclosing pair of quotes, parenthesis or brackets.
-
-    :`Space` `a`: select all
-
-    :`Space` `g`: reselect the last selected area
-
-    :`Space` `Space`: select last pasted text
-
-.. admonition:: Inserting text simultaneously in multiple lines
-
-    A very useful feature of block selections is that you can append any text at
-    either side of them. For example, if you have a column of text that expands over
-    several lines and want to add another column at its side, you just have to
-    select the original column with a block and press `Ctrl-h` to prepend text to
-    the left of it or `Ctrl-l` to append text to its right.
-
-    Once you press `Ctrl-l` or `Ctrl-h`, type the text you want to include and
-    then `Ctrl-o` when you're finished. The text that you just entered will be
-    repeated in every line covered by the selection:
-
-    .. class:: key-summary
-
-        :`Ctrl-h`: (*block mode*) prepend text to a selected block
-
-        :`Ctrl-l`: (*block mode*) append text to a selected block
-
-
-Using the clipboard
--------------------
-
-Vem has two clipboards, which means that you can hold two pieces of text
-simultaneously in memory and paste them independently.
-
-The primary clipboard is the most commonly used one. If your terminal emulator
-supports it, it is connected to your system clipboard and it allows you to
-exchange information with other applications, like copying or pasting from
-webpages or other editors. Use the following commands to make use of it:
-
-    :`e`: copy
-
-    :`d`: cut
-
-    :`p`: paste
-
-Te secondary clipboard allows you to hold in memory an additional piece of text
-and it is not connected to the system clipboard in any way. Use the upper case
-version of the same letters to access it:
-
-    :`E`: copy (aux. clipboard)
-
-    :`D`: cut (aux. clipboard)
-
-    :`P`: paste (aux. clipboard)
-
-
-Indenting code
---------------
-
-To indent code use `Tab` and to un-indent it (shifting it to the left) use
-`Backspace`. If you use these keys when no text is selected, then they apply to
-the current line:
+To indent or unindent the current selection, or just the current line if
+there's no selection active, use:
 
     :`Tab`: indent current line or selection
 
-    :`Shift-Tab` or `Backspace`: un-indent current line or selection
+    :`Shift-Tab`: unindent current line or selection
 
-
-Commenting code
----------------
+Commenting
+""""""""""
 
 You can comment pieces of code out with `v`. If there's a visual selection,
 then all the lines in the visual selection are commented out. If there's no
-visual selection then only the current line will be affected.
+visual selection then only the current line will be commented out:
+
+    :`v`: comment and uncomment code (line comment symbols)
 
 `v` acts as a toggle key so it can be used to both comment and uncomment code.
 If the lines in a selection are already commented out, `v` will remove all the
@@ -636,46 +1065,57 @@ like that already.
 
 To use block comment symbols, instead of line comment ones, use `V`:
 
-    :`v`: comment and uncomment code (line comment symbols)
     :`V`: comment and uncomment code (block comment symbols)
 
-.. container:: note
-
-    If you select a block of code with mixed commented and uncommented lines,
-    Vem will comment them all if the first line is uncommented, and uncomment
-    the commented ones if the first line is commented. That is, Vem just uses
-    the first line of the selection to determine which action to perform.
+The editor is able to automatically use the correct comment symbols for most
+common, and not so common, programming languages and markup files. However, if
+your file comment symbols are not detected correctly, take a look at the 
+`Comments </docs/users-guide/comments.html>`_ section for possible solutions.
 
 
-Deleting text
--------------
+Doing things fast
+-----------------
 
-The basic actions to delete text are:
+So far we have seen many commands that can already help you to be very efficient
+while you edit text. However, you may have already noticed that switching modes
+for small edits can be annoying. For example, if you want to correct a single
+character, you need to press `i` or `o`, delete the character, type the new one
+and press `Ctrl-o` to go back to normal mode. That's way too many key presses
+for such a simple change.
 
-    :`I`: delete character to the left of the cursor (ie. *backspace*)
+This section list commands that make small edits much easier to do and,
+therefore, provide a much smoother editing experience.
 
-    :`O`: delete character to the right of the cursor (ie. *delete*)
+Replacing characters
+""""""""""""""""""""
 
-    :`c`: delete line or selection (if one active)
+Sometimes you need to change just a single character by another one. In those
+cases, you can just press `r`, when the cursor is over the character to be
+replaced, followed by the new one:
 
-In the same way that `g` allows to perform quick common selections, `f` can be
-used to delete text:
+    :`r{char}`: replace the character under the cursor with ``char``. If there's
+                a visual selection active, all the characters in the selection
+                are replaced by ``char``.
 
-    :`f`: delete word under cursor
+Toggle case
+"""""""""""
 
-    :`F`: delete from cursor to the end of line
+You can toggle the case of a character or a selection without leaving normal
+mode with:
 
-    :`Ctrl-f`: delete text between enclosing quotes, parenthesis or brackets.
+    :`Ctrl-u`: toggle case (lowercase/uppercase) of the character under the
+               cursor or the text in the currently active selection.
 
+Adding whitespace
+"""""""""""""""""
 
-Formatting text
----------------
+You can add a blank space both in front or after the cursor (like pressing
+`Space` in insert mode) with:
 
-This section lists actions that can help you to perform common changes to your
-text. They are very useful because they greatly reduce the number of times that
-is necessary to switch between insert and normal mode.
+    :`(`: add a space to the left of the cursor
+    :`)`: add a space to the right of the cursor
 
-**Adding whitespace**
+And you can also add blank lines both above and under the cursor too:
 
 .. container:: tabs key-summary
 
@@ -683,29 +1123,19 @@ is necessary to switch between insert and normal mode.
 
         :`y`: add a blank line over the cursor
         :`n`: add a blank line below the cursor
-        :`(`: add a space to the left of the cursor
-        :`)`: add a space to the right of the cursor
 
     .. container:: tab qwertz
 
         :`z`: add a blank line over the cursor
         :`n`: add a blank line below the cursor
-        :`(`: add a space to the left of the cursor
-        :`)`: add a space to the right of the cursor
 
     .. container:: tab azerty
 
         :`y`: add a blank line over the cursor
         :`n`: add a blank line below the cursor
-        :`(`: add a space to the left of the cursor
-        :`)`: add a space to the right of the cursor
 
-**Toggle case**
-
-    :`Ctrl-u`: toggle case (lowercase/uppercase) of the character under the
-               cursor or the text in the currently active selection.
-
-**Joining/Splitting lines**
+Joining/Splitting lines
+"""""""""""""""""""""""
 
     :`&`: join the next line with the current one (removes the line break).
           If there's a visual selection active, join all the lines in the
@@ -720,7 +1150,15 @@ is necessary to switch between insert and normal mode.
 The commands to join and split lines are specially useful when editing regular
 text (as opposed to code).
 
-**Adding/Substracting units to numbers**
+
+
+A Z v V y n
+
+Tab S-Tab ( ) Enter
+
+
+Adding/Substracting units to numbers
+""""""""""""""""""""""""""""""""""""
 
 .. container:: tabs key-summary
 
@@ -739,40 +1177,64 @@ text (as opposed to code).
         :`Q`: add 1 to the number under the cursor
         :`W`: subtract 1 from the number under the cursor
 
-**Replacing characters**
 
-    :`r{char}`: replace the character under the cursor with ``char``. If there's
-                a visual selection active, all the characters in the selection
-                are replaced by ``char``.
+Solving problems and getting help
+---------------------------------
 
-Insert mode
------------
+Unintended changes
+""""""""""""""""""
 
-While most commands are executed in normal mode, there are some actions that can
-be performed directly from insert mode without having to switch modes.
+It can happen —specially when learning Vem, but also later too— that you
+mistakenly press a different key than the one you really intended to use. Since
+every key has an associated action, you may end up in an unexpected place of
+your document or modifying it in an unintentional way.
 
-**Movements**
+If this happens, just jump back to where you were or undo the latest action with:
 
-You can move the cursor with:
+    :`q`: undo last change
+    :`R`: jump to previous position
 
-    :`Ctrl-h`: (*insert mode*) left
+`q` undoes the last change and jumps back too, so you can use that one to ensure
+that you didn't modify anything by mistake and if the latest change was correct
+you can just redo it with `Q`.
 
-    :`Ctrl-j`: (*insert mode*) down
+In any case, you can also check the timestamps of the latest changes to see, at
+any time, when the last change to the document happened::
 
-    :`Ctrl-k`: (*insert mode*) up
+    :undolist
 
-    :`Ctrl-l`: (*insert mode*) right
+Getting help
+""""""""""""
 
-These are most useful for performing small, quick movements without having to
-switch to normal mode.
+You can get help about any topic using the command line. Just type::
 
-**Cloning characters**
+    :help <topic>
 
-When editing a line, you can insert the character that is above/below the
-current position with:
+With `Tab` you can autocomplete the topic string.
 
-    :`Ctrl-u`: (*insert mode*) insert character above the cursor
+You can use the ``help`` command to find more information about configuration
+options, commands or mappings. For example, you can get more information about
+the ``:sort`` ex-command with::
 
-    :`Ctrl-e`: (*insert mode*) insert character below the cursor
+    :help :sort
 
+After executing this command, the screen will be split showing your current
+document and a new `window </docs/users-guide/windows.html>`__ displaying the
+contents of help. You can move in this window using the same movement keys as in
+the rest of the editor. In addition, you can:
+
+* jump to a topic by placing the cursor on top of a highlighted term and
+  pressing `Space` `o`
+* jump back to the previous topic with `Space` `i`
+* close the window with `x`
+
+.. Note:: The key command information provided by ``:help`` is the one related
+   to the original Vim ones, not Vem's. To get a description of Vem commands use
+   this tutorial, visit the `User's guide </docs/users-guide/index.html>`__ or
+   check the `Key command cheat sheets </docs/cheat-sheets/index.html>`__.
+
+Next steps
+----------
+
+.. TODO
 

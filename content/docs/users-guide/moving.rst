@@ -10,8 +10,8 @@
 .. role:: y
 .. role:: yi
 
-Movements
-=========
+Moving
+======
 
 Vem uses Vim's traditional movement keys:
 
@@ -58,13 +58,13 @@ Vem uses Vim's traditional movement keys:
             →
 
 The advantage of using these over the arrow keys is that they allow you to keep
-your hands on the home row of the keyboard and prevent you from having to move
-your hand back and forth to move the cursor. If you haven't used Vim/Vem before
-it may feel difficult to get used to them at first, however, it usually just
-takes a bit of time and then it is difficult to go back to use the arrow keys.
-Also, since all keys are placed spatially across the keyboard in Vem, many other
-action positions are related to these movement keys.
+your hands on the home row of the keyboard. Many other actions in Vem are
+distributed according to the position of these keys too. Many newcomers to
+Vim/Vem tend to fall back to the use of arrow keys at first, mainly out of habit.
+However, using ``hjkl`` is an essential part of being proficient with Vem, so it
+is worth doing the initial effort to get used to them.
 
+Using ``hjkl`` with the `Shift` and `Ctrl` modifier keys produces movements 
 For instance, the uppercase version of these keys allow you to perform larger
 jumps with the cursor:
 
@@ -89,9 +89,9 @@ mode in different places relative to the current line:
 
     :`Ctrl-h`: start insert mode at the beginning of the current line
 
-    :`Ctrl-j`: start insert mode by opening a blank line above the current one
+    :`Ctrl-j`: start insert mode by opening a blank line below the current one
 
-    :`Ctrl-k`: start insert mode by opening a blank line below the current one
+    :`Ctrl-k`: start insert mode by opening a blank line above the current one
 
     :`Ctrl-l`: start insert mode at the end of the current line
 

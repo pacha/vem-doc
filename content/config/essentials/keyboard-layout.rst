@@ -4,10 +4,10 @@ Keyboard layout
 
 If you use a keyboard with a layout other than **QWERTY**, like for example
 **QWERTZ** (common in German speaking countries) or **AZERTY** (common in French
-speaking countries), it is important that you specify it in your ``vemrc`` file.
-This will make keyboard actions to keep the same spatial distribution across the
-keyboard even if letters change positions in your layout with respect to the
-others.
+speaking countries), it is important that you specify it in your `vemrc
+</config/vemrc.html>`__ file. This will make keyboard actions to keep the same
+spatial distribution across the keyboard even if letters change positions in
+your layout with respect to the others.
 
 To set your keyboard layout, add a line like this to your configuration::
 
@@ -15,11 +15,11 @@ To set your keyboard layout, add a line like this to your configuration::
 
 where ``<layout>`` can be:
 
-    * **qwerty** (default)
+    * ``qwerty`` (default)
 
-    * **qwertz**
+    * ``qwertz``
 
-    * **azerty**
+    * ``azerty``
 
 Vem's documentation includes layout information for those actions that are
 assigned to different keys across them.

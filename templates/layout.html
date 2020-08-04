@@ -13,9 +13,11 @@
             {# in-doc sections #}
             {% if data.index_node %}
                 {% with index = get_node(data.index_node) %}
-                    <ul>
+                    <ul class="menu-first-level">
                         {% for section in index.sections %}
-                            <li><a href="#{{ section.id }}">{{ section.name }}</a></li>
+                        <li>
+                            <a href="#{{ section.id }}">{{ section.name }}</a>
+                        </li>
                         {% endfor %}
                     </ul>
                 {% endwith %}

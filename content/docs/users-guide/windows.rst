@@ -1,4 +1,7 @@
 
+.. role:: key
+.. default-role:: key
+
 Windows
 =======
 
@@ -28,16 +31,24 @@ When you split a window, the new one will show the same content as the one
 you're splitting from. To display a different buffer, you don't have to do
 anything different from what you would do when you have a single window. You can
 open a new file with the file browser or the fuzzy finder, create a new buffer
-with `Ctrl-a` or jump to an existing one with `Ctrl-t`, `t` and `T`. All these
-actions will apply to the current window automatically.
+with `Ctrl-t` or jump to an existing one with `w`, `t` or `T`. All these
+actions will apply to the window in which the cursor is currently placed.
+
+Creating a window with a new buffer
+"""""""""""""""""""""""""""""""""""
+
+If you want to create a window containing a new file, you can use:
+
+    :`Ctrl-w` `Ctrl-]`: new buffer in new vertical window
+    :`Ctrl-w` `Ctrl-_`: new buffer in new horizontal window
 
 Creating a window when opening a file
 """""""""""""""""""""""""""""""""""""
 
-An alternative way of creating a window is to use the following shortcuts while
-inside the file browser or the fuzzy finder:
+You can also directly open files into windows. Once in the file browser or the
+fuzzy finder, use:
 
-    :`Ctrl-v`: open selected file in a new vertical window
+    :`Ctrl-]`: open selected file in a new vertical window
     :`Ctrl-_`: open selected file in a new horizontal window
 
 Jumping to windows
@@ -50,7 +61,7 @@ You can jump between windows with:
     :`Space` `k`: jump to window above cursor
     :`Space` `l`: jump to window to the right of cursor
 
-You can also switch between two windows with:
+You can also alternate positions between two windows with:
 
     :`Ctrl-w` `Ctrl-w`: jump to previous window
 
@@ -61,9 +72,9 @@ You normally close a window using `x`. This will close both the window *and* the
 buffer if the buffer is not shown in any other window. If you need more
 precision on which action you want to perform, you have several options:
 
-    :`Ctrl-w` `x`: close window
-    :`Ctrl-x`: close buffer but keep window
     :`x`: close window and buffer (if the buffer is not displayed elsewhere)
+    :`Ctrl-x`: close buffer but keep window
+    :`Ctrl-w` `x`: close window
 
 You can also close all windows but current one:
 
@@ -72,11 +83,7 @@ You can also close all windows but current one:
 Resize windows
 --------------
 
-In most cases, you can resize windows using your mouse, which is probably the
-most practical way to do it. Just click on the window borders and drag them to
-the position you want.
-
-If you don't have a mouse you can use:
+To change the size of a window use:
 
     :`Ctrl-w` `+`: increase the height of current window
     :`Ctrl-w` `-`: decrease the height of current window
@@ -85,9 +92,10 @@ If you don't have a mouse you can use:
 
 .. container:: note
 
-    Mouse support is enabled in Vem by default. If it is not working for you,
-    check that your teminal is xterm compatible and that ``mouse`` configuration
-    option is set to ``a`` (eg. setting ``set mouse=a`` in your ``vemrc`` file).
+    If your teminal is xterm compatible, you can use ``:set mouse=a`` to enable
+    the interaction with the mouse. Once enabled, you can drag the border of the
+    windows to set their size. (You can also add ``:set mouse=a`` to your `vemrc
+    </config/vemrc.html>`__ file to make the change persistent).
 
 
 Moving windows

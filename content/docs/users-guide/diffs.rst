@@ -2,8 +2,8 @@
 .. role:: key
 .. default-role:: key
 
-Diff mode
-=========
+Diffs
+=====
 
 You can use the editor to see a diff between two or more files. For example, to
 compare ``foo1.txt`` with ``foo2.txt`` start Vem in your terminal with::

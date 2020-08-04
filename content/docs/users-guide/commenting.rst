@@ -2,8 +2,8 @@
 .. role:: key
 .. default-role:: key
 
-Comments
-========
+Commenting
+==========
 
 Vem provides comment/uncomment support for most programming languages thanks to
 the `NERD Commenter <https://github.com/scrooloose/nerdcommenter>`_ plugin.
@@ -34,11 +34,22 @@ produce:
     //     idVec3( 1.00f, 0.80f, 0.10f )
     // };
 
-.. Note:: `v` only takes into account the first line of the selection to decide
+.. note:: `v` only takes into account the first line of the selection to decide
    if it needs to comment or uncomment the rest of them. That means that when
    you want to uncomment several lines that are mixed together with uncommented
    ones, make sure that the first line of your selection is one of the commented
    ones. 
+
+.. admonition:: Filetype detection
+
+   Sometimes the type of your file may not be correctly detected. This happens,
+   for example, if you edit a file with an ``.html`` extension that uses some
+   kind of templating language inside. In that case, the file can be detected as
+   pure HTML and the editor will apply the standard ``<!-- -->`` comment markers
+   instead of the comment markers of your templating language.
+
+   Check `Filetype Autodetection </config/essentials/configuration-per-filetype.html#filetype-autodetection>`__
+   to know how to change the current assigned filetype.
 
 Block comments
 --------------

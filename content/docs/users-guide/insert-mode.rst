@@ -2,11 +2,11 @@
 .. role:: key
 .. default-role:: key
 
-Insert mode
+Insert Mode
 ===========
 
 Most actions in Vem are performed in normal mode. However, there is a number of
-them that you can perform in insert mode using `Ctrl-key` combinations too.
+them that you can perform in insert mode using `Ctrl-<key>` combinations too.
 Most of those are related to the insertion of text —such as autocompletion or
 inserting special characters—, but others are just there to reduce the number
 of mode switches you have to perform —eg. moving the cursor.
@@ -43,12 +43,11 @@ suggestions in a direction or the other. To accept a suggestion just keep typing
 normally.
 
 The behavior of `Tab` is contextual in Vem. If you're at the beginning of a line
-or after white-space, `Tab` will insert a tab or spaces (depending on
-how the editor is configured); however, after non white-space, it will
+or after white space, it will insert a tab character or spaces (depending on
+how the editor is configured); however, after non white space, it will
 autocomplete the current typed text. It can happen that you may want to insert a
 tab character or a series of spaces using the `Tab` key just after some text. In
-that case, `Ctrl-]` always behaves like `Tab` after white-space regardless of
-the context.
+that case, you can use `Ctrl-]` to always inserts tabs or spaces.
 
 .. Admonition:: Programming language aware autocompletion
 
@@ -67,7 +66,7 @@ You can also insert the character that is immediately above or below the cursor
 with:
 
     :`Ctrl-y`: Insert character above the cursor
-    :`Ctrl-e`: Insert character below the cursor
+    :`Ctrl-n`: Insert character below the cursor
 
 .. parsed-literal::
     :class: terminal

@@ -35,19 +35,8 @@ It is important to use ``setlocal`` instead of ``set`` in file type
 configuration files so the changes only apply to the file that is being opened
 and not to all other files open independently of their type.
 
-Each file type has a name. To know which exact name you have to use in each
-case, open a file of the type you are interested in and execute::
-
-    :set ft?
-
-This will output the name in the command line of the editor.
-
-To get a full list with all the file types that are supported by the editor,
-type the following command followed by a space and press ``Ctrl-d``. That
-triggers autocompletion and will display all the file types registered in the
-system::
-
-    :setfiletype ^d
+Check the next section `Filetype Autodetection </>`__ to know how to find the
+names of the supported filetypes and how they are automatically detected.
 
 .. admonition:: Indentation
 
@@ -92,3 +81,42 @@ system::
         filetype indent off
 
     To the end of the file.
+
+Filetype Autodetection
+----------------------
+
+When the editor opens a file, it will try to detect its filetype using it file
+extension or, in particular cases, inspecting its contents.
+
+To know which filetype was assigned to a file once loaded, use::
+
+    :set ft?
+
+For example, for a Go file, you'll get::
+
+    filetype=go
+
+Sometimes the filetype of the file may not be correctly detected or not detected
+at all. This can happen with file extensions that less common or ambiguous.
+
+In those cases, you can set the filetype manually::
+
+    :set ft=<filetype-name>
+
+Or create a file ``.config/vem/ftdetect/<filetype-name>.vim`` with the following
+contents::
+
+    au BufRead,BufNewFile *.<filetype-extension> set ft=<filetype-name>
+
+If you set the filetype manually, the change will only apply to that open file.
+If you set the ``ftdetect`` file, the change will apply to any file with that
+extension in the future (remember to restart the editor after adding the file
+for this detection to work).
+
+To know which filetype names are available in the system type::
+
+    :setfiletype <press-tab-to-autocomplete>
+
+You can also autocomplete providing the first letters of the filetype to know if
+the one you are looking for is available.
+

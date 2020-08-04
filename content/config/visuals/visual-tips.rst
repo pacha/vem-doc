@@ -40,3 +40,16 @@ highlighted. That is exactly what the option ``cursorline`` does::
 In Vem's default color scheme, setting this option changes the background of the
 current line to a lighter color.
 
+Show file type icons next to filenames
+--------------------------------------
+
+Vem can show an icon next to each filename in the tabline thanks to the
+`vim-devicons </plugins/popular-plugins/vim-devicons.html>`__ plugin.
+
+.. image:: /static/img/screenshots/devicons.png
+    :class: screenshot
+    :target: /static/img/screenshots/devicons.png
+
+Follow `this page </plugins/popular-plugins/vim-devicons.html>`__ for
+instructions on how to enable them.
+

@@ -28,8 +28,8 @@ main_menu:
     url: /config/index.html
   - text: Plugins
     url: /plugins/index.html
-  - text: <u>Download</u>
+  - text: Download
     url: /download.html
-  - text: Code
+  - text: <svg class="github-icon"><use xlink:href="/static/icons/feather-sprite.svg#github"/></svg>
     url: https://github.com/pacha/vem
 

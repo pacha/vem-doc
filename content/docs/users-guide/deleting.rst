@@ -45,7 +45,9 @@ mode straight away is usually referred as *changing* text in Vim:
 
     :`F`: change from the current position of the cursor to the end of line
 
-    :`Ctrl-f`: change the content of the closest enclosing pair of symbols `{[("''")]}`
+    :`Ctrl-f`: change the content of the closest enclosing pair of symbols ``{[(<"'>)]}``
+
+    :`Space` `f`: change a camel-case or underscore delimited word
 
 The following examples highlight the text that will be changed depending on the
 action and the position of the cursor:
@@ -71,4 +73,9 @@ action and the position of the cursor:
 
     foobar\ :wi:`(`\ :gi:`{'key': 'val'})`
 
+    :y:`# Text changed with Space f`
+
+    This\ :gi:`L`\ :wi:`o`\ :gi:`ng`\ Identifier
+
+    this\_\ :gi:`l`\ :wi:`o`\ :gi:`ng`\ _identifier
 

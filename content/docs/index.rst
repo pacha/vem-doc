@@ -1,47 +1,34 @@
 
 .. role:: key
 .. default-role:: key
+.. |br| raw:: html
+
+    <br/>
 
 Documentation
 =============
 
-Vem requires some initial learning effort investment. When you open the editor
-there are no menus, toolbars or buttons, everything is controlled using the
-keyboard. Fortunately, learning the basics is pretty easy.
+If you are new to Vem, the best place to start is the Quickstart tutorial:
 
-If you have never used Vem before, you can start with the **Quick start**
-and the **Basic cheat sheet**. They give an introduction to how to use Vem and
+.. container:: note
 
-If you already know the essentials of Vem and want to learn more or are looking
-for some topic in particular, check t
-start
+    `Quickstart </docs/quick-start.html>`__
 
-.. container:: features features-3col
+If you want to learn Vem more in depth, you can check Vem user's guide, which
+explains all Vem commands:
 
-    .. container:: feature
+.. container:: note
 
-        .. raw:: html
+    `User's Guide </docs/users-guide/index.html>`__
 
-            <svg class="icon"><use xlink:href="/static/icons/feather-sprite.svg#code"/></svg>
+For quick reference, you can access the cheat sheets for each keyboard layout.
+There are two versions of each cheat sheet, a basic one with only the most
+important commands —very useful if you're starting with Vem—, and a full one
+with the complete list:
 
-        **Syntax highlighting** support for almost every programming language in
-        existence.
+.. container:: note
 
-    .. container:: feature
-
-        .. raw:: html
-
-            <svg class="icon"><use xlink:href="/static/icons/feather-sprite.svg#feather"/></svg>
-
-        Very **fast** and **lightweight**. Opening Vem to edit 5 source code
-        files takes around 10MB of memory.
-
-    .. container:: feature
-
-        .. raw:: html
-
-            <svg class="icon"><use xlink:href="/static/icons/feather-sprite.svg#terminal"/></svg>
-
-        Both **terminal and graphical interfaces** available. You can use the exact same
-        editor in your local development and in remote machines through SSH.
+    * ``QWERTY``: `Basic </docs/cheat-sheets/qwerty-basic.html>`__ | `Full </docs/cheat-sheets/qwerty-full.html>`__
+    * ``QWERTZ``: `Basic </docs/cheat-sheets/qwertz-basic.html>`__ | `Full </docs/cheat-sheets/qwertz-full.html>`__
+    * ``AZERTY``: `Basic </docs/cheat-sheets/azerty-basic.html>`__ | `Full </docs/cheat-sheets/azerty-full.html>`__
 

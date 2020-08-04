@@ -1,6 +1,8 @@
 ---
 
 title: "Vem :: Download"
+layout: two-cols
+index_node: download.rst
 
 ---
 

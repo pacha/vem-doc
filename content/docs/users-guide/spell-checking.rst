@@ -2,7 +2,7 @@
 .. role:: key
 .. default-role:: key
 
-Spell checking
+Spell Checking
 ==============
 
 For most file types, spell checking is disabled by default. To enable it for
