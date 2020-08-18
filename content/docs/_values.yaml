@@ -3,7 +3,7 @@ title: "Vem :: Documentation"
 layout: two-cols
 menu:
   - title: Tutorial
-    url: /docs/quick-start.html
+    url: /docs/tutorial.html
   - title: "User's Guide"
     url: /docs/users-guide/index.html
     entries:

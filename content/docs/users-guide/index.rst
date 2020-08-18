@@ -9,8 +9,8 @@ This User's Guide goes through every aspect of Vem. While Vem interfaces with
 many Vim's features, it is still relatively simple and you can just read through
 these pages or use them as reference.
 
-If you're new to Vem, you can also take a look to the `Quick Start
-</docs/quick-start.html>`__ section first before digging into all the
+If you're new to Vem, you can also take a look to the `Tutorial
+</docs/tutorial.html>`__ section first before digging into all the
 functionalities of the editor.
 
 This is the list of sections grouped by category, if you prefer to read through

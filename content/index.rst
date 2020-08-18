@@ -70,7 +70,7 @@ Vem requires either Vim or Neovim to be installed in the system and supports the
 
      Try it |br| `Download </download.html>`__
 
-     Know more |br| `Quick start </docs/quick-start.html>`__
+     Know more |br| `Tutorial </docs/tutorial.html>`__
 
      Take a look |br| `Cheat sheets </docs/cheat-sheets/index.html>`__
 
@@ -285,8 +285,8 @@ Some basic actions in command mode are:
                     :`A`: redo
 
 These are the commands you need to know to be able to do a minimal edit to a
-file but, of course, there are many more. Check the `Quick start
-</docs/quick-start.html>`__ to learn Vem's essentials.
+file but, of course, there are many more. Check the `Tutorial
+</docs/tutorial.html>`__ to learn Vem's essentials.
 
 **Note:** By default, Vem is configured to map commands to the ``QWERTY``
 keyboard layout. If you use ``QWERTZ`` or ``AZERTY``, you need to configure your
