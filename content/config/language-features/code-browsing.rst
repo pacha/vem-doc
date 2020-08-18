@@ -1,6 +1,0 @@
-
-Code browsing (tags)
-====================
-
-TODO
-

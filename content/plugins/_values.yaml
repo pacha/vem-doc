@@ -5,15 +5,23 @@ menu:
   - title: Plugin installation
     url: /plugins/installation.html
   - title: Popular plugins
-    url: /plugins/popular-plugins/index.html
+    url: /plugins/popular/index.html
     entries:
+      - title: vim-plug
+        url: /plugins/popular/vim-plug.html
       - title: fzf.vim
-        url: /plugins/popular-plugins/vim-fzf.html
-      - title: vim-fugitive
-        url: /plugins/popular-plugins/vim-fugitive.html
+        url: /plugins/popular/vim-fzf.html
+      - title: vim-gutentags
+        url: /plugins/popular/vim-gutentags.html
+      - title: ale
+        url: /plugins/popular/ale.html
       - title: coc.nvim
-        url: /plugins/popular-plugins/coc-nvim.html
+        url: /plugins/popular/coc-nvim.html
       - title: vim-devicons
-        url: /plugins/popular-plugins/vim-devicons.html
+        url: /plugins/popular/vim-devicons.html
+      - title: vim-fugitive
+        url: /plugins/popular/vim-fugitive.html
+      - title: ultisnips
+        url: /plugins/popular/ultisnips.html
   - title: Included plugins
     url: /plugins/included-plugins.html

@@ -8,11 +8,11 @@
 Documentation
 =============
 
-If you are new to Vem, the best place to start is the Quickstart tutorial:
+If you are new to Vem, the best place to start is its tutorial:
 
 .. container:: note
 
-    `Quickstart </docs/quick-start.html>`__
+    `Tutorial </docs/tutorial.html>`__
 
 If you want to learn Vem more in depth, you can check Vem user's guide, which
 explains all Vem commands:

@@ -21,11 +21,7 @@ Vem Text Editor
 
 .. container:: short-description
 
-    Vem is a text editor of the Vi family that allows you to perform all editing
-    tasks using just the keyboard while having a very simple and straightforward
-    set of commands.
-
-    Vem's command set is as simple as possible but not simpler!
+    Vem is an alternative command layout for the Vim text editor.
 
 .. image:: /static/img/home/vem-main-screenshot.png
     :class: screenshot
@@ -59,12 +55,14 @@ map, and they are much simpler and immediate to use:
             :target: /static/img/cheat-sheets/azerty-full.png
 
 The result is a different editor that strives to be as simple as possible while
-still giving you total control using just the keyboard. If you want to know more
-about what makes Vem different take a look to the next section `Why Vem
-</#why-vem>`_.
+still giving you total control using just the keyboard. Since it uses actual Vim
+as base, you can also make use of its many features.
 
 Vem requires either Vim or Neovim to be installed in the system and supports the
 ``QWERTY``, ``QWERTZ`` and ``AZERTY`` keyboard layouts.
+
+ If you want to know more about what are the advantages of using Vem check out the
+ next section `Why Vem </#why-vem>`_.
 
 --------------------------------------------------------------------------------
 
@@ -112,11 +110,11 @@ computer the one that is waiting for you and that optimization may not be as
 useful as it used to be.
 
 Vem is a text editor that tries to optimize the user experience in a computer
-that answers faster that you can think. It removes any command grammar, makes
+that answers faster that you can think: it removes any command grammar, makes
 commands to answer instantaneously and distributes them spatially to optimize
-the use of both hands. Vem tries to be as simple as possible but not simpler.
-Vem's goal is to allow you to focus on your code rather than on your editor
-while still giving you a rich, keyboard driven editing experience.
+the use of both hands. Vem's goal is to allow you to focus on your code rather
+than on your editor while still giving you a rich, keyboard driven editing
+experience.
 
 
 Quickstart
@@ -286,9 +284,9 @@ Some basic actions in command mode are:
                     :`a`: undo
                     :`A`: redo
 
-These are just the essential commands you need to know to be able to do a
-minimal edit to a file. For a more complete overview of what you can do with
-Vem, check the `Quick start </docs/quick-start.html>`__ page.
+These are the commands you need to know to be able to do a minimal edit to a
+file but, of course, there are many more. Check the `Quick start
+</docs/quick-start.html>`__ to learn Vem's essentials.
 
 **Note:** By default, Vem is configured to map commands to the ``QWERTY``
 keyboard layout. If you use ``QWERTZ`` or ``AZERTY``, you need to configure your

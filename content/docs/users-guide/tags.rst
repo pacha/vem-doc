@@ -37,7 +37,7 @@ to generate/read them.
 
    Vim help files (the ones accesible with the ``:help`` command) make use of
    tags to create the internal hyperlinks inside Vim documentation. Use the
-   commands shown in the next section to browse through them.
+   commands described in the next section to browse through them.
 
 Jumping to/from tags
 --------------------

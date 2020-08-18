@@ -34,8 +34,8 @@ to display the names of the buffers at the top of the editor, autodetects when
 vim-devicons is installed and displays a file type icon next to each filename.
 
 If you want to have vim-devicons installed but not to show the file types in the
-tabline you can add the following line to your `vemrc
-<http://localhost:8000/config/vemrc.html>`__ file::
+tabline you can add the following line to your `vemrc </config/vemrc.html>`__
+file::
 
     let g:vem_tabline_show_icon = 0
 

@@ -128,42 +128,6 @@ Vim provides basic re-indenting of Lisp and C-style programming languages out of
 the box. However, for other languages and more advanced formatting, you may want
 to provide your own tool using the ``equalprg`` option.
 
-For example, to format JSON, you can use the popular ``jq`` command line tool::
-
-    setlocal equalprg=jq\ .
-
-Once set, this option will make `=` to execute ``jq .`` passing the
-contents of the current file as ``stdin`` and replacing them with the result
-(``stdout``) of the execution.
-
-In this case, to make the configuration persist, we can add that option to the
-file type configuration file::
-
-    ~/.config/vem/ftplugin/json.vim
-
-That way, `=` will work correctly for any JSON file we open in the editor.
-
-.. Note:: for more information on how to add per-file-type configuration options
-   take a look at `Configuration per filetype </config/configuration-per-filetype.html>`_
-
-So, in summary, to use an external tool to format your code:
-
-    * Make sure the tool is installed and available in the ``PATH``.
-
-    * Make sure the tool can take text via ``stdin`` and output the result to
-      ``stdout`` (most of them do, but some may require passing a specific
-      parameter to enable it).
-
-    * Set the ``equalprg`` option in your file type specific configuration file
-      using the full command line expression that allows the tool to work with
-      ``stdin`` and ``stdout``. *Note: when setting the option escape all spaces
-      with a backslash*.
-
-    * Remember that changes to a file type configuration file won't affect to
-      files that are already open in the editor unless you close/open them again
-      or reload the configuration with ``:source``.
-
-
 Formatting text
 ---------------
 

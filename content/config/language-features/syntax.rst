@@ -1,7 +1,0 @@
-
-
-Syntax files
-============
-
-TODO
-

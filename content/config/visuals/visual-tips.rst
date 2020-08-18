@@ -44,12 +44,12 @@ Show file type icons next to filenames
 --------------------------------------
 
 Vem can show an icon next to each filename in the tabline thanks to the
-`vim-devicons </plugins/popular-plugins/vim-devicons.html>`__ plugin.
+`vim-devicons </plugins/popular/vim-devicons.html>`__ plugin.
 
 .. image:: /static/img/screenshots/devicons.png
     :class: screenshot
     :target: /static/img/screenshots/devicons.png
 
-Follow `this page </plugins/popular-plugins/vim-devicons.html>`__ for
+Follow `this page </plugins/popular/vim-devicons.html>`__ for
 instructions on how to enable them.
 

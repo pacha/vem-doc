@@ -11,12 +11,12 @@ system you use. However, since Git presence is so extended, Vem is configured to
 optionally display the current branch of the Git repository you're working on in
 the status line by adding one of the following plugins:
 
-* `vim-gitbranch </plugins/popular-plugins/vim-gitbranch.html>`__: this is a
+* `vim-gitbranch </plugins/popular/vim-gitbranch.html>`__: this is a
   very small plugin by itchyny provides just the functionality to retrieve the
   branch name. If you just want to display the branch name and don't want any
   extra features use this one.
 
-* `fugitive.vim </plugins/popular-plugins/vim-fugitive.html>`__: this is a
+* `fugitive.vim </plugins/popular/vim-fugitive.html>`__: this is a
   larger plugin by Tim Pope that allows to use Git from within the
   editor. It is probably the most popular Git integration plugin for Vim.
 

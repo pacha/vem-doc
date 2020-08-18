@@ -2,27 +2,26 @@
 .. role:: key
 .. default-role:: key
 
-Language Servers
-================
+Language features with language servers
+=======================================
 
-A great deal of actions that you can perform with the editor are independent of
-the language of the file which you're editing. You can perform most movements
-and text transformations no matter if you're working on a C, JavaScript or Rust
-file. There are, however, some features such as *Go to definition*, *Show
-function/method signature* or *Display syntax errors* that require specific
-knowledge about the syntax of the language that you're using.
+As explained in `Language features </config/language-features/index.html>`__,
+Vem purposely avoids providing actions that are associated to any programming
+language in particular. However, you can add this kind of features for your
+preferred programming languages in a variety of ways. One of them is using a
+**Language Server**. Language Servers are programs that contain the expert
+knowledge about that programming language and communicate with the editor using
+a standard protocol known as **LSP** (Language Server Protocol). Since the
+protocol is standard, the same language server can be used by multiple editors
+such as Vim/Vem, VSCode or Emacs. That way, the development efforts of the
+community for a given language server benefit all the editors simultaneously.
+You can have language servers for different languages installed simultaneously
+too, and they will be used depending on the files that you have open at the
+moment.
 
-By default, only language agnostic features are supported by Vem. To support
-language dependent features you have to connect Vem to a **Language Server** of
-the programming language you're interested on. Language Servers are programs
-that contain the expert knowledge about that programming language and
-communicate with the editor using a standard protocol known as **LSP** (Language
-Server Protocol). Since the protocol is standard, the same language server can
-be used by multiple editors such as Vim/Vem, VSCode or Emacs, for example, and
-that the development efforts of the community for a given language server
-benefit all the editors simultaneously. You can have language servers for
-different languages installed simultaneously too, and they will be used
-depending on the files that you have open at the moment.
+Language servers have been popularized by Visual Code, which uses them as its
+means of integration with different programming languages, and represent an
+one-stop solution for many different features.
 
 Not all language servers offer all possibilities. Which capabilities are
 supported depend on the language they are created for and their particular
@@ -73,7 +72,7 @@ required ones.
 
 .. admonition:: Installing coc.nvim
 
-   Check the `page on coc.nvim </plugins/popular-plugins/coc-nvim.html>`__ in
+   Check the `page on coc.nvim </plugins/popular/coc-nvim.html>`__ in
    the plugin documentation section for more info on how to install this LSP
    plugin in Vem.
 
