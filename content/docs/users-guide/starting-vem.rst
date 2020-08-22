@@ -58,3 +58,9 @@ Where ``vimcommand`` is any Vim compatible executable (like ``vim``, ``nvim``,
 
         source path/to/vemrc
 
+.. container:: browsing-links
+
+    |
+
+    `Modes </docs/users-guide/modes.html>`_ »
+

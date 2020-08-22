@@ -272,3 +272,11 @@ remain in paste mode, you'll be able to correctly paste using the terminal
 clipboard shortcut. Press `Ctrl-^` or `Ctrl-6` again to exit paste mode so the
 editor can format the text correctly when you enter it manually.
 
+.. container:: browsing-links
+
+    « `Selecting </docs/users-guide/selecting.html>`_
+
+    |
+
+    `Deleting </docs/users-guide/deleting.html>`_ »
+

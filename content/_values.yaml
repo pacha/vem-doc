@@ -21,15 +21,26 @@ js_files:
 
 main_menu:
   - text: Overview
+    mobile_text: Overview
     url: /
+    code: overview
   - text: Docs
+    mobile_text: Documentation
     url: /docs/index.html
+    code: docs
   - text: Config
+    mobile_text: Configuration
     url: /config/index.html
+    code: config
   - text: Plugins
+    mobile_text: Plugins
     url: /plugins/index.html
+    code: plugins
   - text: Download
+    mobile_text: Download
     url: /download.html
+    code: download
   - text: <svg class="github-icon"><use xlink:href="/static/icons/feather-sprite.svg#github"/></svg>
+    mobile_text: <svg class="github-icon"><use xlink:href="/static/icons/feather-sprite.svg#github"/></svg> Code
     url: https://github.com/pacha/vem
 

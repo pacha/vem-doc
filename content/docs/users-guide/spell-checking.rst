@@ -104,9 +104,9 @@ spelling of your files is checked.
 
 Use the following commands to manage these lists:
 
-    :`<Space> <+>`: add the word under cursor to your list of valid words
+    :`<Space>` `+`: add the word under cursor to your list of valid words
 
-    :`<Space> <->`: remove the word under cursor from your list of valid words
+    :`<Space>` `-`: remove the word under cursor from your list of valid words
 
 .. Note:: custom spell files are stored in the ``spell`` directory of your
    `configuration folder </configuration.html#vemrc-file>`_ (typically,
@@ -117,4 +117,12 @@ Use the following commands to manage these lists:
    where ``<language>`` is the ``spelllang`` that was active when the word was
    added and the encoding is the current encoding of the file (eg.
    ``en.utf-8.add``).
+
+.. container:: browsing-links
+
+    « `Diffs </docs/users-guide/diffs.html>`_
+
+    |
+
+    `Quickfix lists </docs/users-guide/quickfix.html>`_ »
 

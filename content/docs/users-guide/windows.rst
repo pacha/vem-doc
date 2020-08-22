@@ -135,7 +135,9 @@ Or you can rotate the position of a whole row or column of windows with:
 
 .. container:: browsing-links
 
+    « `Substituting </docs/users-guide/substituting.html>`_
+
     |
 
-    `Tabpages </docs/tabpages.html>`_ »
+    `Tabpages </docs/users-guide/tabpages.html>`_ »
 

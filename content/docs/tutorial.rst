@@ -337,13 +337,53 @@ keyboard). In sum, using these keys is part of an efficient use of Vem.
 For example, the uppercase version of these letters just performs a larger
 movement in the same direction:
 
-    :`H`: previous word
+.. container:: directional-mappings
 
-    :`L`: next word
+    .. container:: key
 
-    :`J`: next paragraph (next blank line)
+        Previous paragraph |br| (previous blank line)
 
-    :`K`: previous paragraph (previous blank line)
+        `K`
+
+    .. class:: symbol
+
+        ↑
+
+    .. container:: central-row
+
+        .. container:: key
+
+            `H`
+
+            Previous word
+
+        .. class:: symbol
+
+            ←
+
+        .. class:: symbol
+
+            ∙
+
+        .. class:: symbol
+
+            →
+
+        .. container:: key
+
+            `L`
+
+            Next word
+
+    .. class:: symbol
+
+        ↓
+
+    .. container:: key
+
+        `J`
+
+        Next paragraph |br| (next blank line)
 
 And you can also use them modified with `Ctrl` to start **insert mode** at the left,
 right, above and below the current line:
@@ -560,7 +600,7 @@ Deselecting and Reselecting
 To stop a selection and go back to normal mode and to reselect the latest
 selected text use:
 
-    :`Space` `Space`: (in visual mode) deselect
+    :`Space`: (in visual mode) deselect
 
     :`Space` `Space`: (in normal mode) reselect
 
@@ -1150,13 +1190,6 @@ Joining/Splitting lines
 The commands to join and split lines are specially useful when editing regular
 text (as opposed to code).
 
-
-
-A Z v V y n
-
-Tab S-Tab ( ) Enter
-
-
 Adding/Substracting units to numbers
 """"""""""""""""""""""""""""""""""""
 
@@ -1236,5 +1269,26 @@ the rest of the editor. In addition, you can:
 Next steps
 ----------
 
-.. TODO
+This tutorial contains all the information needed so you can use Vem
+proficiently. However, there are many more Vem key commands that leverage the
+many features of Vim. For example, you can split the working area of the editor
+in different `windows </docs/users-guide/windows.html>`__, record repetitive
+actions using `macros </docs/users-guide/macros.html>`__ or setting `marks
+</docs/users-guide/marks.html>`__ within your documents to jump quickly to.
+
+To check these and many more actions, you can take a look at the `User's Guide
+</docs/users-guide/index.html>`__, which contains the full explanation of all
+Vem's commands.
+
+If you want just a quick summary of the available actions, you can use one of
+the available cheat sheets instead:
+
+.. container:: note
+
+    * ``QWERTY``: `Basic </docs/cheat-sheets/qwerty-basic.html>`__ | `Full </docs/cheat-sheets/qwerty-full.html>`__
+    * ``QWERTZ``: `Basic </docs/cheat-sheets/qwertz-basic.html>`__ | `Full </docs/cheat-sheets/qwertz-full.html>`__
+    * ``AZERTY``: `Basic </docs/cheat-sheets/azerty-basic.html>`__ | `Full </docs/cheat-sheets/azerty-full.html>`__
+
+The basic sheet contains the commands described in this tutorial, the full
+version contains all available ones.
 

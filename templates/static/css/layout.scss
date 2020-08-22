@@ -129,7 +129,7 @@ nav#primary-navigation-mobile
     ul
     {
         margin: 0;
-        padding: 0 0 0 4vw;
+        padding: 0 0 0 2vw;
         list-style-type: none;
 
         li
@@ -143,6 +143,11 @@ nav#primary-navigation-mobile
             {
                 color: $dark-gray;
             }
+        }
+
+        &.subsections
+        {
+            list-style-type: disc;
         }
     }
 }

@@ -21,7 +21,9 @@ Vem Text Editor
 
 .. container:: short-description
 
-    Vem is an alternative command layout for the Vim text editor.
+    Vem is an alternative command layout for the Vim text editor. It provides
+    full keyboard control over the editor while trying to be as simple and
+    intuitive as possible.
 
 .. image:: /static/img/home/vem-main-screenshot.png
     :class: screenshot
@@ -31,8 +33,12 @@ Description
 -----------
 
 Vem is a set of configuration files for the Vim text editor that changes how you
-interact with it. Commands are arranged spatially across the keyboard, like in a
-map, and they are much simpler and immediate to use:
+interact with it. While Vim is extremely expressive and provides hundreds of
+commands with their own small grammar, Vem takes the opposite approach and
+defines a reduced, simplified set of commands that are executed, in most cases,
+immediately after a single key press. The commands are also distributed
+spatially across the keyboard, like in a map, optimizing their position
+according to their frequency:
 
 .. container:: tabs layout
 
@@ -54,15 +60,13 @@ map, and they are much simpler and immediate to use:
             :class: screenshot
             :target: /static/img/cheat-sheets/azerty-full.png
 
-The result is a different editor that strives to be as simple as possible while
-still giving you total control using just the keyboard. Since it uses actual Vim
-as base, you can also make use of its many features.
+The result is a different editor, strongly focused on the user experience, that
+strives to be as simple as possible while still giving you total control using
+just the keyboard. Since it uses actual Vim as base, you can also make use of
+its many advanced features.
 
 Vem requires either Vim or Neovim to be installed in the system and supports the
 ``QWERTY``, ``QWERTZ`` and ``AZERTY`` keyboard layouts.
-
- If you want to know more about what are the advantages of using Vem check out the
- next section `Why Vem </#why-vem>`_.
 
 --------------------------------------------------------------------------------
 
@@ -76,8 +80,8 @@ Vem requires either Vim or Neovim to be installed in the system and supports the
 
 --------------------------------------------------------------------------------
 
-Why Vem
--------
+Why Vem?
+--------
 
 The Vi text editor —mostly in the form of its successor, Vim— remains as one of
 the most popular text editors among software developers and DevOps engineers to
@@ -88,7 +92,7 @@ One of the reasons for that is that it provides a large amount of editing
 possibilities which you can control using just the keyboard. It is not
 necessarily the easiest text editor to learn, but once you develop some muscle
 memory it can change the way in which you write code given the speed and
-precision that it allows.
+precision that it provides.
 
 However, some of its core design decisions are still rooted in its origins. The
 reason why you can compose elaborated commands using several keystrokes (for
@@ -112,9 +116,10 @@ useful as it used to be.
 Vem is a text editor that tries to optimize the user experience in a computer
 that answers faster that you can think: it removes any command grammar, makes
 commands to answer instantaneously and distributes them spatially to optimize
-the use of both hands. Vem's goal is to allow you to focus on your code rather
-than on your editor while still giving you a rich, keyboard driven editing
-experience.
+the use of both hands and to make the most frequent ones easier to type. Vem's
+goal is to give you a very advanced editor, which you can completely control
+using the keyboard, while still striving to be as simple and intuitive as
+it is possible.
 
 
 Quickstart

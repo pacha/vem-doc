@@ -102,3 +102,7 @@ hyperlink documents together. Therefore, you can:
    this tutorial, visit the `User's guide </docs/users-guide/index.html>`__ or
    check the `Key command cheat sheets </docs/cheat-sheets/index.html>`__.
 
+.. container:: browsing-links
+
+    « `Vim Compatibility </docs/users-guide/vim-compatibility.html>`_
+

@@ -1,6 +1,7 @@
 
 title: "Vem :: Config"
 layout: two-cols
+first_level_section: config
 menu:
   - title: vemrc
     url: /config/vemrc.html

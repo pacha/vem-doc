@@ -125,7 +125,7 @@ Deselecting and Reselecting
 Once you have a selection defined, you can discard it with switching back to
 normal mode with `Ctrl-o` or with:
 
-    :`Space` `Space`: (in visual mode) remove current text selection
+    :`Space`: (in visual mode) remove current text selection
 
 And if there's no selection defined, you can bring back the last active
 selection with:
@@ -257,4 +257,12 @@ Other quick selections are:
 
         :`G` `o` `t`: selects between two HTML/XML tags including the tags
             themselves.
+
+.. container:: browsing-links
+
+    « `Undoing </docs/users-guide/undoing.html>`_
+
+    |
+
+    `Clipboard </docs/users-guide/clipboard.html>`_ »
 

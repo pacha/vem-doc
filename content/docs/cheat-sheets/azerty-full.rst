@@ -107,7 +107,7 @@ Jumping between Ends
 
     :`%`: Jump to matching parenthesis, bracket or HTML/XML tag
     :`*`: Jump between ends of current selection or last selected text
-    :`"`: Jump between ends of last pasted or inserted text
+    :`+`: Jump between ends of last pasted or inserted text
 
 End of Next Word
 """"""""""""""""
@@ -123,9 +123,9 @@ Jump History
 Jumps within Window
 """""""""""""""""""
 
-    :`C` `u`: Jump to first line in window
-    :`C` `c`: Jump to middle line in window
-    :`C` `m`: Jump to last line in window
+    :`"` `u`: Jump to first line in window
+    :`"` `.`: Jump to middle line in window
+    :`"` `m`: Jump to last line in window
 
 Jumps within Identifiers
 """"""""""""""""""""""""
@@ -154,8 +154,6 @@ Deleting
     :`c`: Delete current line or selection
     :`I`: Delete left character (*backspace*)
     :`O`: Delete right character (*delete*)
-
-*You can also use* `Backspace` *and* `Delete` *in normal mode*
 
 Changing
 """"""""
@@ -271,11 +269,13 @@ Quick Selections
 More Quick Selections
 """""""""""""""""""""
 
+    :`Space` `a`: Select all
+    :`Space` `p`: Select paragraph
+    :`Space` `P`: Select last pasted text
     :`Space` `g`: Select camel case or underscore separated word
     :`Space` `G`: Select inner line
         (not including leading and trailing white-space)
-    :`Space` `p`: Select last pasted or inserted text
-    :`Space` `a`: Select all
+
 
 Selecting Text Objects
 """"""""""""""""""""""

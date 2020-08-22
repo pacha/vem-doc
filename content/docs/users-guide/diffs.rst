@@ -120,3 +120,11 @@ To stop the diff, execute::
     You can use ``git difftool`` to see the changes in your working copy inside
     Vem.
 
+.. container:: browsing-links
+
+    « `Tags </docs/users-guide/tags.html>`_
+
+    |
+
+    `Spell Checking </docs/users-guide/spell-checking.html>`_ »
+

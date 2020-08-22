@@ -9,7 +9,7 @@ This User's Guide goes through every aspect of Vem. While Vem interfaces with
 many Vim's features, it is still relatively simple and you can just read through
 these pages or use them as reference.
 
-If you're new to Vem, you can also take a look to the `Tutorial
+If you're new to Vem, you can also take a look to the `tutorial
 </docs/tutorial.html>`__ section first before digging into all the
 functionalities of the editor.
 
@@ -57,11 +57,24 @@ way that topics are introduced progressively:
         * `Scroll </docs/users-guide/scroll.html>`__
         * `Diffs </docs/users-guide/diffs.html>`__
         * `Spell Checking </docs/users-guide/spell-checking.html>`__
-        * `Quickfix Lists </docs/users-guide/quickfix.html>`__
 
     .. admonition:: Buffers, Windows and Tabpages
 
-        * `Buffers </docs/users-guide/buffers.html>`__
+        * `Buffers and Files </docs/users-guide/buffers.html>`__
         * `Windows </docs/users-guide/windows.html>`__
         * `Tabpages </docs/users-guide/tabpages.html>`__
+
+    .. admonition:: Working with Multiple Files
+
+        * `Quickfix lists </docs/users-guide/quickfix.html>`__
+        * `Finding in files </docs/users-guide/finding-in-files.html>`__
+        * `Multifile operations </docs/users-guide/multifile-operations.html>`__
+
+    .. admonition:: Vim Compatibility
+
+        * `Vim compatibility </docs/users-guide/vim-compatibility.html>`__
+
+    .. admonition:: Getting Help
+
+        * `Getting help </docs/users-guide/getting-help.html>`__
 

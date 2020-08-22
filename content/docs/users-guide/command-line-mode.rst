@@ -71,16 +71,6 @@ Some important commands
     disk. Useful when chaining it with a command that can change multiple
     buffers at the same time. See ``bufdo`` below.
 
-``:bufdo <ex-command>``
-    Execute ``<ex-command>`` in all open files (buffers). For example, ``:bufdo
-    %s/foo/bar/g | update`` will replace all occurrences of ``foo`` by ``bar``
-    in all buffers and save them back to disk. You can also execute a command in
-    each window (``:windo``), each tabpage (``:tabdo``) or each file that
-    appears in the quickfix window (``:cfdo``). If you're not familiar with
-    those concepts visit `Windows </docs/users-guide/windows.html>`__, `Tabpages
-    </docs/users-guide/tabpages.html>`__ and `Quickfix Lists
-    </docs/users-guide/quickfix.html>`__.
-    
 ``:sort``
     Sort the lines of the current document alphabetically. To sort in
     descending order use ``:sort!``.
@@ -168,7 +158,15 @@ You can paste text in the command line using:
 Inserting Unicode characters
 """"""""""""""""""""""""""""
 
-Like in insert mode, you can insert `digraphs </docs/insert-mode.html>`_ using:
+Like in insert mode, you can insert `digraphs </docs/insert-mode.html>`__ using:
 
     :`Ctrl-d`: Insert Unicode character (*digraph*)
+
+.. container:: browsing-links
+
+    « `Insert Mode </docs/users-guide/insert-mode.html>`__
+
+    |
+
+    `Searching </docs/users-guide/searching.html>`_ »
 

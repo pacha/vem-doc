@@ -148,3 +148,11 @@ account that Vem uses ``b`` instead of Vim's ``z`` as the key prefix to manage
 folds. Other than that, the rest of the information is as valid in Vem as it is
 in Vim.
 
+.. container:: browsing-links
+
+    « `Macros </docs/users-guide/macros.html>`_
+
+    |
+
+    `Tags </docs/users-guide/tags.html>`_ »
+

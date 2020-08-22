@@ -79,3 +79,11 @@ action and the position of the cursor:
 
     this\_\ :gi:`l`\ :wi:`o`\ :gi:`ng`\ _identifier
 
+.. container:: browsing-links
+
+    « `Clipboard </docs/users-guide/clipboard.html>`_
+
+    |
+
+    `Commenting </docs/users-guide/commenting.html>`_ »
+

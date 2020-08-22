@@ -76,3 +76,11 @@ Note that to uncomment a piece of code surrounded by block comment symbols you
 need to use `v`. `V` doesn't have the same toggling behaviour as `v` because it
 can be used to nest block comments.
 
+.. container:: browsing-links
+
+    « `Deleting </docs/users-guide/deleting.html>`_
+
+    |
+
+    `Formatting </docs/users-guide/formatting.html>`_ »
+

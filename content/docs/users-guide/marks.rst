@@ -52,3 +52,11 @@ behave differently:
    `Backspace` is effectively the same as `!` `Q`, and `Backspace` is the
    same as `\`` `Q`.
 
+.. container:: browsing-links
+
+    « `Scroll </docs/users-guide/scroll.html>`_
+
+    |
+
+    `Macros </docs/users-guide/macros.html>`_ »
+

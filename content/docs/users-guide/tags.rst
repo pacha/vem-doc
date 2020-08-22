@@ -19,16 +19,9 @@ is defined.
 One of the advantages of tags files is that their format is a pretty simple and
 language agnostic which allows them to support plenty of programming languages.
 
-To be able to make use of tags files, you need:
-
-    * To generate the tags files themselves. Ideally, in an automated way as you
-      modify your project.
-
-    * To let the editor know which tags file(s) to use.
-
-To know how to do this, check the `Code browsing
-</config/language-features/code-browsing.html>`__ page in the configuration
-section of the documentation.
+To know how to do create the tag files for your projects, check the `Code
+browsing </config/language-features/with-plugins.html#code-browsing>`__ point in
+the configuration section of the documentation.
 
 The rest of this section explains how to use tags once the editor is configured
 to generate/read them.
@@ -61,4 +54,12 @@ Also, if you want to jump to the definition of an identifier by typing the
 identifier yourself, you can use::
 
     :tjump <identifier>
+
+.. container:: browsing-links
+
+    « `Folds </docs/users-guide/folds.html>`_
+
+    |
+
+    `Diffs </docs/users-guide/diffs.html>`_ »
 

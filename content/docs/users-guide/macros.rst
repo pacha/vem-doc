@@ -23,3 +23,11 @@ In summary:
     :`S`: replay macro ``s``
     :`X`: replay macro ``x``
 
+.. container:: browsing-links
+
+    « `Marks </docs/users-guide/marks.html>`_
+
+    |
+
+    `Folds </docs/users-guide/folds.html>`_ »
+

@@ -134,3 +134,11 @@ Flags (``flags``)
    ``:s`` command features more than these. Execute ``:help :s`` to get a full
    description of the command.
 
+.. container:: browsing-links
+
+    « `Searching </docs/users-guide/searching.html>`_
+
+    |
+
+    `Windows </docs/users-guide/windows.html>`_ »
+

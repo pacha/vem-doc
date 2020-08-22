@@ -47,3 +47,11 @@ To close a tabpage, close all the windows inside it or use::
 
     :tabclose
 
+.. container:: browsing-links
+
+    « `Windows </docs/users-guide/windows.html>`_
+
+    |
+
+    `Scroll </docs/users-guide/scroll.html>`_ »
+

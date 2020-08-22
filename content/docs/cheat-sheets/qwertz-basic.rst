@@ -125,8 +125,6 @@ Deleting
     :`I`: Delete left character (*backspace*)
     :`O`: Delete right character (*delete*)
 
-*You can also use* `Backspace` *and* `Delete` *in normal mode*
-
 Changing
 """"""""
 
@@ -203,10 +201,12 @@ Quick Selections
 More Quick Selections
 """""""""""""""""""""
 
+    :`Space` `a`: Select all
+    :`Space` `p`: Select paragraph
+    :`Space` `P`: Select last pasted text
     :`Space` `g`: Select camel case or underscore separated word
     :`Space` `G`: Select inner line
         (not including leading and trailing white-space)
-    :`Space` `a`: Select all
 
 Copying, Cutting and Deleting
 """""""""""""""""""""""""""""

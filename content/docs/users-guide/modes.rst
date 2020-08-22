@@ -68,10 +68,19 @@ Once in visual mode you can move the cursor to define the text selection that
 you want and operate over it using the visual mode commands (like `e` *copy*,
 `d` *cut* or `c` *delete*). The execution of many of these commands will put you
 back to normal mode. If you want to leave visual mode without performing any
-action (ie. deselecting the current selection), you can just press `Ctrl-o`.
+action (ie. deselecting the current selection), you can just press `Ctrl-o` or
+`Space`.
 
 To make switching modes easier in certain situations, many commands perform an
 action and switch modes at the same time. For example, `f` deletes the word
 under the cursor and switches to insert mode. All these cases are explained in
 next sections of this guide.
+
+.. container:: browsing-links
+
+    « `Starting Vem </docs/users-guide/starting-vem.html>`_
+
+    |
+
+    `Buffers and Files </docs/users-guide/buffers.html>`_ »
 

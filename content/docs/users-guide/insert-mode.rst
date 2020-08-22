@@ -174,3 +174,11 @@ that are still relevant:
 .. Note:: If you're using spaces instead of tabs in your code, you can use
    `Ctrl-v` `Tab` to enter an actual tab character (``^I``) in your file.
 
+.. container:: browsing-links
+
+    « `Surrounding Pairs </docs/users-guide/surrounding-pairs.html>`_
+
+    |
+
+    `Command-line Mode </docs/users-guide/command-line-mode.html>`_ »
+

@@ -23,3 +23,11 @@ seconds, minutes, hours or days respectively.
    branches and undo persistence between sessions. Check ``:help undo`` to know
    more about these advanced features.
 
+.. container:: browsing-links
+
+    « `Moving </docs/users-guide/moving.html>`_
+
+    |
+
+    `Selecting </docs/users-guide/selecting.html>`_ »
+

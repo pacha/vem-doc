@@ -33,15 +33,15 @@ Adding Surrounding Pairs
 You can also enclose a piece of selected text between a surrounding pair. To do
 so, use:
 
-    :`Space` `<char>`: (in visual mode) surround current text selection with a
+    :`s` `<char>`: (in visual mode) surround current text selection with a
         pair of enclosing symbols defined by ``<char>``, which can be one of
         ``{[("'>)]}``, or also ``<`` and ``t`` for HTML/XML tags.
 
-For example, `Space` `"` surrounds the current selection with double quotes and
-`Space` `)` surrounds it with parenthesis.
+For example, `s` `"` surrounds the current selection with double quotes and
+`s` `)` surrounds it with parenthesis.
 
-Note that to surround text between angle brackets you need to use `Space` `>`
-(as `Space` `<` will enclose the text between HTML/XML tags):
+Note that to surround text between angle brackets you need to use `s` `>`
+(as `s` `<` will enclose the text between HTML/XML tags):
 
 .. parsed-literal::
     :class: terminal
@@ -50,7 +50,7 @@ Note that to surround text between angle brackets you need to use `Space` `>`
 
     A fair field :gi:`ful`\ :wi:`l` of folk
 
-    :y:`# Brackets added with: Space >`
+    :y:`# Brackets added with: s >`
 
     A fair field <full> of folk
 
@@ -68,11 +68,11 @@ selected text. If you use the closing character, no space is added:
 
     A fair field :gi:`ful`\ :wi:`l` of folk
 
-    :y:`# Parenthesis added with: Space (`
+    :y:`# Parenthesis added with: s (`
 
     A fair field ( full ) of folk
 
-    :y:`# Parenthesis added with: Space )`
+    :y:`# Parenthesis added with: s )`
 
     A fair field (full) of folk
 
@@ -92,7 +92,7 @@ added inline:
 
     :gi:`This lin`\ :wi:`e`
 
-    :y:`# After Space }`
+    :y:`# After s }`
 
     {This line}
 
@@ -106,7 +106,7 @@ lines (and the content indented):
 
     :gi:`This lin`\ :wi:`e`
 
-    :y:`# After Space }`
+    :y:`# After s }`
 
     {
         This line
@@ -123,7 +123,7 @@ Finally, if the selection is **blockwise**, each line of the block is surrounded
     aaa :gi:`bbb` ccc
     aaa :gi:`bb`\ :wi:`b` ccc
 
-    :y:`# After Space }`
+    :y:`# After s }`
 
     aaa {bbb} ccc
     aaa {bbb} ccc
@@ -132,8 +132,8 @@ Finally, if the selection is **blockwise**, each line of the block is surrounded
 Adding HTML/XML tags
 """"""""""""""""""""
 
-To surround the selected text with an HTML/XML tag use either `Space` `<` or
-`Space` `t`. You'll be prompted in the command line for the complete tag and, as
+To surround the selected text with an HTML/XML tag use either `s` `<` or
+`s` `t`. You'll be prompted in the command line for the complete tag and, as
 soon as you close the tag with ``>`` or press ``Enter``, the selected text will
 be enclosed:
 
@@ -144,13 +144,13 @@ be enclosed:
 
     A fair field :gi:`ful`\ :wi:`l` of folk
 
-    :y:`# Tag added with: Space <span class="foo">`
+    :y:`# Tag added with: s <span class="foo">`
 
     A fair field <span class="foo">full</span> of folk
 
 As you can see, you can add attributes inside the tag if you need to.
 
-As an special case, if you press `Space` `Ctrl-t` the operation will work in the
+As an special case, if you press `s` `Ctrl-t` the operation will work in the
 same way but tags will be placed each one in their own lines.
 
 
@@ -201,4 +201,11 @@ you close your new tag with `>`:
 
     A fair field <div>full</div> of folk
 
+.. container:: browsing-links
+
+    « `Formatting </docs/users-guide/formatting.html>`_
+
+    |
+
+    `Insert Mode </docs/users-guide/insert-mode.html>`_ »
 

@@ -10,8 +10,8 @@
 .. role:: y
 .. role:: yi
 
-Buffers (Files)
-===============
+Buffers and Files
+=================
 
 You can open several files in Vem by passing them in the command line::
 
@@ -36,15 +36,16 @@ screen in the *tabline*:
 
     One thing that can be a bit confusing to newcomers is that Vim refers to
     *files* —at least to how the concept is commonly understood in many other
-    editors— as *buffers*. While most editors don't, Vim differentiates, in its
-    terminology, between content in disk (a file) and content that is loaded in
+    applications— as *buffers*. While most editors don't, Vim differentiates in its
+    terminology between content in disk (a file) and content that is loaded in
     memory when you are editing it (a buffer). So, when you save, you technially
     are saving the contents of the buffer back to its associated file.
 
-    Actually, internally, a buffer is a bit more than just the content of the
-    file in memory, but for the day to day that distinction is not necessarily
-    important. Just keep in mind its meaning as it is a very frequent term in
-    the context of Vim.
+    Actually, a buffer is a bit more than just the content of the
+    file in memory, but for the purposes of this or Vim's documentation,
+    whenever you see buffer keep into account that is mainly a document in
+    memory that may or may not have an associated file in disk (like for example
+    in the case of newly created ones).
 
 
 Using the file browser
@@ -258,4 +259,12 @@ To save and close, use:
     :`Space` `s`: save all modified files
     :`x`: close current file
     :`Space` `x`: close all files and exit
+
+.. container:: browsing-links
+
+    « `Modes </docs/users-guide/modes.html>`_
+
+    |
+
+    `Moving </docs/users-guide/moving.html>`_ »
 

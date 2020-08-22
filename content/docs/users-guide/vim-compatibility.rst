@@ -65,3 +65,11 @@ they are available to you.
    Note that, while you can access all the commands associated with `[`, `]`,
    `g` and `z`, you can't provide *counts* to them as you would do in Vim.
 
+.. container:: browsing-links
+
+    « `Multifile Operations </docs/users-guide/multifile-operations.html>`_
+
+    |
+
+    `Getting Help </docs/users-guide/getting-help.html>`_ »
+

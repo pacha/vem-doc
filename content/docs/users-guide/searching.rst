@@ -167,3 +167,11 @@ will literally match the ``[foo]`` string.
    * **Very nomagic** (``/\V``): when you need symbols to be matched literally
      instead of being used to define regular expressions.
 
+.. container:: browsing-links
+
+    « `Command-line Mode </docs/users-guide/command-line-mode.html>`_
+
+    |
+
+    `Substituting </docs/users-guide/substituting.html>`_ »
+

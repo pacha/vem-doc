@@ -1,6 +1,7 @@
 
 title: "Vem :: Documentation"
 layout: two-cols
+first_level_section: docs
 menu:
   - title: Tutorial
     url: /docs/tutorial.html
@@ -11,7 +12,7 @@ menu:
         url: /docs/users-guide/starting-vem.html
       - title: Modes
         url: /docs/users-guide/modes.html
-      - title: Buffers (Files)
+      - title: Buffers and Files
         url: /docs/users-guide/buffers.html
       - title: Moving
         url: /docs/users-guide/moving.html
@@ -55,13 +56,17 @@ menu:
         url: /docs/users-guide/diffs.html
       - title: Spell Checking
         url: /docs/users-guide/spell-checking.html
-      - title: Quickfix Lists
+      - title: Quickfix lists
         url: /docs/users-guide/quickfix.html
+      - title: Finding in files
+        url: /docs/users-guide/finding-in-files.html
+      - title: Multifile Operations
+        url: /docs/users-guide/multifile-operations.html
       - title: Vim compatibility
         url: /docs/users-guide/vim-compatibility.html
       - title: Getting Help
         url: /docs/users-guide/getting-help.html
-  - title: Basic cheat sheet
+  - title: Basic cheat sheets
     url: /docs/cheat-sheets/index.html
     entries:
       - title: QWERTY
@@ -70,7 +75,7 @@ menu:
         url: /docs/cheat-sheets/qwertz-basic.html
       - title: AZERTY
         url: /docs/cheat-sheets/azerty-basic.html
-  - title: Full cheat sheet
+  - title: Full cheat sheets
     url: /docs/cheat-sheets/index.html
     entries:
       - title: QWERTY

@@ -1,6 +1,7 @@
 
 title: "Vem :: Plugins"
 layout: two-cols
+first_level_section: plugins
 menu:
   - title: Plugin installation
     url: /plugins/installation.html
@@ -11,17 +12,21 @@ menu:
         url: /plugins/popular/vim-plug.html
       - title: fzf.vim
         url: /plugins/popular/vim-fzf.html
-      - title: vim-gutentags
-        url: /plugins/popular/vim-gutentags.html
       - title: ale
         url: /plugins/popular/ale.html
       - title: coc.nvim
         url: /plugins/popular/coc-nvim.html
-      - title: vim-devicons
-        url: /plugins/popular/vim-devicons.html
       - title: vim-fugitive
         url: /plugins/popular/vim-fugitive.html
       - title: ultisnips
         url: /plugins/popular/ultisnips.html
+      - title: vim-gutentags
+        url: /plugins/popular/vim-gutentags.html
+      - title: vim-ripgrep
+        url: /plugins/popular/vim-ripgrep.html
+      - title: vim-gitbranch
+        url: /plugins/popular/vim-gitbranch.html
+      - title: vim-devicons
+        url: /plugins/popular/vim-devicons.html
   - title: Included plugins
     url: /plugins/included-plugins.html

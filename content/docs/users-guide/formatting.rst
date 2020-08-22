@@ -171,3 +171,11 @@ To set an option according to the file type, check `Configuration per filetype
    You can also use the ``formatoptions`` to define how formatting should be
    done (for example, where to break lines or how to indent lists).
 
+.. container:: browsing-links
+
+    « `Commenting </docs/users-guide/commenting.html>`_
+
+    |
+
+    `Surrounding Pairs </docs/users-guide/surrounding-pairs.html>`_ »
+
