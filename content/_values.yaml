@@ -2,7 +2,7 @@
 project: vem
 title: "Vem Text Editor"
 logo: "/static/img/vem-logo.svg"
-copyright: "Copyright 2019 Andrés Sopeña Pérez.<br>Site generated using <a href='https://github.com/pacha/spekulatio'>Spekulatio</a>."
+copyright: "Copyright 2020 Andrés Sopeña Pérez.<br>Site generated using <a href='https://github.com/pacha/spekulatio'>Spekulatio</a>."
 favicon: |-
   <link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon/favicon-32x32.png">
