@@ -1070,10 +1070,6 @@ effectively leaving Vem). You can do so with:
 To execute them, you first have to press `Space` and then `s` or `x` in
 sequence.
 
-Insert mode
------------
-
-Most commands are available when in normal mode, however, there 
 Working with code
 -----------------
 

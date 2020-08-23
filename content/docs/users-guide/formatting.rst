@@ -2,6 +2,14 @@
 .. role:: key
 .. default-role:: key
 
+.. terminal colors
+.. role:: w
+.. role:: wi
+.. role:: g
+.. role:: gi
+.. role:: y
+.. role:: yi
+
 Formatting
 ==========
 
