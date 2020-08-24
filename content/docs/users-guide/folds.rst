@@ -130,8 +130,8 @@ These folds are normal ones and can be managed with the same keyboard commands
 described in this section. In particular, for diffs, it is very useful to toggle
 the folds open and close with `ba` when you need to inspect their contents.
 
-To know more about comparing files check the `Diff Mode </docs/diff.html>`_
-section.
+To know more about comparing files check the `Diff Mode
+</docs/users-guide/diffs.html>`_ section.
 
 
 More info

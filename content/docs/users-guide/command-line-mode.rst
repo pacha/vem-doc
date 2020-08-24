@@ -94,8 +94,9 @@ Some important commands
 Key shortcuts in the command line
 ---------------------------------
 
-Like in `insert mode </docs/insert-mode.html>`_, there are some `Ctrl-<key>`
-combinations that allows you to perform some actions while in command line mode:
+Like in `insert mode </docs/users-guide/insert-mode.html>`_, there are some
+`Ctrl-<key>` combinations that allows you to perform some actions while in
+command line mode:
 
 Command history
 """""""""""""""
@@ -158,7 +159,8 @@ You can paste text in the command line using:
 Inserting Unicode characters
 """"""""""""""""""""""""""""
 
-Like in insert mode, you can insert `digraphs </docs/insert-mode.html>`__ using:
+Like in insert mode, you can insert `digraphs
+</docs/users-guide/insert-mode.html>`__ using:
 
     :`Ctrl-d`: Insert Unicode character (*digraph*)
 

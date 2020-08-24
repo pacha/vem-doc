@@ -169,7 +169,7 @@ Sometimes, it is useful to set the text width according to file types. For
 example, you may want to set automatic line wrapping for Markdown or
 Restructured text files while leaving in its disabled, default value for code.
 To set an option according to the file type, check `Configuration per filetype
-</config/configuration-per-filetype.html>`_.
+</config/essentials/configuration-per-filetype.html>`_.
 
 .. Note:: The ``formatexpr`` and ``formatprg`` options can be used to configure
    how text is formatted with `|`. The first one allows you to define your own

@@ -45,5 +45,6 @@ the other way around), check the ``:retab`` command.
 Sometimes you may want to set the type/size of indentation according to the file
 type that you are editing. For example, you could need to use tabs of size 8 in
 C source code files but 2 spaces in HTML files. To do something like this, check
-`Configuration per filetype </config/configuration-per-filetype.html>`_.
+`Configuration per filetype
+</config/essentials/configuration-per-filetype.html>`_.
 

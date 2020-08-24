@@ -12,7 +12,7 @@ two steps:
 
     * If the color scheme is distributed as a plugin (for example, if it is a
       repository containing a ``colors/`` directory inside), then you need to
-      install it as any other `plugin </plugins/>`_ by copying it to
+      install it as any other `plugin </plugins/index.html>`_ by copying it to
       ``~/.config/vem/pack/plugins/start/``.
 
 **Activate it in your vemrc file:**

@@ -27,7 +27,7 @@ simultaneously or specify a regional variant of the form ``xx_xx``::
     :set spelllang=en_CA,es
 
 If you want to set ``spelllang`` permanently, you just have to include the
-command in your `vemrc </configuration.html#vemrc-file>`_ file.
+command in your `vemrc </config/vemrc.html>`_ file.
 
 .. Note:: The first time you use a given dictionary (by setting ``spelllang``
    and enabling ``spell``), Vim will ask you if you want to download it. This is
@@ -44,7 +44,7 @@ command in your `vemrc </configuration.html#vemrc-file>`_ file.
     * ``.diff`` files that contain the differential content for the region variants
 
    Copy the files of the languages you want check into the ``spell`` folder of
-   your `configuration directory </configuration.html#vemrc-file>`_ (typically,
+   your `configuration directory </config/vemrc.html>`_ (typically,
    ``~/.config/vem/spell/``).
 
 .. Admonition:: Spell checking and source code files
@@ -109,7 +109,7 @@ Use the following commands to manage these lists:
     :`<Space>` `-`: remove the word under cursor from your list of valid words
 
 .. Note:: custom spell files are stored in the ``spell`` directory of your
-   `configuration folder </configuration.html#vemrc-file>`_ (typically,
+   `configuration folder </config/vemrc.html>`_ (typically,
    ``~/.config/vem/spell/``) with a filename of the form::
 
         <language>.<encoding>.add

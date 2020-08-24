@@ -19,7 +19,7 @@ Notes
   installing plugins is as easy as to clone them in the correct folder. And
   deleting them is as easy as to delete their directories. However, having a
   plugin manager can be very useful to keep your Vem configuration in 
-  your `vemrc <http://localhost:8000/config/vemrc.html>`__ file. 
+  your `vemrc </config/vemrc.html>`__ file. 
 
 * Since vim-plug is a special kind of plugin, to install it you just have to
   copy `this single file

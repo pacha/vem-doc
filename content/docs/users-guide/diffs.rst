@@ -27,7 +27,7 @@ The diff highlighting in the example is pretty straightforward:
     * **Folds** are used to hide large sections of common code so you have a
       better overview of the differences between the files. You can toggle a
       fold open and close with `b` `a` (for more info about folds, check the
-      `Folds </docs/folds.html>`_ section).
+      `Folds </docs/users-guide/folds.html>`_ section).
 
 The diff will be updated automatically as you change the files: the editor will
 detect the changes and update the view accordingly. However, you can also force

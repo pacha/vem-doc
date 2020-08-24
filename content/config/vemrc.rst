@@ -32,7 +32,7 @@ about setting up a ``vimrc`` file for Vim apply to ``vemrc`` as well.
 
 Vim provides an extraordinarily amount of configuration options. You can
 configure almost every aspect of the editor, including both its visual
-appearance and behavior. The `Configuration </config/>`__ section of Vem's documentation
+appearance and behavior. The `Configuration </config/index.html>`__ section of Vem's documentation
 offers information about some common ones, but you can check ``:help options``
 for a complete list.
 

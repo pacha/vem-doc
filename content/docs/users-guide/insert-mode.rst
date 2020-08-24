@@ -55,8 +55,9 @@ that case, you can use `Ctrl-]` to always inserts tabs or spaces.
     means that you won't get suggestions based on the constructs of your
     programming language. For example, if you type ``myobj.`` you won't get a
     list of methods and attributes of that object. To get this kind of
-    autocompletion check `Autocompletion </configuration.html#autocompletion>`_
-    in the Configuration section of the documentation.
+    autocompletion check `Autocompletion
+    </config/language-features/with-plugins.html#autocompletion>`_ in the
+    Configuration section of the documentation.
 
 
 Cloning the line above/below
@@ -131,8 +132,8 @@ effect:
                            return socket.inet_ntoa(struct.pack('>I', bits))
 
 The reasons why this happens are explained in `Pasting in terminal
-</docs/clipboard.hml#pasting-in-terminal>`_ in detail, but if you just want to
-avoid it from happening, you can use:
+</docs/users-guide/clipboard.html#pasting-in-terminal>`_ in detail, but if you
+just want to avoid it from happening, you can use:
 
     :`Ctrl-^` or `Ctrl-6`: Toggle paste mode
 
@@ -168,8 +169,8 @@ that are still relevant:
 .. Note:: If you open a document and see some ``^M`` characters at the end of
    some lines, that most likely means that the file contains a mix of
    DOS/Windows (``CRLF``) and Unix (``LF``) line endings. Check the `docs on
-   line endings </configuration.html#default-line-endings>`_ in the
-   Configuration section to get more information on how to fix them.
+   line endings </config/essentials/line-endings.html>`_ in the Configuration
+   section to get more information on how to fix them.
 
 .. Note:: If you're using spaces instead of tabs in your code, you can use
    `Ctrl-v` `Tab` to enter an actual tab character (``^I``) in your file.

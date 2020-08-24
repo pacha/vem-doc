@@ -214,8 +214,8 @@ In general, to use an external tool to autoformat your code:
   parameter to enable it).
 
 * Set the ``equalprg`` option in your `file type specific configuration file
-  </config/configuration-per-filetype.html>`__ using the full command line
-  expression that allows the tool to work with ``stdin`` and ``stdout``.
+  </config/essentials/configuration-per-filetype.html>`__ using the full command
+  line expression that allows the tool to work with ``stdin`` and ``stdout``.
   *Note: when setting the option escape all spaces with a backslash*.
 
 * Remember that changes to a file type configuration file won't affect to

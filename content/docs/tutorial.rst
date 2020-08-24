@@ -38,7 +38,7 @@ long and you may end up preferring Vem's simplicity.
 
 This tutorial doesn't explain all available Vem commands, but it provides all
 the essential ones. The complete set is explained in the `User's Guide
-</docs/guide/index.html>`__.
+</docs/users-guide/index.html>`__.
 
 
 Starting Vem
@@ -625,7 +625,7 @@ use the following shortcuts:
     :`Space` `p`: select current paragraph
 
 There are many more selecting actions. Take a look at the `Selecting
-</docs/guide/selecting.html>`_ section for a complete list.
+</docs/users-guide/selecting.html>`_ section for a complete list.
 
 Using the clipboard
 """""""""""""""""""
@@ -684,7 +684,7 @@ access it with:
     provide support for it.
 
     If you can't copy or paste from/to other applications, check the `Clipboard
-    <docs/guide/clipboard.html>`_ section to setup the system correctly.
+    </docs/users-guide/clipboard.html>`_ section to setup the system correctly.
 
 Directional paste
 """""""""""""""""
@@ -826,8 +826,8 @@ Or you can reset the highlighting when you don't need it anymore:
 Some relevant facts to note are:
 
     * You can use regular expressions in your search (see the `Searching and
-      replacing </docs/guide/search.html>`_ section for more information about
-      the syntax).
+      replacing </docs/users-guide/searching.html>`_ section for more
+      information about the syntax).
 
     * Searches are case sensitive by default. To make case insensitive search, prefix your
       term with ``\c``. For example::
@@ -1105,8 +1105,8 @@ To use block comment symbols, instead of line comment ones, use `V`:
 
 The editor is able to automatically use the correct comment symbols for most
 common, and not so common, programming languages and markup files. However, if
-your file comment symbols are not detected correctly, take a look at the 
-`Comments </docs/guide/comments.html>`_ section for possible solutions.
+your file comment symbols are not detected correctly, take a look at the
+`Comments </docs/users-guide/commenting.html>`_ section for possible solutions.
 
 
 Doing things fast
@@ -1248,7 +1248,7 @@ the ``:sort`` ex-command with::
     :help :sort
 
 After executing this command, the screen will be split showing your current
-document and a new `window </docs/guide/windows.html>`__ displaying the
+document and a new `window </docs/users-guide/windows.html>`__ displaying the
 contents of help. You can move in this window using the same movement keys as in
 the rest of the editor. In addition, you can:
 
@@ -1259,7 +1259,7 @@ the rest of the editor. In addition, you can:
 
 .. Note:: The key command information provided by ``:help`` is the one related
    to the original Vim ones, not Vem's. To get a description of Vem commands use
-   this tutorial, visit the `User's guide </docs/guide/index.html>`__ or
+   this tutorial, visit the `User's guide </docs/users-guide/index.html>`__ or
    check the `Key command cheat sheets </docs/cheat-sheets/index.html>`__.
 
 Next steps

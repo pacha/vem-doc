@@ -55,7 +55,8 @@ names of the supported filetypes and how they are automatically detected.
         setlocal shiftwidth=8
 
     And similar ones for the other file types (see `Indentation
-    </config/indentation.html>`_ for an explanation on these options).
+    </config/essentials/indentation.html>`_ for an explanation on these
+    options).
 
     **Automatic indentation per file type**
 

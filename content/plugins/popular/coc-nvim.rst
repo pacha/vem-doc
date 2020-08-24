@@ -29,12 +29,13 @@ Notes
 
     * Despite its name, the plugin supports both Vim and Neovim.
     * It offers very smooth autocompletion and very complete LSP support.
-    * For an optimal experience use it with very modern versions of Vim (>=8.2) or
-      Neovim (>= 0.4.3).
-    * You need to install a Language Server for each language you want to use it with (https://langserver.org).
+    * For an optimal experience use it with very modern versions of Vim (>=8.2)
+      or Neovim (>= 0.4.3).
+    * You need to install a Language Server for each language you want to use it
+      with (https://langserver.org).
     * It has NodeJs as a dependency.
-    * Check the `Language Features </docs/language-features.html>`_ section for
-      more info on LSP and how it integrates with the editor.
+    * Check the `Language Features </config/language-features/index.html>`_
+      section for more info on LSP and how it integrates with the editor.
 
 Configuration
 -------------
