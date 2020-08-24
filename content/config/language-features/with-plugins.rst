@@ -330,3 +330,28 @@ For example, for JavaScript, you may find plugins like `this one
 highlighting or like `this one <https://github.com/MaxMEllon/vim-jsx-pretty>`__ to
 add specific highlighting to React's ``jsx`` files.
 
+Sometimes, instead of installing a plugin, you can just get a syntax file of
+the form ``foo.vim`` for the ``foo`` filetype. To install it, save it as::
+
+    ~/.config/vem/syntax/foo.vim
+
+This will immediately work after restarting the editor if the ``foo`` filetype (eg.
+``*.foo``) is already recognized by Vim. You can check that by executing::
+
+    set ft?
+
+after opening a file of that type. The output of that command should be
+``filetype=foo`` if the type is recognized or ``filetype=`` otherwise.
+
+If it is not recognized, you can also add your own filetype detection to Vim.
+To do that, create the file::
+
+    ~/.config/vem/ftdetect/foo.vim
+
+with the following content::
+
+    au BufRead,BufNewFile *.foo    set filetype=foo
+
+Now, every time you open a file with that extension, the filetype will be set
+correctly and the corresponding syntax file executed.
+

@@ -66,7 +66,7 @@ To learn more about how to add these resources, follow the following links:
 * `Color schemes </config/visuals/color-schemes.html>`__
 * `Plugins </plugins/installation.html>`__
 * `Spell checking files </docs/users-guide/spell-checking.html>`__
-* `Syntax files </config/language-features/syntax.html>`__
+* `Syntax files </config/language-features/with-plugins.html#syntax-highlighting>`__
 
 .. admonition:: Vimscript
 
