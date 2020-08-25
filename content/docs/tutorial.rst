@@ -9,58 +9,45 @@ Tutorial
 ========
 
 When you launch Vem, you are welcomed with an extremely minimalistic interface:
-no toolbars, no buttons and no menus. The entire space is reserved for just one
-thing, the editor, except for a single line of information at the bottom of the
-screen. And, if you start typing something, chances are that strange
-things start happening.
+no toolbars, no buttons and no menus. Just the editing area and two special
+lines at the bottom.
 
 .. image:: /static/img/screenshots/new-doc.png
     :class: screenshot
     :target: /static/img/screenshots/new-doc.png
 
-Other applications with these interface elements may be easier to discover using
-the mouse, even when using them for the first time. Vem requires some initial
-learning though. The good news is that it is not difficult and this tutorial
-will guide you through all you need to know to use it.
+Vem is a member of the Vi family and it is built on top of Vim. As such, Vem is
+a modal editor. That means that you can decide at any time if you want to use
+the keyboard to insert text (which is know as *insert mode*) or to execute
+commands (known as *command* or *normal mode*).
 
-Vem is a kind-of-odd relative of the Vi family of editors, and it is build on
-top of Vim. If you haven't ever used a modal editors before, you're in for a
-wild ride. They are very different from most conventional text editors, but they
-can also change the way you write code. They can take a bit to get used to, but
-one advantage of Vem is that it is arguably easier and more intuitive than the
-rest of the family members.
+This tutorial will guide you through how to use these modes and describe the
+most frequently used commands. If you are already familiar with Vim, it will
+also explain many of the differences between both.
 
-If you have used Vim before then Vem has the potential to get on your nerves,
-specially at first. Vem commands are placed in very different locations and they
-behave differently than in Vim. If you have developed any muscle memory for Vim,
-then you'll need some time to adapt. But persist. It doesn't actually take that
-long and you may end up preferring Vem's simplicity.
-
-This tutorial doesn't explain all available Vem commands, but it provides all
-the essential ones. The complete set is explained in the `User's Guide
-</docs/users-guide/index.html>`__.
+If you're interested in a description of the complete set of commands, check the
+`User's Guide </docs/users-guide/index.html>`__ out instead.
 
 
 Starting Vem
 ------------
 
-Vem is just a set of configuration files on top of Vim or Neovim. That means
-that you need one of those editors being installed in your system before you can
-use Vem. Head to `Download </download.html>`_ for more details on how to install
-them, and Vem, in your system.
-
-Once you have Vem and Vim (or Neovim) installed, you can start it by running the
-following command in a terminal::
+You can start Vem by running the following command in a terminal::
 
     vem [filename]
 
 This will start Vem using Vim as the underlying editor. You can also use the
-``nvem`` and ``gvem`` commands to start Vem using either Neovim and the graphical
+``nvem`` and ``gvem`` commands to start Vem using either Neovim or the graphical
 version of Vim respectively. Which one to use is mostly a question of personal
-preference. From the point of view of Vem's features, there is no
-difference between them.
+preference. Vem works almost identically in all of them.
 
-To exit Vem, just press the ``x`` key:
+Of course, this requires either Vim or Neovim to be installed in
+the system, if that's not the case check the `Download </download.html>`_ for
+more information.
+
+Vim has funnily become a traditional trap for first time users which struggle to
+find their way out of the editor. Let's cover that first. To exit Vem, just
+press the ``x`` key:
 
     :`x`: close file (and exit Vem if it is the last open one)
 
@@ -90,8 +77,7 @@ do in most editors— or you can use it as a sort of *control panel* where each
 key performs an action. Each one of these two options is known as a *mode* and
 you can switch from one to another at any time.
 
-The names of these two main modes are —there are others but these are the most
-important:
+The names of these two main modes are:
 
 * **Insert mode**: characters get inserted into the text as you type (except
   ``Ctrl-<key>`` combinations, which perform actions).
@@ -102,11 +88,12 @@ important:
   Vem if it is the last one). Command mode is most commonly referred to as
   **Normal mode**.
 
-Being able to insert text and switch back to normal mode at any time allows you
-to have a large number of commands/actions available at your fingertips.
-Although it may take some days to get used to it at first, switching modes
-allows you to be extremely precise and fast when you develop some muscle memory.
-You can, quite literally, perform actions at the same speed that you type.
+There are other modes, but these two are the most important ones. Being able to
+insert text and switch back to normal mode at any time allows you to have a
+large number of commands/actions available at your fingertips. Although it may
+take some days to get used to it at first, switching modes allows you to be
+extremely precise and fast when you develop some muscle memory. You can, quite
+literally, perform actions at the same speed that you type.
 
 .. admonition:: Vem and Vim differences
 
@@ -122,28 +109,65 @@ You can, quite literally, perform actions at the same speed that you type.
     in itself.
 
     Which approach is better is mostly a question of personal preference. Vem
-    design stance is that it is better for the editor to be smaller and simpler,
-    so it can stay out of the way and allow the user to focus 
+    design principle is that it is better for the editor to be smaller and
+    simpler (at least comparatively) and to stay out of the way as much as
+    possible.
 
 The basics
 ----------
 
 So far so good, but you may be wondering how to *actually* use Vem. Let's jump
-straight into it:
+straight into it.
 
-* Vem starts in normal mode by default.
-* To start **insert mode**, so you can insert text, press `i` (or `o` to start
-  inserting at the *right side* of the current character instead of the left one).
-* To go back to **normal mode** press `Ctrl-o`.
-* Once in normal mode press `s` to save the current document and `x` to close it
-  and exit.
+Let's create a new file with::
 
-If you press `s` and you didn't specify a filename in the command line, you'll
-be prompted for one at the bottom of the screen.
+    vem my-new-file.txt
 
-With just those commands (`i`, `Ctrl-o`, `s`, `x`) you can already edit any
-file, however, they won't be making your editing life much better. For
-that you'll need more commands. This is how the most important ones are
+Vem starts in normal mode. That means that any key we press now will execute a
+command. Let's take a look at our first set of them:
+
+    :`i`: start insert mode (left of current character)
+    :`o`: start insert mode (right of current character)
+
+..
+
+    :`Ctrl-o`: go back to normal mode
+
+..
+
+    :`s`: save
+    :`x`: close (and exit if it is the last document)
+
+So now you can press `i`, which will start insert mode and allow you to enter
+any text. When you're satisfied with your brand new document, you can go back to
+normal mode using `Ctrl-o` and save your document with `s` (if you didn't
+provide a filename in the command line when launching Vem, you'll be prompted
+for one).
+
+You can switch between insert mode and normal mode any time you need. And if you
+make any mistake you can undo/redo changes with:
+
+.. container:: tabs layout key-summary
+
+    .. container:: tab qwerty
+
+        :`q`: undo
+        :`Q`: redo
+
+    .. container:: tab qwertz
+
+        :`q`: undo
+        :`Q`: redo
+
+    .. container:: tab azerty
+
+        :`a`: undo
+        :`A`: redo
+
+Finally, you can close the current document and exit Vem with `x`.
+
+With just those commands you can already edit any file, however, they they are
+only the beginning. There are many more. This is how the most important ones are
 distributed across the keyboard:
 
 .. container:: tabs layout
@@ -166,98 +190,16 @@ distributed across the keyboard:
             :class: screenshot
             :target: /static/img/cheat-sheets/azerty-basic.png
 
-If you take a look at that chart, you may notice how there doesn't seem to be a
-connection between the name of the commands and the letter of the key they are
-assigned to in many cases. For example, in the case of **Undo** and
-**Redo** the assigned letter is:
-
-.. container:: tabs layout key-summary
-
-    .. container:: tab qwerty
-
-        :`q`: undo
-        :`Q`: redo
-
-    .. container:: tab qwertz
-
-        :`q`: undo
-        :`Q`: redo
-
-    .. container:: tab azerty
-
-        :`a`: undo
-        :`A`: redo
-
-That is because, in Vem, commands are distributed spatially across the keyboard
-so that related actions are clustered together and to optimize the use of both
-hands for actions that are usually executed sequentially.
+If you take a look at that chart, you may notice that actions are not associated
+to the letters of the keyboard using mnemonics. That is because, in Vem,
+commands are distributed spatially so that related actions are clustered
+together and to make frequent commands to be in more convenient locations.
 
 Looking at all those commands at once may be a bit overwhelming if you haven't
 used a modal text editor before, but don't worry, remembering them and their
 positions is actually pretty easy. Also, the meaning of some of them may not
-look very clear at first. That chart is more useful when you know a bit more
-about what the commands do, which is what the next sections will quickly cover.
-
-But first let's summarize the commands we know already:
-
-.. container:: tabs layout key-summary
-
-    .. container:: tab qwerty
-
-        :`Ctrl-o`: start normal mode
-
-        ..
-
-        :`i`: start insert mode (left of current character)
-        :`o`: start insert mode (right of current character)
-
-        ..
-
-        :`s`: save
-        :`x`: close (and exit if it is the last document)
-
-        ..
-
-        :`q`: undo
-        :`Q`: redo
-
-    .. container:: tab qwertz
-
-        :`Ctrl-o`: start normal mode
-
-        ..
-
-        :`i`: start insert mode (left of current character)
-        :`o`: start insert mode (right of current character)
-
-        ..
-
-        :`s`: save
-        :`x`: close (and exit if it is the last document)
-
-        ..
-
-        :`q`: undo
-        :`Q`: redo
-
-    .. container:: tab azerty
-
-        :`Ctrl-o`: start normal mode
-
-        ..
-
-        :`i`: start insert mode (left of current character)
-        :`o`: start insert mode (right of current character)
-
-        ..
-
-        :`s`: save
-        :`x`: close (and exit if it is the last document)
-
-        ..
-
-        :`a`: undo
-        :`A`: redo
+look very clear yet, but they are pretty straightforward and this tutorial will
+try to cover all them.
 
 .. admonition:: The Esc key
 
