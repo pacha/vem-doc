@@ -318,7 +318,7 @@ Screenshots
         :class: screenshot
         :target: /static/img/home/vem-live-regex.png
 
-        Hilighting of regex matches as-you-type
+        Highlighting of regex matches as-you-type
 
     .. figure:: /static/img/home/thumbs/vem-fuzzy-finder.png
         :class: screenshot
