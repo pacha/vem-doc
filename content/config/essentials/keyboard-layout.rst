@@ -37,3 +37,14 @@ assigned to different keys across them.
     key distribution makes many action mappings not very intuitive and in many
     cases directly unfeasible.
 
+.. admonition:: Autodetecting the layout in your vemrc file.
+
+   Vem is unaware of your keyboard layout until you explicitly set it (and takes
+   ``QWERTY`` by default), but you can autodetect it in your `vemrc
+   </config/vemrc.html>`__  file. For example, in linux you could do something
+   like::
+
+        let g:vem_layout = system('setxkbmap -query 2> /dev/null | grep -o -E "(querty|quertz|azerty)$" || echo "querty"')[:-2]
+
+   Tip provided by `/u/mirsella <https://www.reddit.com/user/mirsella/>`__.
+
