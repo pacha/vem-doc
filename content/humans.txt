@@ -1,0 +1,9 @@
+/* TEAM */
+	Author: Andrés Sopeña Pérez
+	GitHub: https://github.com/pacha
+	From: Düsseldorf, Germany
+
+/* SITE */
+	Language: English
+	Doctype: HTML5
+	Text Editor: Vem :)
