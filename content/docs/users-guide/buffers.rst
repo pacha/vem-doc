@@ -96,8 +96,9 @@ In addition to opening a file with `l`, you can use:
     :`Ctrl-^`: open file under cursor in a new tabpage (you can use `Ctrl-6` if
         you can't press `Ctrl-^` in your keyboard).
 
-How to use windows and tabs is explained in `Windows </docs/windows.html>`_ and
-`Tabpages </docs/tabpages.html>`_.
+How to use windows and tabs is explained in `Windows
+</docs/users-guide/windows.html>`_ and `Tabpages
+</docs/users-guide/tabpages.html>`_.
 
 
 Using the fuzzy finder
@@ -162,7 +163,8 @@ Other available keyboard commands are:
         you can't press `Ctrl-^` in your keyboard).
 
 How to use windows and tabs is explained in `Windows
-</docs/windows.html>`_ and `Tabpages </docs/tabpages.html>`_.
+</docs/users-guide/windows.html>`_ and `Tabpages
+</docs/users-guide/tabpages.html>`_.
 
 Finally, to close the fuzzy finder you can use `Ctrl-o`, `Ctrl-c` or `Esc`:
 
