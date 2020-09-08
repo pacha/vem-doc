@@ -132,7 +132,7 @@ the cursor to that position:
 Pasting different selection types
 ---------------------------------
 
-As shown in the `Selecting text </doc/selecting.html>`_ section, there are three
+As shown in the `Selecting text </docs/users-guide/selecting.html>`_ section, there are three
 kinds of visual selections:
 
     * **Characterwise**: the common one in other text editors, for an arbitrary
