@@ -25,3 +25,6 @@ with the complete list:
     following the instructions at the `Keyboard layout
     </config/essentials/keyboard-layout.html>`__ section of the documentation.
 
+    To get a quick comparison on how these keyboard layouts differ from one
+    another check the `Layout comparison
+    </docs/cheat-sheets/layout-comparison.html>`__ page.

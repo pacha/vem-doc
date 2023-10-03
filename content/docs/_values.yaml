@@ -84,3 +84,5 @@ menu:
         url: /docs/cheat-sheets/qwertz-full.html
       - title: AZERTY
         url: /docs/cheat-sheets/azerty-full.html
+  - title: Layout comparison
+    url: /docs/cheat-sheets/layout-comparison.html

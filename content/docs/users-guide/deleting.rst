@@ -1,4 +1,3 @@
-
 .. role:: key
 .. default-role:: key
 
