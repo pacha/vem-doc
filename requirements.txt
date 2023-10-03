@@ -1,1 +1,1 @@
-git+git://github.com/pacha/spekulatio-old.git@master#egg=spekulatio
+git+https://github.com/pacha/spekulatio-old.git@master#egg=spekulatio
